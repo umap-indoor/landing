@@ -20,5 +20,5 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          source: '/'
+          source: '.'
           target: '~/web/landing/prod'
