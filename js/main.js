@@ -1,4 +1,5 @@
 
+//text slider
 slider();
 
 async function slider() {
@@ -23,6 +24,7 @@ async function slider() {
     }
 };
 
+//scroll phone
 const phone = document.querySelector('.right_part_img');
 
 
@@ -55,6 +57,8 @@ function animationPhone() {
 
     } 
 };
+
+
 //select
 
 let selectContainer = document.querySelector(".select-container");
@@ -78,7 +82,7 @@ options.forEach((e) => {
     });
 });
 
-
+//cariusel project
 const carousel = document.querySelector(".carousel1");
 const pagination = document.querySelector(".swiper-pagination1");
 
@@ -93,11 +97,9 @@ function removeDots(){
 };
 
 
-
 const carousel2 = document.querySelector(".carousel2");
-
 const pagination2 = document.querySelector(".swiper-pagination2");
-console.log(pagination2)
+
 
 carousel2.addEventListener('mouseover', addDots2);
 function addDots2(){
@@ -147,6 +149,7 @@ const swiper2 = new Swiper('.swiper2', {
     },
 
     });
+
     
 //accordion
 
@@ -162,5 +165,37 @@ for (let i = 0; i < accordionContents.length; i++) {
 const plus = document.getElementsByClassName("img-plus");
 
 
-
 //tarif
+// const wrapper = document.querySelector('.wrapper');
+// if (wrapper.offsetWidth < 1300) {
+//     console.log('dfdf');
+// };
+// console.log(wrapper.offsetWidth)
+
+
+// cлайдер 
+// const wrapper = document.querySelector('.wrapper')
+// const sliderTarif = document.querySelector(".tarif-cards__container");
+// const itemSlider = document.querySelectorAll(".tarif-card__item");
+
+// if (wrapper.offsetWidth < 1210) {
+//     tarifSlider();
+// } else if (wrapper.offsetWidth > 1210){
+//     tarifSlider = false;
+// };
+
+// function tarifSlider(){
+//     itemSlider[0].addEventListener("click", () => {
+//         sliderTarif.style.transform = "translate(33.33%)";
+    
+    
+//     });
+//     itemSlider[1].addEventListener("click", () => {
+//         sliderTarif.style.transform = "";
+    
+//     });
+//     itemSlider[2].addEventListener("click", () => {
+//         sliderTarif.style.transform = "translate(-33.33%)";
+    
+//     });
+// }
