@@ -173,29 +173,38 @@ const plus = document.getElementsByClassName("img-plus");
 // console.log(wrapper.offsetWidth)
 
 
-// cлайдер 
-// const wrapper = document.querySelector('.wrapper')
-// const sliderTarif = document.querySelector(".tarif-cards__container");
-// const itemSlider = document.querySelectorAll(".tarif-card__item");
+// slider-price
+const wrapper = document.querySelector('.wrapper')
+const sliderTarif = document.querySelector(".tarif-cards__container")
+const itemSlider = document.querySelectorAll(".tarif-card__item")
 
+window.addEventListener('resize', checkResize);
+
+function checkResize() {
+
+    if (document.documentElement.clientWidth < 1210) {
+        tarifSlider();
+    } 
+};
 // if (wrapper.offsetWidth < 1210) {
 //     tarifSlider();
 // } else if (wrapper.offsetWidth > 1210){
 //     tarifSlider = false;
 // };
 
-// function tarifSlider(){
-//     itemSlider[0].addEventListener("click", () => {
-//         sliderTarif.style.transform = "translate(33.33%)";
+function tarifSlider(){
+    itemSlider[0].addEventListener("click", () => {
+        sliderTarif.style.transform = "translate(13.33%)";
+        // document.getElementsByClassName("psevdo-shadow").classList.remove("psevdo-shadow");
     
     
-//     });
-//     itemSlider[1].addEventListener("click", () => {
-//         sliderTarif.style.transform = "";
+    });
+    itemSlider[1].addEventListener("click", () => {
+        sliderTarif.style.transform = "";
     
-//     });
-//     itemSlider[2].addEventListener("click", () => {
-//         sliderTarif.style.transform = "translate(-33.33%)";
+    });
+    itemSlider[2].addEventListener("click", () => {
+        sliderTarif.style.transform = "translate(-13.33%)";
     
-//     });
-// }
+    });
+};
