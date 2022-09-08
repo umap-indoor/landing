@@ -292,6 +292,7 @@ function checkResize() {
 checkResize();
 
 
+
 function tarifSlider(){
     itemSlider[0].addEventListener("click", () => {
         sliderTarif.style.transform = "translate(13.33%)";
