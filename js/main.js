@@ -82,7 +82,56 @@ options.forEach((e) => {
     });
 });
 
-//cariusel project
+
+
+const sl1 = new Swiper('.swiper-animation_one', {
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 20000,
+    slidesPerView: '2.8',
+    autoplay: {
+    enabled: true,
+    delay: 1,
+    reverseDirection: true,
+    },
+});
+
+
+const sl2 = new Swiper('.swiper-animation_two', {
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 40000,
+    slidesPerView: '3.0',
+    autoplay: {
+    enabled: true,
+    delay: 1,
+    },
+});
+
+const sl3 = new Swiper('.swiper-animation_three', {
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 28000,
+    slidesPerView: '2.5',
+    autoplay: {
+    enabled: true,
+    delay: 1,
+    reverseDirection: true,
+    },
+});
+
+const sl4 = new Swiper('.swiper-animation_four', {
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 35000,
+    slidesPerView: '2.6',
+    autoplay: {
+    enabled: true,
+    delay: 1,
+    },
+});
+
+//carousel project
 const carousel = document.querySelector(".carousel1");
 const pagination = document.querySelector(".swiper-pagination1");
 

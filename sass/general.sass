@@ -45,6 +45,8 @@ main
     backdrop-filter: blur(12px);
     background: $color-header
     padding: 20px
+    @include media-deskotop
+        gap: 5rem
     
 
 .nav-menu
@@ -397,28 +399,30 @@ main
     font-size: 50px
     font-weight: 700
 
+.swiper-wrapper 
+    transition-timing-function: linear
 
 //Infinity animation
-@keyframes infinityAnimation 
-    0%
-        transform: translate(0);
+// @keyframes infinityAnimation 
+//     0%
+//         transform: translate(0);
     
-    100%
-        transform: translate(calc(0px - var(--itemWidth)))
+//     100%
+//         transform: translate(calc(0px - var(--itemWidth)))
     
 
-@keyframes infinityAnimation_revers
-    0%
-        transform: translate(calc(0px - var(--itemWidth)))
+// @keyframes infinityAnimation_revers
+//     0%
+//         transform: translate(calc(0px - var(--itemWidth)))
     
-    100%
-        transform: translate(0);
+//     100%
+//         transform: translate(0);
     
 .animation_wrapper
     width: 112%
     overflow: hidden;
     // border: 1px solid;
-    --itemWidth: 39%;
+    --itemWidth: 29%;
 
 
 .text_wrapper
@@ -445,7 +449,8 @@ main
     padding: 28px 20px
     margin: 0 20px
     border-radius: 24px
-    width: var(--itemWidth);
+    // width: auto
+    // width: var(--itemWidth);
     font-weight: 400
     font-size: 22px
     border: 1px solid
@@ -1231,10 +1236,22 @@ textarea:focus, input:focus
     text-align: right
 
 .email-info
+    overflow: hidden
+    position: relative
+    height: 50px
     font-size: 40px
     font-weight: 500
     color: $white
     padding-bottom: 20px
+    transition: 0.2s
+
+.email-info__item1
+    transition: 0.2s
+    position: absolute
+    top: -50px
+    // top: 0
+.email-info:hover .email-info__item1
+    top: 0
 .footer-descr
     font-size: 18px
     font-weight: 400
@@ -1259,7 +1276,11 @@ textarea:focus, input:focus
     gap: 30px
 .footer_year
     gap: 12px
-
+.hover-link
+    transition: 0.3s
+    cursor: pointer
+.hover-link:hover
+    color: rgba(255, 255, 255, 1);
 
 .footer_year-dot
     width: 1px
