@@ -47,8 +47,27 @@ main
     padding: 20px
     @include media-deskotop
         gap: 5rem
-    
-
+.nav-request-mobile
+    display: none
+    @include media-tablet
+        display: flex
+        gap: 28px
+        position: fixed
+        bottom: 15%
+        z-index: 2000
+        align-items: center
+.link_request-mobile
+    align-items: center
+    color: $white
+    font-weight: 500
+    background: rgba(255,255,255,0.05)
+    width: 250px;
+    height: 46px;
+.btn__open-map-mobile
+    width: 182px
+    height: 56px
+    border-radius: 20px
+    color: $white
 .nav-menu
     display: flex
     justify-content: space-between
@@ -56,6 +75,7 @@ main
     align-items: center
     color: $white
     font-size: 16px
+
 
 
 .nav-menu__item_deviders
@@ -78,7 +98,7 @@ main
 	height: 1px; 
 	background-color: rgba(255, 255, 255, 0.2)
 	content: "";
-	transition: width 0.3s ease-out; /*задаём время анимации*/
+	transition: width 0.3s ease-out; 
 .menu__item-link:after 
     top: 23px
 .menu__item-link:hover:after,
@@ -170,6 +190,7 @@ main
     font-weight: 700
     color: $white
 
+
 .title-descr__first-block
     position: relative
     z-index: 100
@@ -243,6 +264,8 @@ main
 .img_qr_link
     transform: translateY(37%)
 .phone-laptop
+    display: none
+.phone-tablet
     display: none
 .stick
     z-index: 100

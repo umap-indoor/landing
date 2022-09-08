@@ -69,14 +69,16 @@
         transform: translate(calc(81vw - 258px), -74%)
     .position
         transform: translate(calc(81vw - 258px), 324%);
-    .navigation
-        gap: 6rem
-    .nav-menu li:nth-child(6)
+    .nav-menu
+        gap: 50px
+    .nav-request
         display: none
-    .nav-menu li:nth-child(7)
-        display: none
-    .nav-menu li:nth-child(8)
-        display: none
+    // .nav-menu li:nth-child(6)
+    //     display: none
+    // .nav-menu li:nth-child(7)
+    //     display: none
+    // .nav-menu li:nth-child(8)
+    //     display: none
     .phone-desctop
         display: none
     .phone-laptop
@@ -279,8 +281,6 @@
 @media  screen and (max-width: 1085px)
     .navigation
         gap: 1rem
-    .nav-menu li:nth-child(5)
-        display: none
     .section__title_made-maps 
         width: 60%;
     .made-maps__img_display >img
@@ -309,3 +309,90 @@
         height: 252px
     .road-plan
         padding-right: 0.3%
+
+@media  screen and (max-width: 985px) 
+    .nav-menu
+        gap: 20px
+    .nav-menu li:nth-child(8)
+        display: none
+    .main-information_item 
+        padding-left: 2.4rem
+    .phone-laptop
+        display: none
+    .phone-tablet
+        display: block
+    .stick
+        transform: translate(calc(81vw - 194px), -87%);
+    .position
+        transform: translate(calc(81vw - 194px), 278%);
+    .title_block, .slider-text__item
+        font-size: 44px
+    .title-descr 
+        font-size: 16px;
+    .title-descr__first-block 
+        width: 51%;
+    .nav-request-mobile
+        bottom: 21%
+    .main-information 
+        padding-top: 21.531rem
+        padding-bottom: 5.25rem;
+    .secondary-block__title 
+        font-size: 34px;
+        font-weight: 600
+        line-height: 38px;
+    
+    .secondary-block__title-one 
+        width: 53%
+    .secondary-block_title-descr-one 
+        width: 40%
+    .title-descr
+        line-height: 24px
+    .first-block 
+        padding-bottom: 22.9rem
+    .secondary-block 
+        padding-bottom: 356px
+    .secondary-block_title-descr-two
+        width: 53%;
+    .secondary-block-three 
+        padding-bottom: 111px
+    .section__title_made-maps 
+        width: 76%;
+    .section__wrapper_made-maps 
+        padding-top: 58px;
+        padding-bottom: 59px
+        width: 100%
+        margin-bottom: 96px
+    .made-maps__img_display
+        height: 400px
+    .why-choose
+        margin-top: 0
+    .section__wrapper_why-choose 
+        padding-top: 72px
+    .section__title_made-maps_why-choose 
+        padding-top: 0
+    .section__title_made-maps_why-choose 
+        font-size: 38px
+        padding-bottom: 40px
+    .animation-cards__container
+        flex-direction: column
+    .animation-card__item
+        display: flex
+        gap: 30px
+    .section__title_block_helps
+        font-size: 38px
+        width: 60%
+    .section__title_projects
+        font-size: 38px
+        padding-bottom: 40px
+    .projects__slider
+        flex-direction: column
+    .carousel-container 
+        width: 673px;
+        height: 428px;
+    .carousel 
+        max-width: 598px
+        height: 302px
+    .carousel >img
+        align-items: center
+    .swiper-pagination
+        display: none

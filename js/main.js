@@ -94,6 +94,19 @@ const sl1 = new Swiper('.swiper-animation_one', {
     delay: 1,
     reverseDirection: true,
     },
+    breakpoints: {
+        // when window width is >= 768px
+        738: {
+            slidesPerView: 1.4,
+        },
+        1068: {
+            slidesPerView: 2.3,
+        },
+        // when window width is >= 1350px
+        1350: {
+            slidesPerView: 3,
+        }
+        },
 });
 
 
@@ -106,6 +119,19 @@ const sl2 = new Swiper('.swiper-animation_two', {
     enabled: true,
     delay: 1,
     },
+    breakpoints: {
+        // when window width is >= 768px
+        738: {
+            slidesPerView: 1.4,
+        },
+        1068: {
+            slidesPerView: 2.3,
+        },
+        // when window width is >= 1350px
+        1350: {
+            slidesPerView: 3,
+        }
+        },
 });
 
 const sl3 = new Swiper('.swiper-animation_three', {
@@ -118,6 +144,19 @@ const sl3 = new Swiper('.swiper-animation_three', {
     delay: 1,
     reverseDirection: true,
     },
+    breakpoints: {
+        // when window width is >= 768px
+        738: {
+            slidesPerView: 1.4,
+        },
+        1068: {
+            slidesPerView: 2.3,
+        },
+        // when window width is >= 1350px
+        1350: {
+            slidesPerView: 3,
+        }
+        },
 });
 
 const sl4 = new Swiper('.swiper-animation_four', {
@@ -129,6 +168,20 @@ const sl4 = new Swiper('.swiper-animation_four', {
     enabled: true,
     delay: 1,
     },
+     // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 768px
+        738: {
+            slidesPerView: 1.2,
+        },
+        1068: {
+            slidesPerView: 2.3,
+        },
+        // when window width is >= 1350px
+        1350: {
+            slidesPerView: 3,
+        }
+        },
 });
 
 //carousel project
@@ -233,13 +286,11 @@ function checkResize() {
 
     if (document.documentElement.clientWidth < 1210) {
         tarifSlider();
-    } 
+    }
+    
 };
-// if (wrapper.offsetWidth < 1210) {
-//     tarifSlider();
-// } else if (wrapper.offsetWidth > 1210){
-//     tarifSlider = false;
-// };
+checkResize();
+
 
 function tarifSlider(){
     itemSlider[0].addEventListener("click", () => {
