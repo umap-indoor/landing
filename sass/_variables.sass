@@ -31,12 +31,20 @@ $pink-text-tarif: rgba(128, 7, 243, 1)
 $pink-backround-tarif: rgba(64, 43, 84, 0.3)
 
 @mixin media-deskotop() 
-    @media (max-width: 1430px) 
+    @media (max-width: 1355px) 
+        @content
+@mixin media-deskotopS() 
+    @media (max-width: 1290px) 
         @content
 
+
 @mixin media-tablet() 
-    @media (max-width: 1185px) 
+    @media (max-width: 1219px) 
         @content        
 @mixin media-tablet-mini() 
     @media (max-width: 985px) 
+        @content 
+
+@mixin media-tablet-XS() 
+    @media (max-width: 765px) 
         @content 

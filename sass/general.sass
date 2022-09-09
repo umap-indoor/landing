@@ -40,13 +40,14 @@ main
     display: flex
     justify-content: space-between
     align-items: center
-    gap: 9rem
+    // gap: 6.5rem
+    gap: 4.16vw
     border-radius: 28px
     backdrop-filter: blur(12px);
     background: $color-header
     padding: 20px
     @include media-deskotop
-        gap: 5rem
+        gap: calc( 2vw - 23px  )
 .nav-request-mobile
     display: none
     @include media-tablet
@@ -75,6 +76,12 @@ main
     align-items: center
     color: $white
     font-size: 16px
+    @include media-deskotopS
+        gap: 10px
+    @include media-tablet
+        gap: calc( 5vw - 25px  )
+
+    
 
 
 
@@ -110,9 +117,11 @@ main
     display: flex
     justify-content: space-between
     align-items: center
-    gap: 32px
+    gap: 1.29vw
     font-size: 16px
     color: $white
+    @include media-tablet
+        display: none
 .btn
     display: block
     font-size: 16px
