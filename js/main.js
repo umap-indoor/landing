@@ -82,7 +82,7 @@ options.forEach((e) => {
     });
 });
 
-
+//animation line
 
 const sl1 = new Swiper('.swiper-animation_one', {
     slidesPerView: 'auto',
@@ -213,6 +213,24 @@ function removeDots2(){
     pagination2.classList.remove('dot-translate');
 };
 
+bulletsOne = document.querySelector('.swiper-pagination1')
+bulletsTwo = document.querySelector('.swiper-pagination2')
+
+// window.addEventListener('resize', removeBullets)
+
+function removeBullets(){
+    if (document.documentElement.clientWidth < 1000) {
+        bulletsOne.parentNode.removeChild(bulletsOne);
+        bulletsTwo.parentNode.removeChild(bulletsTwo);
+
+    } else {
+        console.log('jkmit');
+        // bulletsTwo.append(carousel2);
+    }
+    
+};
+removeBullets();
+
 //carousel1
 const swiper = new Swiper('.swiper1', {
     loop: true,
@@ -232,11 +250,10 @@ const swiper = new Swiper('.swiper1', {
 
     });
 
+
 //carousel2
 const swiper2 = new Swiper('.swiper2', {
     loop: true,
-
-    // If we need pagination
     pagination: {
         el: '.swiper-pagination2',
         type: 'bullets',
@@ -244,15 +261,20 @@ const swiper2 = new Swiper('.swiper2', {
     //   dynamicBullets: true
     },
 
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-prev2',
         prevEl: '.swiper-button-next2',
     },
-
+    pagination: {
+        el: '.swiper-pagination2',
+        type: 'bullets',
+        clickable: true,
+    //   dynamicBullets: true
+    },
     });
 
-    
+
+
 //accordion
 
 
@@ -283,10 +305,9 @@ const itemSlider = document.querySelectorAll(".tarif-card__item")
 window.addEventListener('resize', checkResize);
 
 function checkResize() {
-
     if (document.documentElement.clientWidth < 1210) {
         tarifSlider();
-    }
+    } 
     
 };
 checkResize();
