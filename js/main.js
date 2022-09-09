@@ -213,18 +213,20 @@ function removeDots2(){
     pagination2.classList.remove('dot-translate');
 };
 
-bulletsOne = document.querySelector('.swiper-pagination1')
-bulletsTwo = document.querySelector('.swiper-pagination2')
+bullets = document.querySelectorAll('.carousel_nav')
 
 // window.addEventListener('resize', removeBullets)
 
 function removeBullets(){
     if (document.documentElement.clientWidth < 1000) {
-        bulletsOne.parentNode.removeChild(bulletsOne);
-        bulletsTwo.parentNode.removeChild(bulletsTwo);
+        bullets[0].style.display="none";
+        bullets[1].style.display="none";
+        // bulletsOne.parentNode.removeChild(bulletsOne);
+        // bulletsTwo.parentNode.removeChild(bulletsTwo);
 
     } else {
-        console.log('jkmit');
+        bullets[0].style.display="flex";
+        bullets[1].style.display="flex";
         // bulletsTwo.append(carousel2);
     }
     

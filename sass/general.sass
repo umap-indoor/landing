@@ -901,7 +901,10 @@ textarea:focus, input:focus
     padding: 40px
     background-color: rgba(22, 23, 27, 0.8)
     border-radius: 40px
-    border: 3px solid rgba(255, 255, 255, 0.08)
+    border: 3px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+.app__container
+
 .ellips__app-container
     position: absolute
     z-index: 0
@@ -915,7 +918,8 @@ textarea:focus, input:focus
     transform: translate(-10%, -1%)
     z-index: 0
     width: 60%
-    
+.app__img-mobile
+    display: none
 .app__container-img
     position: absolute
     transform: translate(0%, 102%)
@@ -1064,7 +1068,7 @@ textarea:focus, input:focus
     padding-top: 384px
     padding-right: 11.3%
     position: relative
- 
+
 
 .road-plan::before
     content: url('../assets/images/icons/line-road.svg')
