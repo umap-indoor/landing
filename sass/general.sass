@@ -120,7 +120,7 @@ main
     display: flex
     justify-content: space-between
     align-items: center
-    gap: 1.29vw
+    gap: 8px
     font-size: 16px
     color: $white
     @include media-tablet
@@ -230,7 +230,7 @@ main
     font-weight: 400
     line-height: 20px
     position: absolute
-    transform: translate(-35%, -121%)
+    transform: translate(132%, -110%)
     width: 223px;
     height: 253px;
     background: rgba(22, 23, 27, 0.9);
@@ -240,7 +240,10 @@ main
     z-index: 1100
     opacity: 0
     transition: 0.3s
-
+.scan-popup-footer
+    transform: translate(92%, -121%)
+.apps_icon:hover .scan-popup
+    opacity: 1
 .apps_icon_link
     transition: 0.2s
     background-color: $social-link
@@ -270,8 +273,10 @@ main
     height: 56px
     border-radius: 16px
     text-align: center
-.qr_code_link:hover .scan-popup
+.appa_icon-footer:hover .scan-popup
     opacity: 1
+// .qr_code_link:hover .scan-popup
+//     opacity: 1
 
 .img_qr_link
     transform: translateY(37%)
@@ -415,13 +420,14 @@ main
     background-position: center
     background-repeat: no-repeat;
 .animation-card_title
-    margin-top: 20px
-    margin-bottom: 12px
+    margin-top: 14px
+    margin-bottom: 9px
     text-align: left
     font-size: 26px
     color: $white
     font-weight: 600
 .animation-card_description
+    padding-left: 10px
     width: 95%
     font-size: 20px
     color: $white
@@ -659,7 +665,7 @@ main
     width: 94%
 .tarif-card__name-std
     gap: 9px
-    padding: 22px 0px 35px 0px
+    padding: 22px 9px 35px 14px
 .tarif-card__name-free
     width: 100%
 .tarif-card__name-full
@@ -673,13 +679,16 @@ main
     // backdrop-filter: blur(8px);
     border-radius: 28px
     height: 33%
-    margin: 20px 20px 10px 20px
+    margin: 20px
 .tarif_line
     margin-top: -36px
     height: 1px
     background-color: rgba(255, 255, 255, 0.1)
     width: 100%
-    
+.small-img
+    margin-left: 10px
+.small-img-one
+    margin-left: 5px
 .tarif_coast
     font-weight: 600;
     font-size: 56px;
@@ -762,9 +771,8 @@ main
         background: rgba(255, 255, 255, 0.12)
 
 .price-item
-    // 
     position: relative
-    top: 22%
+    top: 34%
     font-size: 17px
     font-weight: 400
     color: rgba(255, 255, 255, 0.4);
@@ -853,6 +861,7 @@ main
 .secondary-block_title-descr-req
     width: 80%
 .questions
+    
     display: flex
     flex-direction: column
 
@@ -1145,7 +1154,11 @@ textarea:focus, input:focus
     font-size: 56px
 
 
-
+.accordion__conteiner
+    height: 108px
+    align-items: center
+    @include media-tablet-mini
+        height: 112px
 
 .accordeon-answer_container
     padding-top: 80px;
@@ -1160,8 +1173,8 @@ textarea:focus, input:focus
 
 
 .accordion__content 
-    margin-bottom: 55px;
-    padding-bottom: 10px
+    // margin-bottom: 55px;
+    // padding-bottom: 10px
     color: $white
     font-size: 20px
     font-weight: 500
@@ -1327,6 +1340,14 @@ textarea:focus, input:focus
     background: rgba(255, 255, 255, 0.75);
 .app-footer
     background: rgba(31, 31, 31, 0.6);
+.app-footer:hover
+    background: rgba(31, 31, 31, 0.8);
+.app-footer-google:hover
+    background: rgba(31, 31, 31, 0.6);
+.app-footer-google:hover
+    background: rgba(31, 31, 31, 0.8);
+
+
 
 
 
