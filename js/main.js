@@ -304,31 +304,27 @@ const wrapper = document.querySelector('.wrapper')
 const sliderTarif = document.querySelector(".tarif-cards__container")
 const itemSlider = document.querySelectorAll(".tarif-card__item")
 
-window.addEventListener('resize', checkResize);
-
-function checkResize() {
-    if (document.documentElement.clientWidth < 1210) {
-        tarifSlider();
-    } 
-    
-};
-checkResize();
 
 
 
 function tarifSlider(){
     itemSlider[0].addEventListener("click", () => {
-        sliderTarif.style.transform = "translate(13.33%)";
+        if(document.documentElement.clientWidth < 1230)
+            sliderTarif.style.transform = "translate(13.33%)";
         // document.getElementsByClassName("psevdo-shadow").classList.remove("psevdo-shadow");
     
     
     });
     itemSlider[1].addEventListener("click", () => {
-        sliderTarif.style.transform = "";
+        if(document.documentElement.clientWidth < 1230)
+            sliderTarif.style.transform = "";
     
     });
     itemSlider[2].addEventListener("click", () => {
-        sliderTarif.style.transform = "translate(-13.33%)";
+        if(document.documentElement.clientWidth < 1230)
+            sliderTarif.style.transform = "translate(-13.33%)";
     
     });
 };
+
+tarifSlider();
