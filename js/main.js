@@ -307,24 +307,64 @@ const itemSlider = document.querySelectorAll(".tarif-card__item")
 
 
 
-function tarifSlider(){
-    itemSlider[0].addEventListener("click", () => {
-        if(document.documentElement.clientWidth < 1230)
-            sliderTarif.style.transform = "translate(13.33%)";
-        // document.getElementsByClassName("psevdo-shadow").classList.remove("psevdo-shadow");
+// function tarifSlider(){
+//     itemSlider[0].addEventListener("click", () => {
+//         if(document.documentElement.clientWidth < 1230)
+//             sliderTarif.style.transform = "translate(13.33%)";
+//         // document.getElementsByClassName("psevdo-shadow").classList.remove("psevdo-shadow");
     
     
-    });
-    itemSlider[1].addEventListener("click", () => {
-        if(document.documentElement.clientWidth < 1230)
-            sliderTarif.style.transform = "";
+//     });
+//     itemSlider[1].addEventListener("click", () => {
+//         if(document.documentElement.clientWidth < 1230)
+//             sliderTarif.style.transform = "";
     
-    });
-    itemSlider[2].addEventListener("click", () => {
-        if(document.documentElement.clientWidth < 1230)
-            sliderTarif.style.transform = "translate(-13.33%)";
+//     });
+//     itemSlider[2].addEventListener("click", () => {
+//         if(document.documentElement.clientWidth < 1230)
+//             sliderTarif.style.transform = "translate(-13.33%)";
     
-    });
-};
+//     });
+// };
 
-tarifSlider();
+// tarifSlider();
+
+
+
+//tarif
+var swiperTarif = new Swiper('.swiper-container', {
+    initialSlide: 1,
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 21,
+    slideToClickedSlide: true,
+    // Responsive breakpoints
+    // breakpoints: {
+    //   // when window width is >= 320px
+    //     600: {
+    //     slidesPerView: 1.3,
+    //     spaceBetween: 21
+    //     },
+    //     800: {
+    //     slidesPerView: 1.8,
+    //     spaceBetween: 21
+    //     },
+    //   // when window width is >= 480px
+    //     1000: {
+    //     slidesPerView: 2.3,
+    //     spaceBetween: 21
+    //     },
+    //     1200: {
+    //     slidesPerView: 2.78,
+    //     spaceBetween: 21
+    //     },
+    //   // when window width is >= 640px
+    //     1310: {
+    //     slidesPerView: 3.0,
+    //     spaceBetween: 21
+
+    //     }
+    // }
+    
+    });
