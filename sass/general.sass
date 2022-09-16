@@ -886,10 +886,31 @@ main
 
 .questions_container
     max-width: 724px
+    width: 100%
     padding: 38px 40px
     background-color: rgba(22, 23, 27, 0.8)
     border-radius: 40px
     border: 3px solid rgba(255, 255, 255, 0.08)
+.buttons-container
+    display: flex
+    flex-wrap: wrap
+    gap: 8px
+
+
+.btns-theme
+    display: inline-block
+    color: $white
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    // background-color: pink
+    border-radius: 20px
+    font-size: 16px
+    padding: 18px 30px 20px 30px
+    cursor: pointer
+
+.active-buttons
+    background-color: rgba(12, 117, 241, 1)
+    border: 2px solid rgba(255, 255, 255, 0.12);
 .form-questions_title
     width: 96%
     text-align: left
@@ -907,10 +928,14 @@ main
 .secondary-block_title-descr-req
     width: 80%
 .questions
-    
     display: flex
     flex-direction: column
-
+    gap: 14px
+.secondary-block_title-descr-form
+    padding-bottom: 10px
+    padding-top: 0
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px
 .select-css, .input-question, .textare-question
     display: block; 
     font-size: 18px;
@@ -928,7 +953,6 @@ main
     -webkit-appearance: none;
     appearance: none;
     background: rgba(255, 255, 255, 0.06);
-    margin-bottom: 14px
 .textare-question
     color: white
     padding-top: 20px

@@ -31,7 +31,7 @@ async function slider() {
     const posts = document.querySelectorAll('.slider-text__item');
     posts[0].style = "top:0px; opacity:1; transition: 0s";
     
-    if (document.documentElement.clientWidth > 800){
+    if (document.documentElement.clientWidth > 900){
         posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s');
     } else {
         posts.forEach(t => t.style = 'top:-50px; pacity:0; transition: 0s');
@@ -43,7 +43,7 @@ async function slider() {
         const next = (i + 1) % posts.length;
         posts[next].style = "top:0px; opacity:1";
         
-        if (document.documentElement.clientWidth > 800){
+        if (document.documentElement.clientWidth > 900){
             posts[i].style = "top:100px; opacity:0";
         } else {
             posts[i].style = "top:50px; opacity:0";
@@ -51,7 +51,7 @@ async function slider() {
         
         
         await new Promise(resolve => setTimeout(resolve, 2000));
-        if (document.documentElement.clientWidth > 800) {
+        if (document.documentElement.clientWidth > 900) {
             posts[i].style = "top:-100px; opacity:0; transition: 0s";
         } else {
             posts[i].style = "top:-50px; opacity:0; transition: 0s";
@@ -122,26 +122,27 @@ function animationPhone() {
 
 //select
 
-let selectContainer = document.querySelector(".select-container");
-let select = document.querySelector(".select");
-let input = document.getElementById("input");
-let options = document.querySelectorAll(".select-container .option");
+// let selectContainer = document.querySelector(".select-container");
+// let select = document.querySelector(".select");
+// let input = document.getElementById("input");
+// let options = document.querySelectorAll(".select-container .option");
 
 
-select.onclick = () => {
-    selectContainer.classList.toggle("active");
-};
+// select.onclick = () => {
+//     selectContainer.classList.toggle("active");
+// };
 
-options.forEach((e) => {
-    e.addEventListener("click", () => {
-        input.value = e.innerText;
-        selectContainer.classList.remove("active");
-        options.forEach((e) => {
-            e.classList.remove("selected");
-        });
-        e.classList.add("selected");
-    });
-});
+
+// options.forEach((e) => {
+//     e.addEventListener("click", () => {
+//         input.value = e.innerText;
+//         selectContainer.classList.remove("active");
+//         options.forEach((e) => {
+//             e.classList.remove("selected");
+//         });
+//         e.classList.add("selected");
+//     });
+// });
 
 //animation line
 
@@ -429,3 +430,8 @@ var swiperTarif = new Swiper('.swiper-container', {
     // }
     
     });
+
+
+        const el=document.getElementById("TextWindow");
+        el.placeholder="Какой вопрос хотите задать?";
+
