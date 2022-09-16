@@ -1,28 +1,89 @@
 
 //text slider
+// window.addEventListener('resize', checkWith);
+
+// function checkWith() {
+//     if (document.documentElement.clientWidth < 800){
+//         slider('50px');
+//     } else {
+//         slider('100px');
+//     }
+// }
+// checkWith();
+// console.log(withDoc);
+
+
+// slider();
+// function checkWith(With) {
+//     let With  = document.documentElement.clientWidth;
+//     if(With < 800) {
+//         slider('50px');
+//     } else {
+//         slider('100px');
+//     }
+// }
+// checkWith();
+
 slider();
 
 async function slider() {
     let i = 0;
     const posts = document.querySelectorAll('.slider-text__item');
-    posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s');
     posts[0].style = "top:0px; opacity:1; transition: 0s";
+    
+    if (document.documentElement.clientWidth > 800){
+        posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s');
+    } else {
+        posts.forEach(t => t.style = 'top:-50px; pacity:0; transition: 0s');
+    }
     
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     while(true) {
         const next = (i + 1) % posts.length;
-        
-        posts[i].style = "top:100px; opacity:0";
         posts[next].style = "top:0px; opacity:1";
         
+        if (document.documentElement.clientWidth > 800){
+            posts[i].style = "top:100px; opacity:0";
+        } else {
+            posts[i].style = "top:50px; opacity:0";
+        }
+        
+        
         await new Promise(resolve => setTimeout(resolve, 2000));
-        posts[i].style = "top:-100px; opacity:0; transition: 0s";
+        if (document.documentElement.clientWidth > 800) {
+            posts[i].style = "top:-100px; opacity:0; transition: 0s";
+        } else {
+            posts[i].style = "top:-50px; opacity:0; transition: 0s";
+        }
+        
         
         i = next;
         
     }
 };
+
+// async function slider(screen) {
+//     let i = 0;
+//     const posts = document.querySelectorAll('.slider-text__item');
+//     posts.forEach(t => t.style = `top:-${screen}; opacity:0; transition: 0s`);
+//     posts[0].style = "top:0px; opacity:1; transition: 0s";
+    
+//     await new Promise(resolve => setTimeout(resolve, 2000));
+    
+//     while(true) {
+//         const next = (i + 1) % posts.length;
+        
+//         posts[i].style = `top:${screen}; opacity:0`;
+//         posts[next].style = `top:${screen}; opacity:1`;
+        
+//         await new Promise(resolve => setTimeout(resolve, 2000));
+//         posts[i].style = `top:-${screen}; opacity:0; transition: 0s`;
+        
+//         i = next;
+        
+//     }
+// };
 
 //scroll phone
 const phone = document.querySelector('.right_part_img');
