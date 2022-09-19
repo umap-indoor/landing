@@ -26,42 +26,66 @@
 
 slider();
 
+slider()
+
 async function slider() {
-    let i = 0;
-    const posts = document.querySelectorAll('.slider-text__item');
+    let i = 0
+    const posts = document.querySelectorAll('.slider-text__item')
+    posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s')
     posts[0].style = "top:0px; opacity:1; transition: 0s";
     
-    if (document.documentElement.clientWidth > 900){
-        posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s');
-    } else {
-        posts.forEach(t => t.style = 'top:-50px; pacity:0; transition: 0s');
-    }
-    
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000))
     
     while(true) {
-        const next = (i + 1) % posts.length;
+        const next = (i + 1) % posts.length
+        
+        posts[i].style = "top:100px; opacity:0";
         posts[next].style = "top:0px; opacity:1";
         
-        if (document.documentElement.clientWidth > 900){
-            posts[i].style = "top:100px; opacity:0";
-        } else {
-            posts[i].style = "top:50px; opacity:0";
-        }
+        await new Promise(resolve => setTimeout(resolve, 2000))
+        posts[i].style = "top:-100px; opacity:0; transition: 0s";
         
-        
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        if (document.documentElement.clientWidth > 900) {
-            posts[i].style = "top:-100px; opacity:0; transition: 0s";
-        } else {
-            posts[i].style = "top:-50px; opacity:0; transition: 0s";
-        }
-        
-        
-        i = next;
+        i = next
         
     }
-};
+}
+
+// async function slider() {
+//     let i = 0;
+//     const posts = document.querySelectorAll('.slider-text__item');
+//     posts[0].style = "top:0px; opacity:1; transition: 0s";
+    
+//     if (document.documentElement.clientWidth > 900){
+//         posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s');
+//     } else {
+//         posts.forEach(t => t.style = 'top:-50px; pacity:0; transition: 0s');
+//     }
+    
+//     await new Promise(resolve => setTimeout(resolve, 2000));
+    
+//     while(true) {
+//         const next = (i + 1) % posts.length;
+//         posts[next].style = "top:0px; opacity:1";
+        
+//         if (document.documentElement.clientWidth > 900){
+//             posts[i].style = "top:100px; opacity:0";
+//         } else {
+//             posts[i].style = "top:50px; opacity:0";
+//         }
+        
+        
+//         await new Promise(resolve => setTimeout(resolve, 2000));
+//         if (document.documentElement.clientWidth > 900) {
+//             posts[i].style = "top:-100px; opacity:0; transition: 0s";
+//         } else {
+//             posts[i].style = "top:-50px; opacity:0; transition: 0s";
+//         }
+        
+        
+//         i = next;
+        
+//     }
+// };
 
 // async function slider(screen) {
 //     let i = 0;
@@ -394,24 +418,31 @@ const itemSlider = document.querySelectorAll(".tarif-card__item")
 
 
 //tarif
-const InitSliderTarif = () => {
-    if (document.documentElement.clientWidth < 1307) {
-        swiperTarif = new Swiper('.swiper-container', {
-            initialSlide: 1,
-            slidesPerView: 3,
-            centeredSlides: true,
-            loop: true,
-            spaceBetween: 21,
-            slideToClickedSlide: true,
-            });
-    } else if (document.documentElement.clientWidth < 1307) {
-        swiperTarif = undefined;
-    }
-}
+// const InitSliderTarif = () => {
+//     if (document.documentElement.clientWidth < 1307) {
+//         swiperTarif = new Swiper('.swiper-container', {
+//             initialSlide: 1,
+//             slidesPerView: 3,
+//             centeredSlides: true,
+//             loop: true,
+//             spaceBetween: 21,
+//             slideToClickedSlide: true,
+//             });
+//     } else if (document.documentElement.clientWidth < 1307) {
+//         swiperTarif = undefined;
+//     }
+// }
 
-InitSliderTarif();
+// InitSliderTarif();
 
-        
+swiperTarif = new Swiper('.swiper-container', {
+    initialSlide: 1,
+    slidesPerView: 3,
+    centeredSlides: true,
+    loop: true,
+    spaceBetween: 21,
+    slideToClickedSlide: true,
+    });
 
 
 
