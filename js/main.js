@@ -394,43 +394,22 @@ const itemSlider = document.querySelectorAll(".tarif-card__item")
 
 
 //tarif
-var swiperTarif = new Swiper('.swiper-container', {
-    initialSlide: 1,
-    slidesPerView: 3,
-    centeredSlides: true,
-    loop: true,
-    spaceBetween: 21,
-    slideToClickedSlide: true,
-    // Responsive breakpoints
-    // breakpoints: {
-    //   // when window width is >= 320px
-    //     600: {
-    //     slidesPerView: 1.3,
-    //     spaceBetween: 21
-    //     },
-    //     800: {
-    //     slidesPerView: 1.8,
-    //     spaceBetween: 21
-    //     },
-    //   // when window width is >= 480px
-    //     1000: {
-    //     slidesPerView: 2.3,
-    //     spaceBetween: 21
-    //     },
-    //     1200: {
-    //     slidesPerView: 2.78,
-    //     spaceBetween: 21
-    //     },
-    //   // when window width is >= 640px
-    //     1310: {
-    //     slidesPerView: 3.0,
-    //     spaceBetween: 21
+const InitSliderTarif = () => {
+    if (document.documentElement.clientWidth < 1307) {
+        swiperTarif = new Swiper('.swiper-container', {
+            initialSlide: 1,
+            slidesPerView: 3,
+            centeredSlides: true,
+            loop: true,
+            spaceBetween: 21,
+            slideToClickedSlide: true,
+            });
+    } else if (document.documentElement.clientWidth < 1307) {
+        swiperTarif = undefined;
+    }
+}
 
-    //     }
-    // }
-    
-    });
-
+InitSliderTarif();
 
         
 
