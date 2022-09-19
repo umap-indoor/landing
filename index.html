@@ -647,8 +647,24 @@
                                     </div>
                                 </div> -->
 
-                                <input required type="text" placeholder="Ваше имя" class="input-question">
-                                <input required type="email" placeholder="Почта" class="input-question">
+                                <div class="input-block">
+                                    <input type="text" name="input-text" id="input-text" required spellcheck="false">
+                                    <span class="placeholder">
+                                       Ваше имя
+                                    </span>
+                                  </div>
+
+                                  <div class="input-block">
+                                    <input type="email" name="input-text" id="input-email" required spellcheck="false">
+                                    <span class="placeholder">
+                                       Почта
+                                    </span>
+                                  </div>
+                                                
+                                <!-- <input required type="text" placeholder="Ваше имя" class="input-question"> -->
+                                <!-- <input required type="email" placeholder="Почта" class="input-question"> -->
+
+                                
                                 <textarea name="" id="TextWindow" style="width:100%; height:151px;"" placeholder="Какой вопрос хотите задать?" class="textare-question"></textarea>
 
                                 <button class="btn questions_btn btn-color"><a href="#no_scroll" class="open-link">Оставить заявку</a></button>
@@ -671,7 +687,7 @@
                                         class="img_goole_icons"></a>
                                 <a href="#!" class="apps_icon_link qr_code_link"><img src="./assets/images/icons/qrcode.png"
                                         alt="qrcode" class="img_qr_link"> </a>
-                                        <div class="scan-popup">
+                                        <div class="scan-popup scan-popup-form">
                                             <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
                                             Сканируй, чтобы <br> получить приложение
                                         </div>
