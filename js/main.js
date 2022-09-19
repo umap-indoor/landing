@@ -439,7 +439,7 @@ swiperTarif = new Swiper('.swiper-container', {
     initialSlide: 1,
     slidesPerView: 3,
     centeredSlides: true,
-    loop: true,
+    // loop: true,
     spaceBetween: 21,
     slideToClickedSlide: true,
     });
