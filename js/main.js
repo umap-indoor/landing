@@ -175,6 +175,7 @@ const sl1 = new Swiper('.swiper-animation_one', {
     loop: true,
     speed: 20000,
     slidesPerView: '2.8',
+    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -201,6 +202,7 @@ const sl2 = new Swiper('.swiper-animation_two', {
     loop: true,
     speed: 40000,
     slidesPerView: '3.0',
+    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -225,6 +227,7 @@ const sl3 = new Swiper('.swiper-animation_three', {
     loop: true,
     speed: 28000,
     slidesPerView: '2.5',
+    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -250,6 +253,7 @@ const sl4 = new Swiper('.swiper-animation_four', {
     loop: true,
     speed: 35000,
     slidesPerView: '2.6',
+    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
