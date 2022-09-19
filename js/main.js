@@ -432,6 +432,47 @@ var swiperTarif = new Swiper('.swiper-container', {
     });
 
 
-        const el=document.getElementById("TextWindow");
-        el.placeholder="Какой вопрос хотите задать?";
+        
 
+
+
+
+    // form
+
+const BtnsTheme = document.querySelectorAll('.btns-theme');
+function activeBtn () {
+    for (let btn of BtnsTheme) {
+        btn.addEventListener('click', (event) => {
+        const et = event.target;
+        const BtnActive = document.querySelector('.active-buttons');
+        if (BtnActive) {
+            BtnActive.classList.remove('active-buttons');
+        }
+        et.classList.add('active-buttons');
+        })
+    }
+    };
+    activeBtn();
+
+const el=document.getElementById("TextWindow");
+el.placeholder="Какой вопрос хотите задать?";
+
+function ChangePlaceholder(){
+    for (let btn of BtnsTheme) {
+        btn.addEventListener('click', (event) => {
+        const et = event.target;
+        if (et.classList.contains('btn-idea')) {
+            el.placeholder = "Предложите свою идею";
+        } else if (et.classList.contains('btn-quest')){
+            el.placeholder = "Какой вопрос хотите задать?";
+        }else if (et.classList.contains('btn-error')){
+            el.placeholder = "Сообщите нам об ошибке";
+        } else if (et.classList.contains('btn-develop')){
+            el.placeholder = "Заказать разработку";
+        } else if (et.classList.contains('btn-other')){
+            el.placeholder = "Пишите по любой теме";
+        }
+    })
+    }
+};
+    ChangePlaceholder()
