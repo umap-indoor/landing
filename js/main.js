@@ -1,32 +1,6 @@
 
-//text slider
-// window.addEventListener('resize', checkWith);
-
-// function checkWith() {
-//     if (document.documentElement.clientWidth < 800){
-//         slider('50px');
-//     } else {
-//         slider('100px');
-//     }
-// }
-// checkWith();
-// console.log(withDoc);
-
-
-// slider();
-// function checkWith(With) {
-//     let With  = document.documentElement.clientWidth;
-//     if(With < 800) {
-//         slider('50px');
-//     } else {
-//         slider('100px');
-//     }
-// }
-// checkWith();
-
 slider();
 
-slider()
 
 async function slider() {
     let i = 0
@@ -111,6 +85,7 @@ async function slider() {
 
 //scroll phone
 const phone = document.querySelector('.right_part_img');
+
 
 
 window.addEventListener('scroll', scrollPhone);
@@ -446,8 +421,32 @@ swiperTarif = new Swiper('.swiper-container', {
     loop: true,
     spaceBetween: 21,
     slideToClickedSlide: true,
+    // allowTouchMove:false,
+     // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 768px
+        1280: {
+            allowTouchMove: false,
+        }
+        },
     });
 
+    swiperheader = new Swiper('.sl', {
+        // 
+        slidesPerView: 5,
+        // centeredSlides: true,
+        loop: true,
+        // spaceBetween: 21,
+        // slideToClickedSlide: true,
+        // allowTouchMove:false,
+         // Responsive breakpoints
+        // breakpoints: {
+        //     // when window width is >= 768px
+        //     1280: {
+        //         allowTouchMove: false,
+        //     }
+            
+        });
 
 
 
