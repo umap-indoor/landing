@@ -103,24 +103,6 @@ function scrollPhone() {
 };
 
 
-//scroll phone-desctop
-// const phoneTablet = document.querySelector('.right_part_img-tablet');
-
-
-
-// window.addEventListener('scroll', scrollPhoneTablet);
-// function scrollPhoneTablet() {
-//     let vertical_position = pageYOffset;
-//     if(vertical_position > 1644){
-//         phoneTablet.classList.remove('stick');
-//         phoneTablet.classList.add('position');
-
-//     } else {
-//         phoneTablet.classList.add('stick');
-//         phoneTablet.classList.remove('position');
-
-//     }
-// };
 
 
 
