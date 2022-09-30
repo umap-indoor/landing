@@ -24,42 +24,6 @@ async function slider() {
     }
 }
 
-// async function slider() {
-//     let i = 0;
-//     const posts = document.querySelectorAll('.slider-text__item');
-//     posts[0].style = "top:0px; opacity:1; transition: 0s";
-    
-//     if (document.documentElement.clientWidth > 900){
-//         posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s');
-//     } else {
-//         posts.forEach(t => t.style = 'top:-50px; pacity:0; transition: 0s');
-//     }
-    
-//     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-//     while(true) {
-//         const next = (i + 1) % posts.length;
-//         posts[next].style = "top:0px; opacity:1";
-        
-//         if (document.documentElement.clientWidth > 900){
-//             posts[i].style = "top:100px; opacity:0";
-//         } else {
-//             posts[i].style = "top:50px; opacity:0";
-//         }
-        
-        
-//         await new Promise(resolve => setTimeout(resolve, 2000));
-//         if (document.documentElement.clientWidth > 900) {
-//             posts[i].style = "top:-100px; opacity:0; transition: 0s";
-//         } else {
-//             posts[i].style = "top:-50px; opacity:0; transition: 0s";
-//         }
-        
-        
-//         i = next;
-        
-//     }
-// };
 
 // async function slider(screen) {
 //     let i = 0;
@@ -103,11 +67,11 @@ function scrollPhone() {
 };
 
 
+//video-el
 
 
-
-const videoEl = document.getElementsByTagName('video')[0]
-console.log(videoEl)
+const videoEl = document.getElementsByTagName('video')[0];
+console.log(videoEl);
 
 
 // videoEl.playbackRate = -1;
@@ -117,26 +81,6 @@ console.log(videoEl)
 // }
 // });
 
-
-
-
-
-
-
-//animation-phone
-
-// let animation = document.querySelector('.app__container-img');
-
-
-// window.addEventListener('scroll', animationPhone);
-// function animationPhone() {
-//     let vertical_position = pageYOffset;
-//     // console.log(vertical_position)
-//     if(vertical_position > 6567){
-//         animation.classList.add('transform-Y');
-
-//     } 
-// };
 
 
 //select
@@ -162,6 +106,10 @@ console.log(videoEl)
 //         e.classList.add("selected");
 //     });
 // });
+
+
+
+
 
 //animation line
 
@@ -315,11 +263,10 @@ bullets = document.querySelectorAll('.carousel_nav')
 // window.addEventListener('resize', removeBullets)
 
 function removeBullets(){
+
     if (document.documentElement.clientWidth < 1000) {
         bullets[0].style.display="none";
         bullets[1].style.display="none";
-        // bulletsOne.parentNode.removeChild(bulletsOne);
-        // bulletsTwo.parentNode.removeChild(bulletsTwo);
 
     } else {
         bullets[0].style.display="flex";
@@ -388,43 +335,14 @@ for (let i = 0; i < accordionContents.length; i++) {
 const plus = document.getElementsByClassName("img-plus");
 
 
-//tarif
-// const wrapper = document.querySelector('.wrapper');
-// if (wrapper.offsetWidth < 1300) {
-//     console.log('dfdf');
-// };
-// console.log(wrapper.offsetWidth)
+
 
 
 // slider-price
-const wrapper = document.querySelector('.wrapper')
-const sliderTarif = document.querySelector(".tarif-cards__container")
-const itemSlider = document.querySelectorAll(".tarif-card__item")
+const wrapper = document.querySelector('.wrapper'),
+const sliderTarif = document.querySelector(".tarif-cards__container"),
+const itemSlider = document.querySelectorAll(".tarif-card__item");
 
-
-
-
-// function tarifSlider(){
-//     itemSlider[0].addEventListener("click", () => {
-//         if(document.documentElement.clientWidth < 1230)
-//             sliderTarif.style.transform = "translate(13.33%)";
-//         // document.getElementsByClassName("psevdo-shadow").classList.remove("psevdo-shadow");
-    
-    
-//     });
-//     itemSlider[1].addEventListener("click", () => {
-//         if(document.documentElement.clientWidth < 1230)
-//             sliderTarif.style.transform = "";
-    
-//     });
-//     itemSlider[2].addEventListener("click", () => {
-//         if(document.documentElement.clientWidth < 1230)
-//             sliderTarif.style.transform = "translate(-13.33%)";
-    
-//     });
-// };
-
-// tarifSlider();
 
 
 
@@ -473,7 +391,7 @@ swiperTarif = new Swiper('.swiper-container', {
         // allowTouchMove:false,
          // Responsive breakpoints
         // breakpoints: {
-        //     // when window width is >= 768px
+        //     // when window width is >= 1280px
         //     1280: {
         //         allowTouchMove: false,
         //     }
