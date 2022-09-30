@@ -25,6 +25,7 @@ async function slider() {
 }
 
 
+
 // async function slider(screen) {
 //     let i = 0;
 //     const posts = document.querySelectorAll('.slider-text__item');
@@ -55,6 +56,7 @@ const phone = document.querySelector('.right_part_img');
 window.addEventListener('scroll', scrollPhone);
 function scrollPhone() {
     let vertical_position = pageYOffset;
+    console.log(vertical_position)
     if(vertical_position > 2267){
         phone.classList.remove('stick');
         phone.classList.add('position');
@@ -72,6 +74,28 @@ function scrollPhone() {
 
 const videoEl = document.getElementsByTagName('video')[0];
 console.log(videoEl);
+
+let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
+
+
+function pauseVideo() {
+    if (videoEl.currentTime > 3) {
+        videoEl.pause();
+    }
+    else if (videoEl.currentTime > 6){
+        console.log('dfvd')
+    }
+}
+videoEl.addEventListener('timeupdate', pauseVideo);
+
+function playVideo() {
+    if(pageYOffset > 200){
+        videoEl.play();
+    }
+}
+window.addEventListener('scroll', playVideo);
+
+
 
 
 // videoEl.playbackRate = -1;
