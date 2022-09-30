@@ -77,24 +77,31 @@ console.log(videoEl);
 
 let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
 
+let currentState = 0;
 
 function pauseVideo() {
-    if (videoEl.currentTime > 3) {
+    if (videoEl.currentTime > 3 && currentState == 0) {
         videoEl.pause();
-    } else if (videoEl.currentTime > 6){
+        currentState = 1;
+    } else if (videoEl.currentTime > 6.2 && currentState == 1){
         videoEl.pause();
-    }  else if (videoEl.currentTime > 8){
+        currentState =2;
+    }  else if (videoEl.currentTime > 10 && currentState == 3){
         videoEl.pause();
+        currentState =4;
     }
 }
 videoEl.addEventListener('timeupdate', pauseVideo);
 
 function playVideo() {
-    if (pageYOffset > 200){
+    if (pageYOffset > 400 && currentState ==1){
         videoEl.play();
-    } else if (pageYOffset > 2270) {
-        // console.log(videoEl.playbackRate)
-        console.log(videoEl.playbackRate)
+    } else if (pageYOffset > 1000 && currentState == 2) {
+        videoEl.play();
+    } else if (pageYOffset > 2200 && currentState == 3) {
+        videoEl.play();
+    } else if (pageYOffset > 5270) {
+        videoEl.play();
     }
 }
 window.addEventListener('scroll', playVideo);
