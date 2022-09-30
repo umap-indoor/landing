@@ -81,16 +81,20 @@ let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
 function pauseVideo() {
     if (videoEl.currentTime > 3) {
         videoEl.pause();
-    }
-    else if (videoEl.currentTime > 6){
-        console.log('dfvd')
+    } else if (videoEl.currentTime > 6){
+        videoEl.pause();
+    }  else if (videoEl.currentTime > 8){
+        videoEl.pause();
     }
 }
 videoEl.addEventListener('timeupdate', pauseVideo);
 
 function playVideo() {
-    if(pageYOffset > 200){
+    if (pageYOffset > 200){
         videoEl.play();
+    } else if (pageYOffset > 2270) {
+        // console.log(videoEl.playbackRate)
+        console.log(videoEl.playbackRate)
     }
 }
 window.addEventListener('scroll', playVideo);
