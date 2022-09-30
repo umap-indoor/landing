@@ -104,23 +104,41 @@ function scrollPhone() {
 
 
 //scroll phone-desctop
-const phoneTablet = document.querySelector('.right_part_img-tablet');
+// const phoneTablet = document.querySelector('.right_part_img-tablet');
 
 
 
-window.addEventListener('scroll', scrollPhoneTablet);
-function scrollPhoneTablet() {
-    let vertical_position = pageYOffset;
-    if(vertical_position > 1644){
-        phoneTablet.classList.remove('stick');
-        phoneTablet.classList.add('position');
+// window.addEventListener('scroll', scrollPhoneTablet);
+// function scrollPhoneTablet() {
+//     let vertical_position = pageYOffset;
+//     if(vertical_position > 1644){
+//         phoneTablet.classList.remove('stick');
+//         phoneTablet.classList.add('position');
 
-    } else {
-        phoneTablet.classList.add('stick');
-        phoneTablet.classList.remove('position');
+//     } else {
+//         phoneTablet.classList.add('stick');
+//         phoneTablet.classList.remove('position');
 
-    }
-};
+//     }
+// };
+
+
+
+var videoEl = document.getElementsByTagName('video')[0]
+
+
+videoEl.playbackRate = -1;
+// videoEl.addEventListener('timeupdate', function () {
+// if(videoEl.duration == videoEl.currentTime){
+// console.log(videoEl.duration)
+// }
+// });
+
+
+
+
+
+
 
 //animation-phone
 
