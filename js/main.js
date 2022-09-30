@@ -125,18 +125,18 @@ console.log(videoEl)
 
 //animation-phone
 
-let animation = document.querySelector('.app__container-img');
+// let animation = document.querySelector('.app__container-img');
 
 
-window.addEventListener('scroll', animationPhone);
-function animationPhone() {
-    let vertical_position = pageYOffset;
-    // console.log(vertical_position)
-    if(vertical_position > 6567){
-        animation.classList.add('transform-Y');
+// window.addEventListener('scroll', animationPhone);
+// function animationPhone() {
+//     let vertical_position = pageYOffset;
+//     // console.log(vertical_position)
+//     if(vertical_position > 6567){
+//         animation.classList.add('transform-Y');
 
-    } 
-};
+//     } 
+// };
 
 
 //select
