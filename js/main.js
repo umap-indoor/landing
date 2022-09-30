@@ -339,8 +339,8 @@ const plus = document.getElementsByClassName("img-plus");
 
 
 // slider-price
-const wrapper = document.querySelector('.wrapper'),
-const sliderTarif = document.querySelector(".tarif-cards__container"),
+const wrapper = document.querySelector('.wrapper');
+const sliderTarif = document.querySelector(".tarif-cards__container");
 const itemSlider = document.querySelectorAll(".tarif-card__item");
 
 
