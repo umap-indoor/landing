@@ -106,10 +106,11 @@ function scrollPhone() {
 
 
 
-var videoEl = document.getElementsByTagName('video')[0]
+const videoEl = document.getElementsByTagName('video')[0]
+console.log(videoEl)
 
 
-videoEl.playbackRate = -1;
+// videoEl.playbackRate = -1;
 // videoEl.addEventListener('timeupdate', function () {
 // if(videoEl.duration == videoEl.currentTime){
 // console.log(videoEl.duration)
