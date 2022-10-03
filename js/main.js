@@ -30,14 +30,18 @@ async function slider() {
 const cookieAlert = document.querySelector('.cookies-alert');
 const cookiesBtn =document.querySelector('.cookies-alert__btn')
 
+
+
 setTimeout(() => {
     cookieAlert.classList.add('show')
 }, 1000)
+
 
 cookiesBtn.addEventListener('click', setCookies)
 
     function setCookies() {
         cookieAlert.classList.remove('show')
+        Cookies.set('cookieAlert', true, { expires: 7 });
     }
 
 
