@@ -27,22 +27,22 @@ async function slider() {
 //cookie
 
 
-const cookieAlert = document.querySelector('.cookies-alert');
-const cookiesBtn =document.querySelector('.cookies-alert__btn')
+// const cookieAlert = document.querySelector('.cookies-alert');
+// const cookiesBtn =document.querySelector('.cookies-alert__btn')
 
 
 
-setTimeout(() => {
-    cookieAlert.classList.add('show')
-}, 1000)
+// setTimeout(() => {
+//     cookieAlert.classList.add('show')
+// }, 1000)
 
 
-cookiesBtn.addEventListener('click', setCookies)
+// cookiesBtn.addEventListener('click', setCookies)
 
-    function setCookies() {
-        cookieAlert.classList.remove('show')
-        Cookies.set('cookieAlert', true, { expires: 7 });
-    }
+//     function setCookies() {
+//         cookieAlert.classList.remove('show')
+//         Cookies.set('cookieAlert', true, { expires: 7 });
+//     }
 
 
 // async function slider(screen) {
@@ -187,7 +187,7 @@ const sl1 = new Swiper('.swiper-animation_one', {
             slidesPerView: 1.4,
         },
         1068: {
-            slidesPerView: 2.3,
+            slidesPerView: 1.8,
         },
         // when window width is >= 1350px
         1350: {
@@ -210,13 +210,13 @@ const sl2 = new Swiper('.swiper-animation_two', {
     breakpoints: {
         // when window width is >= 768px
         250: {
-            slidesPerView: 1,
+            slidesPerView: 0.6,
         }, 
         738: {
             slidesPerView: 1.4,
         },
         1068: {
-            slidesPerView: 2.3,
+            slidesPerView: 1.8,
         },
         // when window width is >= 1350px
         1350: {
@@ -239,17 +239,20 @@ const sl3 = new Swiper('.swiper-animation_three', {
     breakpoints: {
         // when window width is >= 768px
         250: {
-            slidesPerView: 1,
+            slidesPerView: 0.6,
         }, 
         738: {
             slidesPerView: 1.4,
         },
         1068: {
-            slidesPerView: 2.3,
+            slidesPerView: 1.6,
+        },
+        1200: {
+            slidesPerView: 1.4,
         },
         // when window width is >= 1350px
         1350: {
-            slidesPerView: 3,
+            slidesPerView: 2.4,
         }
         },
 });
@@ -274,11 +277,14 @@ const sl4 = new Swiper('.swiper-animation_four', {
             slidesPerView: 1.2,
         },
         1068: {
-            slidesPerView: 2.3,
+            slidesPerView: 1.8,
+        },
+        1200: {
+            slidesPerView: 1.4,
         },
         // when window width is >= 1350px
         1350: {
-            slidesPerView: 3,
+            slidesPerView: 2.5,
         }
         },
 });

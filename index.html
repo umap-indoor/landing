@@ -45,7 +45,7 @@
 
     <main class="main">
 
-        <div class="cookies-alert cookies-alert--js">
+        <!-- <div class="cookies-alert cookies-alert--js">
                 <div class="cookies-alert__left">
                     <p class="cookies-text">Наш сайт использует куки</p>
                     <a class="text-secondary" href="./pages/agreement/licence.html" target="_blank" rel="nofollow"> Узнать подробнее</a>
@@ -53,7 +53,7 @@
                 <div class="cookies-alert__right">
                     <button class="btn btn__primary cookies-alert__btn">Oкей</button>              
                 </div>
-        </div>
+        </div> -->
         
         <div class="wrapper">
             
@@ -97,12 +97,14 @@
                             <a href="#!" class="apps_icon_link app_google_link"><img
                                     src="./assets/images/icons/google-app.png" alt="app-google"
                                     class="img_goole_icons"></a>
-                            <a href="#!" class="apps_icon_link qr_code_link"><img src="./assets/images/icons/qrcode.png"
-                                    alt="qrcode" class="img_qr_link"> </a>
-                            <div class="scan-popup">
-                                <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
-                                Сканируй, чтобы <br> получить приложение
-                            </div>       
+                                <div class="apps_icon_link qr_code_link">
+                                    <img src="./assets/images/icons/qrcode.png" alt="qrcode" class="img_qr_link">
+                                    <div class="scan-popup">
+                                        <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
+                                        Сканируй, чтобы <br> получить приложение
+                                    </div>  
+                                </div>
+
                         </div>
 
                         <div class="phone-img-mobile">
@@ -178,12 +180,13 @@
                             <a href="#!" class="apps_icon_link app_google_link"><img
                                     src="./assets/images/icons/google-app.png" alt="app-google"
                                     class="img_goole_icons"></a>
-                            <a href="#!" class="apps_icon_link qr_code_link"><img src="./assets/images/icons/qrcode.png"
-                                    alt="qrcode" class="img_qr_link"> </a>
-                            <div class="scan-popup">
-                                <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
-                                Сканируй, чтобы <br> получить приложение
-                            </div>       
+                                    <div class="apps_icon_link qr_code_link">
+                                        <img src="./assets/images/icons/qrcode.png" alt="qrcode" class="img_qr_link">
+                                        <div class="scan-popup">
+                                            <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
+                                            Сканируй, чтобы <br> получить приложение
+                                        </div>  
+                                    </div>     
                         </div>
 
                         <div class="phone-img-mobile">
@@ -218,27 +221,25 @@
                         <div class="animation-card__item">
                             <div class="animation-card_img">
                                 <video class="img-video" autoplay loop muted playsinline>
-                                    <source src="assets/images/video/Имидж.m4v" type="video/mp4">
+                                    <source src="assets/images/video/имидж.m4v" type="video/mp4">
                                 </video>
                             </div>
                             
                             <div class="animation-card_description">
                                 <div class="animation-card_title">Имидж</div>
-                                Тратиться на листовки теперь просто не нужно, все в
-                                телефонах и это очень экономит время ваших клиентов</div>
+                                Создайте более комфортную среду для ваших клиентов. Экономьте их время и избавьте от дискомфорта незнакомого места.</div>
                         </div>
 
                         <div class="animation-card__item">
                             <div class="animation-card_img">
                                 <video class="img-video" autoplay loop muted playsinline>
-                                    <source src="assets/images/video/Карта.m4v" type="video/mp4">
+                                    <source src="assets/images/video/map.m4v" type="video/mp4">
                                 </video>
                             </div>
                             
                             <div class="animation-card_description">
                                 <div class="animation-card_title">Экономия денег</div>
-                                Тратиться на листовки теперь просто не нужно, все в
-                                телефонах и это очень экономит время ваших клиентов</div>
+                                Тратиться на брошюры и указатели больше не надо. Ваша карта всегда доступна в приложении UMAP.</div>
                         </div>
 
                         <div class="animation-card__item">
@@ -338,7 +339,6 @@
                                                     <img src="./assets/images/img/Map1.png" class="slider-img" alt="" role="presentation">
                                                 </div>
                                             </div>
-                                        <!-- <div class="carousel_nav swiper-pagination"> -->
                                             <div class="carousel_nav swiper-pagination swiper-pagination1"></div>
                                         </div>
     
@@ -529,9 +529,6 @@
 
                         <div class="questions_container">
                             <div class="form-questions">
-                                <!-- <div class="form-questions_title">Задавайте вопросы</div> -->
-                                <!-- <div class="title-descr secondary-block_title-descr secondary-block_title-descr-form">
-                                    Понимаем ваши сложности и кол-во свободного времени. Мы поможем создать карту вашего помещения!</div> -->
                                     <div class="title-descr secondary-block_title-descr secondary-block_title-descr-form">
                                         Тема заявки</div>
                             </div>
@@ -543,29 +540,6 @@
                                     <div class="btns-theme btn-develop">Заказать разработку</div>
                                     <div class="btns-theme btn-other">Другое</div>
                                 </div>
-
-                                <!-- <div class="select-container">
-                                    <div class="select">
-                                        <input type="text" id="input" placeholder="Тема заявки" onfocus="this.blur();">
-                                    </div>
-                                    <div class="option-container">
-                                        <div class="option">
-                                            <label>Предложить идею</label>
-                                        </div>
-                                        <div class="option">
-                                            <label>Сообщить об ошибке</label>
-                                        </div>
-                                        <div class="option">
-                                            <label>Задать вопрос</label>
-                                        </div>
-                                        <div class="option">
-                                            <label>Заказать разработку</label>
-                                        </div>
-                                        <div class="option">
-                                            <label>Другое</label>
-                                        </div>
-                                    </div>
-                                </div> -->
 
                                 <div class="input-block">
                                     <input type="text" name="input-text" id="input-text" required spellcheck="false">
@@ -582,7 +556,7 @@
                                   </div>
 
                                 
-                                <textarea name="" id="TextWindow" style="width:100%; height:151px;"" placeholder="Какой вопрос хотите задать?" class="textare-question"></textarea>
+                                <textarea name="" id="TextWindow" style="width:100%; height:151px;" placeholder="Какой вопрос хотите задать?" class="textare-question"></textarea>
 
                                 <button class="btn questions_btn btn-color"><a href="#no_scroll" class="open-link">Оставить заявку</a></button>
 
@@ -596,18 +570,20 @@
                                     Удобное приложение для навигации и поиска путей!</div>
                             </div>
                             <div class="apps_icon apps_icons-form">
-                                <a href="#!" class="apps_icon_link app_apple_link"><img
+                                <a href="#!" class="apps_icon_link app_apple_link apps_icon-form"><img
                                         src="./assets/images/icons/apple-app.png" alt="app-apple"
                                         class="img_apps_icons"></a>
-                                <a href="#!" class="apps_icon_link app_google_link"><img
+                                <a href="#!" class="apps_icon_link app_google_link apps_icon-form"><img
                                         src="./assets/images/icons/google-app.png" alt="app-google"
                                         class="img_goole_icons"></a>
-                                <a href="#!" class="apps_icon_link qr_code_link"><img src="./assets/images/icons/qrcode.png"
-                                        alt="qrcode" class="img_qr_link"> </a>
-                                        <div class="scan-popup scan-popup-form">
-                                            <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
-                                            Сканируй, чтобы <br> получить приложение
+                                        <div class="apps_icon_link qr_code_link apps_icon-form">
+                                            <img src="./assets/images/icons/qrcode.png" alt="qrcode" class="img_qr_link">
+                                            <div class="scan-popup scan-popup-form">
+                                                <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
+                                                Сканируй, чтобы <br> получить приложение
+                                            </div>  
                                         </div>
+
                             </div>
                             <div class="ellips__app-form">
 
@@ -780,12 +756,15 @@
                         <a href="#!" class="apps_icon_link app_google_link app-footer app-footer-google"><img
                                 src="./assets/images/icons/google-app.png" alt="app-google"
                                 class="img_goole_icons"></a>
-                        <a href="#!" class="apps_icon_link qr_code_link app-footer app-footer-google"><img
-                                src="./assets/images/icons/qrcode.png" alt="qrcode" class="img_qr_link"></a>
-                        <div class="scan-popup scan-popup-footer">
-                            <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
-                                Сканируй, чтобы <br> получить приложение
-                        </div>
+
+                                <div class="apps_icon_link qr_code_link app-footer app-footer-google">
+                                    <img src="./assets/images/icons/qrcode.png" alt="qrcode" class="img_qr_link">
+                                    <div class="scan-popup scan-popup-footer">
+                                        <img src="./assets/images/icons/QR.svg" alt="qr" width="150" height="150" class="qr-img">
+                                        Сканируй, чтобы <br> получить приложение
+                                    </div>  
+                                </div>
+
                     </div>
                 </div>
             </div>
@@ -800,7 +779,6 @@
                     <a  href="./pages/agreement/licence.html" class="footer_year-item hover-link">Политика конфидециальности</a>
                     <a  href="./pages/agreement/licence.html" class="footer_year-item hover-link">Куки</a>
                     <a  href="./pages/agreement/licence.html" class="footer_year-item hover-link">Публичная оферта</a>
-                    <div class="footer_year-item hover-link">Публичная оферта</div>
                 </div>
             </div>
     </footer>
