@@ -73,7 +73,7 @@ main
     gap: 8px
     font-size: 16px
     color: $white
-    padding-left: 135px
+    padding-left: 125px
 //     // @include media-tablet
 //     //     display: none
 .btn
@@ -286,13 +286,20 @@ main
 .right_part_img
     width: 353.86px
     height: 716px
-    background-image: url('../assets/images/img/Phone.png');
     display: flex
     justify-content: center
     align-items: center
+.frame
+    position: absolute
+    height: auto
+    top: 0
+    left: 0
+    z-index: 3
+    width: 353.86
 .img-video-phone
+    z-index: 1
     width: 90%
-    height: 95%
+    height: auto
     border-radius: 37px
 
 
@@ -935,7 +942,8 @@ main
     margin-bottom: 22px
 textarea:focus, input:focus
     outline: none
-
+.textare-question
+    height: 212px
 .input-block 
     position: relative;
 
@@ -1337,7 +1345,7 @@ textarea:focus, input:focus
     z-index: 0;
     position: relative;
     margin-top: 60px;
-    background: #404040;
+    background: rgba(41, 41, 43, 1)
     border-radius: 56px 56px 0px 0px;
     transition: background 2s ease-out 100ms;
     padding: 40px 72px 20px 72px

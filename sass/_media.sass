@@ -75,9 +75,9 @@
     .ellips_first-section-group
         transform: translate(2%, -41%)
     .stick
-        transform: translate(calc(81vw - 258px), -74%)
+        transform: translate(calc(81vw - 258px), -57%)
     .position
-        transform: translate(calc(81vw - 258px), 324%);
+        transform: translate(calc(81vw - 258px), 224%);
     .nav-request
         padding-left: 5vw
     .phone-desctop
@@ -251,10 +251,38 @@
         width: 66%
     .road-plan
         padding-right: 6.3%
+    .animation-card__item
+        width: 100%
+        border-radius: 24px
+    .animation-card_img
+        width: 326.6px
+        border-radius: 24px
     .img-video
         height: 100%
-        width: 100%
+        width: 326.6px
 @media  screen and (max-width: 1150px)
+    .right_part_img
+        width: 270px
+        height: 545px
+        display: flex
+        justify-content: center
+        align-items: center
+    .frame
+        position: absolute
+        height: 545px
+        top: 0
+        left: 0
+        z-index: 3
+        width: 270
+    .stick
+        transform: translate(calc(81vw - 258px), -70%)
+    .position
+        transform: translate(calc(81vw - 258px), 301%)
+    .img-video-phone
+        z-index: 1
+        width: 90%
+        height: auto
+        border-radius: 37px
     .questions-and-app__container 
         width: 100%
         padding-top: 33px
@@ -307,7 +335,16 @@
     // .tarif-cards__container::before
     //     width: 250px;
     //     right: calc(55px + 175 * ((290vw - 768px) / (1180 - 768)));
-
+@media  screen and (max-width: 1040px)
+    .animation-cards__container
+        flex-direction: column
+        width: 91%
+    .animation-card__item
+        display: flex
+        align-items: center
+        gap: 30px
+    .animation-card_description
+        padding-left: 0
 @media  screen and (max-width: 985px) 
 
     .main-information_item 
@@ -316,8 +353,12 @@
         display: none
     .phone-tablet
         display: block
-    .right_part_img
-        display: none
+    // .right_part_img
+    //     display: none
+    .stick
+        transform: translate(calc(81vw - 213px), -57%)
+    .position
+        transform: translate(calc(81vw - 213px), 200%);
     //     width: 353.86px
     //     height: 716px
     //     background-image: url('../assets/images/img/iPhone-tablet.png');
@@ -325,14 +366,12 @@
     //     justify-content: center
     //     align-items: center
     //     background-image: no-repeat
-    .img-video-phone
-        width: 90%
-        height: 95%
-        border-radius: 37px
-        .stick
-        transform: translate(calc(81vw - 194px), -71%);
-    .position
-        transform: translate(calc(81vw - 194px), 260%);
+    // .img-video-phone
+    //     width: 90%
+    //     height: 95%
+    //     border-radius: 37px
+    //     .stick
+    //     transform: translate(calc(81vw - 194px), -71%);
     .title_block, .slider-text__item
         font-size: 44px
     .title-descr 
@@ -346,6 +385,13 @@
         font-size: 34px;
         font-weight: 600
         line-height: 38px;
+    .animation-card_description
+        padding-bottom: 61px
+    .section__title_block_helps
+        padding-top: 26px
+        padding-bottom: 39px
+    .projects__container
+        padding-bottom: 65px
     
     .secondary-block__title-one 
         width: 53%
@@ -376,14 +422,21 @@
         padding-top: 72px
     .section__title_made-maps_why-choose 
         padding-top: 0
-    .section__title_made-maps_why-choose 
+    .section__title_made-maps_why-choose
         font-size: 38px
         padding-bottom: 40px
-    .animation-cards__container
-        flex-direction: column
-    .animation-card__item
-        display: flex
-        gap: 30px
+    .section__title_request
+        font-size: 38px
+    .secondary-block_title-descr-request
+        width: 70%
+    .animation-card_img
+        width: 63.5%
+    // .img-video
+    //     width: 100%
+    //     // height: 202px
+    //     // width: 328px
+    //     // border-radius: 24px
+    //     // overflow: hidden
     .section__title_block_helps
         font-size: 38px
         width: 60%
@@ -397,7 +450,8 @@
         width: 462px
         height: 356px
     
-
+    .secondary-block_title-our-price 
+        width: 72%
     .carousel-container
         width: 644px
         height: 428px
@@ -414,7 +468,21 @@
         display: none
     .app__container
         max-width: 724px
-
+    .textare-question
+        height: 151px
+        margin-bottom: 49px
+    .questions_container
+        width: 99.7%
+    .form-questions_title
+        font-size: 28px
+        width: 56%
+    .secondary-block_title-descr-req
+        width: 49%
+    .app__container
+        padding-bottom: 0px
+    .section__title_we-know
+        font-size: 28px
+        width: 64%
     .app__img-mobile
         display: block
     .app__container-img
@@ -436,7 +504,6 @@
         width: 72%
     .road-plan
         padding-top: 140px
-        position: 
         left: 64px
     .road-plan::before 
         content: url(../assets/images/icons/road-line-mobil.svg)
@@ -482,17 +549,23 @@
         justify-content: start
         backdrop-filter: blur(0px)
     .main-information
-        padding-top: 10.531rem
+        padding-top: 16.3rem
+    .main-information_item
+        padding-left: 3.1rem
+    .title-descr__first-block
+        padding-top: 21px
     .first-block
-        padding-bottom: 17.9rem
+        padding-bottom: 25.3rem
+    .apps_icon
+        padding-top: 25px
 
     .nav-request-mobile
-        z-index: 100
+        z-index: 150
         position: fixed
         display: flex
         gap: 10px
         transform: translatex(4%)
-        top: 63vh
+        top: 58vh
     .btn-menu
         display: flex
         padding: 16px 24px 16px 24px
@@ -525,6 +598,17 @@
         width: 80px
     .tarif-cards__container::after
         width: 80px
+    .road-plan
+        left: 52px
+    .btn-plan
+        width: 533px
+    .section__title_answer
+        padding-top: 88px
+    .accordeon-answer_container
+        padding-top: 30px
+@media  screen and (max-width: 710px)
+    .secondary-block__title-one
+        width: 56%
     
 @media  screen and (max-width: 700px)
     .right_part_img-tablet

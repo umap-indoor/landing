@@ -181,10 +181,13 @@ const sl1 = new Swiper('.swiper-animation_one', {
     breakpoints: {
         // when window width is >= 768px
         250: {
-            slidesPerView: 1,
+            slidesPerView: 0.7,
+        },
+        450: {
+            slidesPerView: 0.8,
         },
         738: {
-            slidesPerView: 1.4,
+            slidesPerView: 1.2,
         },
         1068: {
             slidesPerView: 1.8,
@@ -210,10 +213,13 @@ const sl2 = new Swiper('.swiper-animation_two', {
     breakpoints: {
         // when window width is >= 768px
         250: {
-            slidesPerView: 0.6,
+            slidesPerView: 0.7,
         }, 
+        450: {
+            slidesPerView: 0.8,
+        },
         738: {
-            slidesPerView: 1.4,
+            slidesPerView: 1.1,
         },
         1068: {
             slidesPerView: 1.8,
@@ -239,10 +245,13 @@ const sl3 = new Swiper('.swiper-animation_three', {
     breakpoints: {
         // when window width is >= 768px
         250: {
-            slidesPerView: 0.6,
+            slidesPerView: 0.7,
+        }, 
+        450: {
+            slidesPerView: 0.8,
         }, 
         738: {
-            slidesPerView: 1.4,
+            slidesPerView: 1.3,
         },
         1068: {
             slidesPerView: 1.6,
@@ -270,8 +279,11 @@ const sl4 = new Swiper('.swiper-animation_four', {
      // Responsive breakpoints
     breakpoints: {
         250: {
-            slidesPerView: 1,
+            slidesPerView: 0.7,
         }, 
+        450: {
+            slidesPerView: 0.8,
+        },
         // when window width is >= 768px
         738: {
             slidesPerView: 1.2,
