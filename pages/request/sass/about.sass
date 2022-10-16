@@ -34,7 +34,6 @@ main
     gap: 14px
 
 .logo-icon
-    display: block
     padding-right: 32px
 
 .title
@@ -87,7 +86,7 @@ main
     gap: 8px
     font-size: 16px
     color: $white
-    padding-left: 118px
+    padding-left: 125px
 //     // @include media-tablet
 //     //     display: none
 .btn
@@ -172,6 +171,135 @@ main
     margin-top: -100px
     margin-bottom: 100px
     z-index: 1
+
+
+main
+    z-index: 1
+
+
+.wrapper
+    max-width: 1440px
+    margin: 0 auto
+    border-radius: 20px
+
+.logo-icon
+    padding-right: 32px
+
+.wrapper-header
+    padding: 0 20px
+
+
+.nav-menu__item_deviders
+    display: block
+    height: 24px
+    width: 2px
+    background-color: rgba(255, 255, 255, 0.08)
+.menu__item-link
+    position: relative
+    flex-shrink: 0
+
+.menu__item-link
+	text-decoration: none
+
+.menu__item-link:after 
+	display: block
+	position: absolute
+	left: 0
+	width: 0;
+	height: 1px; 
+	background-color: rgba(255, 255, 255, 0.2)
+	content: "";
+	transition: width 0.3s ease-out; 
+.menu__item-link:after 
+    top: 23px
+.menu__item-link:hover:after,
+.menu__item-link:focus:after 
+	width: 100%; 
+
+.nav-request-mobile
+    display: none
+.nav-request
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 8px
+    font-size: 16px
+    color: $white
+    padding-left: 125px
+//     // @include media-tablet
+//     //     display: none
+.btn
+    display: block
+    font-size: 16px
+    height: 46px
+    border-radius: 20px
+    color: $white
+    transition: 0.2s
+    cursor: pointer
+    
+
+.btn__open-map
+    width: 157px
+    background-color: $blue-btn
+    &:hover
+        background: #3F85ED;
+    &:active
+        background: #1D51B5;
+
+.phone-img-mobile
+    display: none
+
+//header
+.header
+    display: flex
+    justify-content: center
+
+.navigation
+    z-index: 200
+    display: flex
+    max-width: 1390px
+    margin: 0 20px
+    width: 100%
+    justify-content: center
+    box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.08);
+    padding: 20px 20px
+    border-radius: 28px
+    background: rgba(30, 30, 30, 0.7);
+    backdrop-filter: blur(12px);
+    position: fixed
+    top: 22px
+    // @include media-mobilesmall
+    //     width: 92%
+.nav-menu
+    overflow: hidden
+    // overflow: scroll
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: $white
+    font-size: 16px
+    gap: 20px
+.nav-menu-mib
+    margin-left: 100px
+.item-link
+    padding-right: 50px
+    flex-shrink: 0
+
+
+.nav-request
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 8px
+    font-size: 16px
+    color: $white
+.btn
+    display: block
+    font-size: 16px
+    height: 44px
+    border-radius: 20px
+    color: $white
+
 .link_request
     display: flex
     justify-content: center
@@ -183,7 +311,11 @@ main
     &:hover
         background: rgba(255, 255, 255, 0.12)
 //sections
-
+.contacts
+    color: $white
+    font-size: 30px
+.contacts >li
+    padding-bottom: 40px
 
 
 .title-descr
@@ -226,6 +358,7 @@ main
     z-index: 1100
     display: none
     transition: 0.3s
+
 .qr_code_link:hover .scan-popup
     display: flex
 .apps_icon_link
