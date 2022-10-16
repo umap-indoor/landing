@@ -92,7 +92,6 @@ function scrollPhone() {
 
 
 const videoEl = document.getElementsByTagName('video')[0];
-console.log(videoEl);
 
 let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
 
@@ -105,7 +104,7 @@ function pauseVideo() {
     } else if (videoEl.currentTime > 6.2 && currentState == 1){
         videoEl.pause();
         currentState =2;
-    }  else if (videoEl.currentTime > 10 && currentState == 3){
+    }  else if (videoEl.currentTime > 8.7 && currentState == 3){
         videoEl.pause();
         currentState =4;
     }
@@ -119,6 +118,8 @@ function playVideo() {
         videoEl.play();
     } else if (pageYOffset > 2200 && currentState == 3) {
         videoEl.play();
+    } else if (pageYOffset > 2000 && videoEl.currentTime > 8.6) {
+        videoEl.pause();
     } else if (pageYOffset > 5270) {
         videoEl.play();
     }
@@ -126,8 +127,17 @@ function playVideo() {
 window.addEventListener('scroll', playVideo);
 
 
+const vioedGif1 = document.querySelector('#video1');
+console.log(vioedGif1);
 
-
+let isEvent = true;
+function playVideoGif(isEvent) {
+    if (pageYOffset > 2700) {
+        vioedGif1.play();
+        return isEvent = false;
+    } 
+}
+window.addEventListener('scroll', playVideoGif);
 // videoEl.playbackRate = -1;
 // videoEl.addEventListener('timeupdate', function () {
 // if(videoEl.duration == videoEl.currentTime){
