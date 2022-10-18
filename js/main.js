@@ -127,17 +127,34 @@ function playVideo() {
 window.addEventListener('scroll', playVideo);
 
 
-const vioedGif1 = document.querySelector('#video1');
-console.log(vioedGif1);
+const videoGif1 = document.querySelector('#video1');
+const videoGif2 = document.querySelector('#video2');
 
-let isEvent = true;
-function playVideoGif(isEvent) {
-    if (pageYOffset > 2700) {
-        vioedGif1.play();
-        return isEvent = false;
+
+let isEvent = false;
+function playVideoGif() {
+    if (pageYOffset > 2700 &&! isEvent) {
+        videoGif1.play();
+        isEvent = true;
+
     } 
-}
+
+};
 window.addEventListener('scroll', playVideoGif);
+
+
+// setTimeout(function() {
+//         videoGif2.play();
+//     }
+// }, 1000);
+
+// function playVideoGif2() {
+//     if(videoGif1.currentTime == 4){
+//         videoGif2.play();
+//     }
+    
+// };
+// playVideoGif2();
 // videoEl.playbackRate = -1;
 // videoEl.addEventListener('timeupdate', function () {
 // if(videoEl.duration == videoEl.currentTime){
@@ -182,7 +199,6 @@ const sl1 = new Swiper('.swiper-animation_one', {
     loop: true,
     speed: 20000,
     slidesPerView: '2.8',
-    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -204,7 +220,7 @@ const sl1 = new Swiper('.swiper-animation_one', {
         },
         // when window width is >= 1350px
         1350: {
-            slidesPerView: 3,
+            slidesPerView: 2.6,
         }
         },
 });
@@ -215,7 +231,6 @@ const sl2 = new Swiper('.swiper-animation_two', {
     loop: true,
     speed: 40000,
     slidesPerView: '3.0',
-    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -246,7 +261,6 @@ const sl3 = new Swiper('.swiper-animation_three', {
     loop: true,
     speed: 28000,
     slidesPerView: '2.5',
-    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -281,7 +295,6 @@ const sl4 = new Swiper('.swiper-animation_four', {
     loop: true,
     speed: 35000,
     slidesPerView: '2.6',
-    allowTouchMove: false,
     autoplay: {
     enabled: true,
     delay: 1,
@@ -469,29 +482,13 @@ swiperTarif = new Swiper('.swiper-container', {
     // allowTouchMove:false,
      // Responsive breakpoints
     breakpoints: {
-        // when window width is >= 768px
-        1280: {
+        // when window width is >= 1380px
+        1380: {
             allowTouchMove: false,
         }
         },
     });
 
-    swiperheader = new Swiper('.sl', {
-        // 
-        slidesPerView: 5,
-        // centeredSlides: true,
-        loop: true,
-        // spaceBetween: 21,
-        // slideToClickedSlide: true,
-        // allowTouchMove:false,
-         // Responsive breakpoints
-        // breakpoints: {
-        //     // when window width is >= 1280px
-        //     1280: {
-        //         allowTouchMove: false,
-        //     }
-            
-        });
 
 
 
@@ -533,4 +530,4 @@ function ChangePlaceholder(){
     })
     }
 };
-    ChangePlaceholder()
+    ChangePlaceholder();
