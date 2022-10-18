@@ -266,6 +266,8 @@ main
     height: 56px
     border-radius: 16px
     text-align: center
+.app_google_link
+    display: none
 .qr_code_link
     position: relative
     display: block
@@ -528,6 +530,7 @@ main
 
 
 //section our-price
+
 .our-price
     padding-bottom: 188px
 .section__title_our-price
@@ -822,20 +825,9 @@ main
     background: rgba(22, 23, 27, 0.85)
     width: 410px
     height: 806px
-// .tarif_card-color-boder::before 
-//     border-radius: 44px
-//     width: 100%
-//     height: 100%
-//     content: '';
-//     background: linear-gradient(149.16deg, rgba(12, 117, 241, 0.45) 0%, rgba(39, 70, 105, 0.45) 33.47%, rgba(6, 231, 117, 0.3015) 65.23%, rgba(85, 47, 218, 0.45) 100%);
-//     box-shadow: 0px 2px 20px rgba(12, 117, 241, 0.12);
-//     // backdrop-filter: blur(8px)
-//     padding: 6px;
-//     top: -6px;
-//     left: -6px;
-//     position: absolute;
-//     z-index: -1;
 
+.tarif-cards__container-mobile
+    display: none
 //section reqiest
 .section__title_request
     font-weight: 700;
@@ -1265,8 +1257,9 @@ textarea:focus, input:focus
     align-items: flex-start;
 
 .accordion 
-    width: 1096px
-    margin-inline: 20px;
+    max-width: 1096px
+    width: 90vw
+    margin-inline: 56px;
     border-radius: 20px;
 
 
@@ -1455,4 +1448,5 @@ textarea:focus, input:focus
 
 @import _cookies
 @import _our-project
+
 @import _media

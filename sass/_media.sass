@@ -301,8 +301,7 @@
         padding-top: 4px
     .qr_code_link
         display: none
-    .accordion 
-        width: 1022px
+
 @media  screen and (max-width: 1085px)
     .nav-request
         padding-left: 2.3vw
@@ -440,6 +439,8 @@
     .carousel-container
         width: 644px
         height: 428px
+
+
     .carousel
         height: 302px
     .swiper-pagination
@@ -453,6 +454,7 @@
         display: none
     .app__container
         max-width: 724px
+        width: 
     .textare-question
         height: 151px
         margin-bottom: 49px
@@ -499,8 +501,7 @@
         font-size: 38px
         line-height: 42px
         width: 78%;
-    .accordion
-        width: 96%;
+
     .footer
         padding: 40px 48px 30px 48px
     .footer-under
@@ -523,6 +524,8 @@
         align-items: start
     .slider-text__container
         height: 50px
+    .question
+        padding-right: 30px
 @media  screen and (max-width: 770px)
     .nav-menu, .nav-request
         display: none
@@ -550,7 +553,8 @@
         display: flex
         gap: 10px
         transform: translatex(4%)
-        top: 58vh
+        // top: 58vh
+        bottom: 2vh
     .btn-menu
         display: flex
         padding: 16px 24px 16px 24px
@@ -586,7 +590,7 @@
     .road-plan
         left: 52px
     .btn-plan
-        width: 533px
+        width: calc( 100vw - 235px  )
     .section__title_answer
         padding-top: 88px
     .accordeon-answer_container
@@ -594,24 +598,113 @@
 @media  screen and (max-width: 710px)
     .secondary-block__title-one
         width: 56%
-    
+    .animation-card_description
+        padding-bottom: 0
+    .animation-cards__container
+        width: 100%
 @media  screen and (max-width: 700px)
+    
     .right_part_img-tablet
         display: none
     .main-information
         padding-top: 6.531rem
+        padding-inline: 48px
+    .main-information_item
+        padding-left: 0
     .phone-img-mobile
-        display: block
-        position: relative
-        margin: 40px 29%
-        
+        margin: 40px 0
+        display: flex
+        justify-content: center
+    .animation-cards__container
+        width: 100%
     .first-block
         padding-bottom: 0.9rem
     .secondary-block
         padding-bottom: 0px
     .secondary-block__title-one
-        width: 57%;
+        width: 87%;
     .secondary-block-three
         padding-bottom: 0
+    .secondary-block_title-descr-one
+        width: 58%
+    .secondary-block_title-descr-two
+        width: 60%
     .title-descr__first-block 
         width: 63%
+    .carousel-container
+        width: calc( 100vw - 96px  )
+    .form-questions_title
+        width: 90%
+    
+
+@media  screen and (max-width: 640px)
+    .animation-card_img
+        width: 326.6px
+    .animation-card__item
+        flex-direction: column
+        justify-content: center
+        gap: 0px
+    .animation-card_description
+        min-width: 308px
+        width: 326.6px
+        padding-left: 10px
+    .section__title_block_helps
+        width: 90%
+    .tarif-cards__container-desctop
+        display: none
+    .tarif-cards__container::before, .tarif-cards__container::after
+        width: 0
+    .tarif-cards__container-mobile
+        padding-top: 30px
+        display: flex
+        flex-direction: column
+        gap: 20px
+    ///tarif accordeon
+    .tarif-card__item
+        height: auto
+        gap: 18px
+    .tarif-card__title
+        margin-bottom: 0
+        //section our-price
+
+    .button-accordion
+        text-align: center
+        font-size: 16px
+        font-weight: normal
+        color: rgba(255, 255, 255, 1);
+    .accordion-content 
+        padding: 0 20px;
+        max-height: 0;
+        // overflow: hidden;
+        display: none
+        transition: max-height 0.2s ease-in-out;
+
+    .is-open
+        overflow: visible
+        
+
+    .tarif-cards__container-mobile 
+        position: relative
+        padding-top: 20px
+        display: flex
+        flex-direction: column
+        // align-items: center
+        // justify-content: space-between
+        z-index: 100
+        gap: 21px
+        // left: 30%
+        transition: all 2s
+
+
+    .but
+        margin: 0 auto
+        border-radius: 20px
+        text-align: center
+        height: 62px;
+        width: 300px;
+        padding: 20px 40px 24px 40px
+        font-size: 20px
+        color: rgba(255, 255, 255, 0.75)
+        background: rgba(12, 117, 241, 0.2)
+        margin-bottom: 20px
+// @import _tarif
