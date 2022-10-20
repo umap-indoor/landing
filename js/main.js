@@ -202,7 +202,7 @@ const sl1 = new Swiper('.swiper-animation_one', {
     autoplay: {
     enabled: true,
     delay: 1,
-    reverseDirection: true,
+    // reverseDirection: true,
     },
     breakpoints: {
         // when window width is >= 768px
@@ -229,11 +229,12 @@ const sl1 = new Swiper('.swiper-animation_one', {
 const sl2 = new Swiper('.swiper-animation_two', {
     slidesPerView: 'auto',
     loop: true,
-    speed: 40000,
+    speed: 30000,
     slidesPerView: '3.0',
     autoplay: {
     enabled: true,
-    delay: 1,
+    delay: 1700,
+    // reverseDirection: true,
     },
     breakpoints: {
         // when window width is >= 768px
@@ -264,7 +265,7 @@ const sl3 = new Swiper('.swiper-animation_three', {
     autoplay: {
     enabled: true,
     delay: 1,
-    reverseDirection: true,
+    // reverseDirection: true,
     },
     breakpoints: {
         // when window width is >= 768px
@@ -291,13 +292,14 @@ const sl3 = new Swiper('.swiper-animation_three', {
 });
 
 const sl4 = new Swiper('.swiper-animation_four', {
-    slidesPerView: 'auto',
+    // slidesPerView: 'auto',
     loop: true,
     speed: 35000,
-    slidesPerView: '2.6',
+    slidesPerView: '3',
     autoplay: {
     enabled: true,
-    delay: 1,
+    delay: 1000,
+    // reverseDirection: true,
     },
      // Responsive breakpoints
     breakpoints: {
@@ -319,7 +321,7 @@ const sl4 = new Swiper('.swiper-animation_four', {
         },
         // when window width is >= 1350px
         1350: {
-            slidesPerView: 2.5,
+            slidesPerView: 3,
         }
         },
 });
