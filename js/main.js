@@ -124,6 +124,9 @@ function playVideo() {
         videoEl.play();
     }
 }
+
+
+
 window.addEventListener('scroll', playVideo);
 
 
@@ -533,3 +536,49 @@ function ChangePlaceholder(){
     }
 };
     ChangePlaceholder();
+
+    const accordionBtns = document.querySelectorAll(".button-accordion");
+
+    accordionBtns.forEach((accordion) => {
+        accordion.onclick = function () {
+
+        this.classList.toggle("is-open");
+        this.innerHTML = "Скрыть подробности";
+        let content = this.previousElementSibling;
+        if (content.style.maxHeight) {
+    
+            content.style.maxHeight = null;
+            this.innerHTML ="Показать подробности";
+        } else {
+    
+        content.style.maxHeight = content.scrollHeight + "px";
+    
+        }
+    };
+    });
+
+
+
+
+
+
+// const promises = [
+//     new Promise((resolve) => {
+//         setTimeout(() => resolve(1) , 500);
+//     }),
+//     new Promise((resolve) => {
+//         setTimeout(() => resolve(2) , 500);
+//     }),
+//     new Promise((resolve) => {
+//         setTimeout(() => resolve(3) , 500);
+//     }),
+// ]
+
+// console.log(promises)
+
+
+// promiseAll = (array) => {
+
+// }
+
+// promiseAll(promises).then(console.log)
