@@ -453,12 +453,11 @@
     .app__img-dectop
         display: none
     .app__container
-        max-width: 724px
-        width: 
+        width: 99.7%
     .textare-question
         height: 151px
         margin-bottom: 49px
-    .questions_container
+    .questions_container, .app__container
         width: 99.7%
     .form-questions_title
         font-size: 28px
@@ -493,7 +492,7 @@
         padding-top: 140px
         left: 64px
     .road-plan::before 
-        content: url(../assets/images/icons/road-line-mobil.svg)
+        content: url(../assets/images/icons/road-line-mobil.png)
         position: absolute
         top: -1%
         margin-left: -36px
@@ -535,7 +534,7 @@
         box-shadow: none
         top: 12px
         justify-content: start
-        backdrop-filter: blur(0px)
+        backdrop-filter: none
     .main-information
         padding-top: 16.3rem
     .main-information_item
@@ -663,12 +662,14 @@
     .tarif-card__item
         width: calc( 100vw - 50px  )
         height: auto
-        gap: 18px
+        // gap: 18px
     .tarif-card__title
         width: calc(100%  - 40px )
         margin-bottom: 0
         margin-inline: auto
         
+    .tarif_coast-item
+        width: calc( 100vw * 0.44  )
         //section our-price
 
     .button-accordion
@@ -677,15 +678,15 @@
         font-size: 16px
         font-weight: normal
         color: rgba(255, 255, 255, 1);
+        margin: 0px 0px 18px 0px
     .accordion-content 
-        padding: 0 20px;
+        padding: 0px 20px;
         max-height: 0;
         overflow: hidden;
-        display: none
         transition: max-height 0.2s ease-in-out;
+        margin-top: 18px
 
     .is-open
-        // display: flex
         overflow: visible
         
 
@@ -701,10 +702,8 @@
         // left: 30%
         transition: all 2s
     
-    .tarif_coast-item
-        // max-width: 323px
-        // min-width: 280px
-        width: 51%
+    // .tarif_coast-item
+    //     width: 51%
     .tarif_coast-item-third
         width: 66%
 
@@ -741,15 +740,128 @@
         font-size: 16px
         font-weight: normal
         color: rgba(255, 255, 255, 1);
-    .accordion-content 
-        padding: 0 20px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-in-out;
-
-    .is-open
-        overflow: visible
 
 
+@media  screen and (max-width: 510px)
+    .title-descr__first-block
+        width: 86%
+    .secondary-block__title-one
+        width: 100%
+    .secondary-block_title-descr-one
+        width: 72%
+    .secondary-block_title-descr-two
+        width: 82%
+    .main-information
+        padding-bottom: 1.25rem
+    .section__title_projects
+        padding-top: 52px
+    .carousel_title
+        padding-left: 0px
+    .section__title_our-price
+        padding-top: 40px
+    .carousel-container
+        padding-bottom: 0px
+        height: 400px
+    .projects__container
+        padding-bottom: 30px
+    .secondary-block_title-our-price
+        width: 100%
+        font-size: 18px
+    .tarif_coast-item
+        width: calc( 100vw * 0.47  )
+    .tarif_coast-item-third
+        width: 87%
+    .app__container
+        backdrop-filter: none
+    .app__container-img
+        transform: translate(8%, 0%)
+    .transform-Y
+        transform: translate(8%, 0%)
+    .secondary-block_title-descr-req
+        width: 80%
+    .our-price
+        padding-bottom: 80px
+    .btns-theme
+        padding-inline: 10px
+    .app__img-mobile
+        width: 84%
+    .text_item
+        font-size: 16px
+    .carousel-container
+        width: calc( 100vw -  62px)
+        padding-inline: 12px
 
+
+
+@media  screen and (max-width: 450px)
+    .navigation
+        padding-inline: 0
+        padding-top: 32px
+    .main-information
+        padding-inline: 20px
+    .title_block, .slider-text__item
+        font-size: 36px
+    .secondary-block__title-one
+        font-size: 28px
+    .slider-text__container
+        height: 40px
+    .app_apple_link
+        width: 128.86px
+        height: 44px
+        border-radius: 15px
+    .img_apps_icons
+        width: 88%
+    .phone-img-mobile
+        margin: 29px 0px 54px 0px
+    .section__wrapper_why-choose
+        padding-top: 40px
+    .section__title
+        font-size: 34px
+    .carousel-container
+        width: calc( 100vw -  30px)
+        height: 382px
+        padding-inline: 12px
+    .carousel
+        height: 302px
+    .carousel_title
+        font-size: 20px
+        padding-bottom: 20px
+    
+    ///section price
+    .tarif_name-title, .tarif_name-dates
+        font-size: 14px
+    .tarif-coast-descriotin
+        font-size: 16px
+    .tarif_coast, .tarif_coast-second, .tarif_coast-third
+        font-size: 40px
+    .but
+        font-size: 18px
+    .form-questions_title
+        width: 62%
+    .app__img-mobile
+        width: 120%
+    .app__container
+        max-height: 677px
+    .questions_container
+        padding: 20px
+    .textare-question
+        margin-bottom: 30px
+    .app__container-img
+        transform: translate(-6%, -4%)
+    .transform-Y
+        transform: translate(-6%, -4%)
+    .section__title_we-know
+        font-size: 30px
+        width: 89%
+    .secondary-block_title-descr-we-know
+        font-size: 20px
+    .btn-plan
+        width: calc(100vw  - 89px )
+    .section__title_answer
+        width: 98%
+        padding-top: 60px
+    .question
+        padding-right: 10px
+    .img-plus
+        flex-shrink: 0
 // @import _tarif
