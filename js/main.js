@@ -132,17 +132,30 @@ window.addEventListener('scroll', playVideo);
 
 const videoGif1 = document.querySelector('#video1');
 const videoGif2 = document.querySelector('#video2');
+const videoGif3 = document.querySelector('#video3');
 
 
 let isEvent = false;
 function playVideoGif() {
-    if (pageYOffset > 2700 &&! isEvent) {
+    if (pageYOffset > 2700 && !isEvent) {
         videoGif1.play();
         isEvent = true;
 
     } 
 
 };
+
+videoGif1.addEventListener('ended', function (){
+    videoGif2.play();
+
+});
+
+videoGif2.addEventListener('ended', function (){
+    videoGif3.play();
+
+});
+
+
 window.addEventListener('scroll', playVideoGif);
 
 
