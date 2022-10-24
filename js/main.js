@@ -76,6 +76,8 @@ window.addEventListener('scroll', scrollPhone);
 function scrollPhone() {
     let vertical_position = pageYOffset;
     console.log(vertical_position)
+    // console.log(document.documentElement.clientWidth)
+
     if(vertical_position > 2267){
         phone.classList.remove('stick');
         phone.classList.add('position');
@@ -93,7 +95,7 @@ function scrollPhone() {
 
 const videoEl = document.getElementsByTagName('video')[0];
 
-let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
+// let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
 
 let currentState = 0;
 
@@ -127,7 +129,7 @@ function playVideo() {
 
 
 
-window.addEventListener('scroll', playVideo);
+
 
 
 const videoGif1 = document.querySelector('#video1');
@@ -135,13 +137,19 @@ const videoGif2 = document.querySelector('#video2');
 const videoGif3 = document.querySelector('#video3');
 
 
+let windowInnerWidth = document.documentElement.clientWidth;
+
 let isEvent = false;
 function playVideoGif() {
-    if (pageYOffset > 2700 && !isEvent) {
+    console.log(windowInnerWidth)
+    if (windowInnerWidth > 1200 && pageYOffset > 2700 && !isEvent) {
         videoGif1.play();
         isEvent = true;
-
-    } 
+    } else if (800 < windowInnerWidth < 1200 && pageYOffset > 1700 && !isEvent) {
+        console.log('dffd')
+        videoGif1.play();
+        isEvent = true;
+    }
 
 };
 
