@@ -41,14 +41,40 @@
     .navigation
         max-width: 96vw
     .nav-request
-        padding-left: 7vw
+        padding-left: 58px
+        
+@media  screen and (max-width: 1370px)
+    .nav-request
+        padding-left: 71px
+    .nav-menu
+        position: relative
+        gap: 28px
+    .nav-menu:before
+        position: absolute
+        content: '';
+        width: 100px;
+        // width: calc(150px + 210 * ((100vw - 768px)/ (1185  - 768))  )
+        height: 100%
+        top: 0px
+        right: 0
+        background: linear-gradient(to left, #242424 38.4%, rgba(30, 30, 30, 0) 100%);
+        z-index: 1000
+    .navigation
+        position: relative
+        z-index: 1100
+    .arrow-nav
+        display: block
+        position: absolute
+        right: 499px
+        top: 43%
+        z-index: 1100
         
 
 @media  screen and (max-width: 1350px) 
     .wrapper
         // padding: 0 30px
-    .nav-request
-        padding-left: 9vw
+    // .nav-request
+    //     padding-left: 9vw
     .stick
         transform: translate(calc(81vw - 355px), -66%)
     .position
