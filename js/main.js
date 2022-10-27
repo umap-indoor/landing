@@ -139,16 +139,15 @@ const videoGif3 = document.querySelector('#video3');
 
 let windowInnerWidth = document.documentElement.clientWidth;
 
-let isEvent = false;
+// let isEvent = false;
 function playVideoGif() {
     console.log(windowInnerWidth)
-    if (windowInnerWidth > 1200 && pageYOffset > 2700 && !isEvent) {
+    if (windowInnerWidth > 1200 && pageYOffset > 2700)  {
         videoGif1.play();
-        isEvent = true;
-    } else if (800 < windowInnerWidth < 1200 && pageYOffset > 1700 && !isEvent) {
-        console.log('dffd')
+        // isEvent = true;
+    } else if (800 < windowInnerWidth < 1200 && pageYOffset > 1700) {
         videoGif1.play();
-        isEvent = true;
+        // isEvent = true;
     }
 
 };
@@ -165,6 +164,8 @@ videoGif2.addEventListener('ended', function (){
 
 
 window.addEventListener('scroll', playVideoGif);
+
+setTimeout(playVideoGif, 1000);
 
 
 // setTimeout(function() {
@@ -284,8 +285,8 @@ const sl2 = new Swiper('.swiper-animation_two', {
 const sl3 = new Swiper('.swiper-animation_three', {
     slidesPerView: 'auto',
     loop: true,
-    speed: 28000,
-    slidesPerView: '2.5',
+    speed: 8000,
+    slidesPerView: '3',
     autoplay: {
     enabled: true,
     delay: 1,
@@ -318,7 +319,7 @@ const sl3 = new Swiper('.swiper-animation_three', {
 const sl4 = new Swiper('.swiper-animation_four', {
     // slidesPerView: 'auto',
     loop: true,
-    speed: 35000,
+    speed: 15000,
     slidesPerView: '3',
     autoplay: {
     enabled: true,
