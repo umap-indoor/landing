@@ -393,11 +393,14 @@ main
     color: rgba(176, 180, 194, 1)
 .flip-card__btn:hover svg path 
     fill: rgba(176, 180, 194, 1)
-    // stroke: rgba(176, 180, 194, 1)
 .flip-card__btn:hover svg circle
-    // fill: rgba(176, 180, 194, 1)
     stroke: rgba(176, 180, 194, 1)
-    
+.flip-card__btn:active
+    color: rgba(255, 255, 255, 1)
+.flip-card__btn:active svg path 
+    fill: rgba(255, 255, 255, 1)
+.flip-card__btn:active svg circle
+    stroke: rgba(255, 255, 255, 1)
 .flip-front-img
     position: absolute
     bottom: 0
@@ -419,12 +422,17 @@ main
     transform: rotateX(180deg);
 .flip-card:hover .font-card
     background: rgba(24, 25, 27, 0.85)
+.flip-card:active .font-card
+    background: rgba(24, 25, 27, 0.9)
+.flip-card:active .back-card
+    background: rgba(24, 25, 27, 0.9)
 .flip-card:hover .back-card
     background: rgba(24, 25, 27, 0.85)
 
 .font-card:hover
     transform: scale(1.05)
-
+.btn-plus-close
+    transform: rotate(45deg)
 
 .stick
     z-index: 100
