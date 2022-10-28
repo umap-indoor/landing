@@ -5,7 +5,7 @@ slider();
 async function slider() {
     let i = 0
     const posts = document.querySelectorAll('.slider-text__item')
-    posts.forEach(t => t.style = 'top:-100px; pacity:0; transition: 0s')
+    posts.forEach(t => t.style = 'top:-90px; pacity:0; transition: 0s')
     posts[0].style = "top:0px; opacity:1; transition: 0s";
     
     await new Promise(resolve => setTimeout(resolve, 2000))
@@ -13,11 +13,11 @@ async function slider() {
     while(true) {
         const next = (i + 1) % posts.length
         
-        posts[i].style = "top:100px; opacity:0";
+        posts[i].style = "top:90px; opacity:0";
         posts[next].style = "top:0px; opacity:1";
         
         await new Promise(resolve => setTimeout(resolve, 2000))
-        posts[i].style = "top:-100px; opacity:0; transition: 0s";
+        posts[i].style = "top:-90px; opacity:0; transition: 0s";
         
         i = next
         
@@ -93,39 +93,39 @@ function scrollPhone() {
 //video-el
 
 
-const videoEl = document.getElementsByTagName('video')[0];
+// const videoEl = document.getElementsByTagName('video')[0];
 
-// let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
+// // let timerId = setInterval(() => console.log(videoEl.currentTime), 1000);
 
-let currentState = 0;
+// let currentState = 0;
 
-function pauseVideo() {
-    if (videoEl.currentTime > 3 && currentState == 0) {
-        videoEl.pause();
-        currentState = 1;
-    } else if (videoEl.currentTime > 6.2 && currentState == 1){
-        videoEl.pause();
-        currentState =2;
-    }  else if (videoEl.currentTime > 8.7 && currentState == 3){
-        videoEl.pause();
-        currentState =4;
-    }
-}
-videoEl.addEventListener('timeupdate', pauseVideo);
+// function pauseVideo() {
+//     if (videoEl.currentTime > 3 && currentState == 0) {
+//         videoEl.pause();
+//         currentState = 1;
+//     } else if (videoEl.currentTime > 6.2 && currentState == 1){
+//         videoEl.pause();
+//         currentState =2;
+//     }  else if (videoEl.currentTime > 8.7 && currentState == 3){
+//         videoEl.pause();
+//         currentState =4;
+//     }
+// }
+// videoEl.addEventListener('timeupdate', pauseVideo);
 
-function playVideo() {
-    if (pageYOffset > 400 && currentState ==1){
-        videoEl.play();
-    } else if (pageYOffset > 1000 && currentState == 2) {
-        videoEl.play();
-    } else if (pageYOffset > 2200 && currentState == 3) {
-        videoEl.play();
-    } else if (pageYOffset > 2000 && videoEl.currentTime > 8.6) {
-        videoEl.pause();
-    } else if (pageYOffset > 5270) {
-        videoEl.play();
-    }
-}
+// function playVideo() {
+//     if (pageYOffset > 400 && currentState ==1){
+//         videoEl.play();
+//     } else if (pageYOffset > 1000 && currentState == 2) {
+//         videoEl.play();
+//     } else if (pageYOffset > 2200 && currentState == 3) {
+//         videoEl.play();
+//     } else if (pageYOffset > 2000 && videoEl.currentTime > 8.6) {
+//         videoEl.pause();
+//     } else if (pageYOffset > 5270) {
+//         videoEl.play();
+//     }
+// }
 
 
 

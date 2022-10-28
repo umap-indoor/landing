@@ -97,8 +97,7 @@ main
     &:active
         background: #1D51B5;
 
-.phone-img-mobile
-    display: none
+
 
 //header
 .header
@@ -135,7 +134,8 @@ main
 .item-link
     padding-right: 50px
     flex-shrink: 0
-
+.phone-img-mobile
+    display: none
 
 .nav-request
     display: flex
@@ -162,27 +162,38 @@ main
 
 //sections
 .main-information
-    padding-top: 23.375rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    // padding-top: 23.375rem
     padding-bottom: 6.25rem
     width: 100%
 
 .main-information_item
-    padding-left: 10rem
+    display: flex
+    justify-content: center
+.title_block
+    display: flex
+    justify-content: center
 .first-block
     position: relative
-    padding-bottom: 23.9rem
+    padding-bottom: 13.9rem
 
 
 .slider-text__container
-    width: 600px;
-    height: 100px;
+    // width: 600px;
+    width: 465px
+    // height: 100px;
+    height: 90px
     position: relative;
     overflow: hidden;
+    text-align: center
 .slider-text__item
     position: absolute;
     width: 478px;
     height: 100px;
     transition: 2s;
+    margin-top: -20px
 .slider-text__item:nth-of-type(1) 
     top: 0;
     z-index: 10;
@@ -192,8 +203,14 @@ main
 .first-block__title
     display: flex
     flex-direction: column
+    align-items: center
 .title_block
     z-index: 10
+.title-block
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
 
 .title_block, .slider-text__item
     font-size: 80px
@@ -205,12 +222,15 @@ main
     position: relative
     z-index: 100
     padding-top: 11px
-    width: 40%
+    width: 64%
+    display: flex
+    align-items: center
 .title-descr
     z-index: 100
     line-height: 30px
     font-size: 20px
     color: rgba(234, 234, 234, 1)
+    text-align: center
 .apps_icon
     position: relative
     padding-top: 30px
@@ -291,7 +311,16 @@ main
     display: flex
     justify-content: center
     align-items: center
+.phone-video
+    padding-top: 132px
+    position: relative
+    width: 353.86px
+    height: 716px
+    display: flex
+    justify-content: center
+    align-items: center
 .frame
+    padding-top: 64px
     position: absolute
     height: auto
     top: 0
@@ -304,7 +333,74 @@ main
     height: auto
     border-radius: 37px
 
+// flip cards
 
+.container-flip_cards
+    // background-color: #fff
+    max-width: 1000px
+    height: 1000px
+    margin: 0 auto
+    display: flex
+.flip-card
+    width: 964px
+    height: 412px
+    position: relative
+    perspective: 3200px
+    
+.font-card, .back-card
+    border-radius: 40px
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: start
+    transition: 0.8s ease-in-out
+    backface-visibility: hidden
+    padding: 52px 56px
+.back-card
+    justify-content: start
+    gap: 30px
+.font-card
+    background: rgba(24, 25, 27, 0.8)
+    background-color: rgba(24, 25, 27, 0.8)
+.back-card
+    background: rgba(24, 25, 27, 0.8)
+    transform: rotateX(180deg)
+    background: rgba(24, 25, 27, 0.8)
+.flip-card__btn
+    position: relative
+    display: flex
+    align-items: center
+    gap: 10px
+    font-size: 20px
+    color: rgba(255, 255, 255, 1)
+    font-weight: 500
+.flip-front-img
+    position: absolute
+    bottom: 0
+    right: 41px
+.flip-back-img
+    position: absolute
+    top: 0
+    right: 41px
+.flip-descr
+    font-size: 18px
+    font-weight: 400
+    line-height: 26px
+    color: rgba(255, 255, 255, 1)
+    width: 58%
+// .btn-plus
+//     position: relative
+//     top: 20px
+.flip-card:hover .font-card
+    transform: rotateX(180deg)
+.flip-card:hover .back-card
+    transform: rotateX(360deg)
+
+// .font-card:hover
+//     transform: scale(1.1)
 
 
 .stick
@@ -326,13 +422,13 @@ main
 .secondary-block-three
     padding-bottom: 311px
 .secondary-block__title
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 600;
-    line-height: 54px;
+    line-height: 48px;
     letter-spacing: 0em;
     color: $white
 .secondary-block__title-one
-    width: 50%
+    width: 77%
 .secondary-block_title-descr
     padding-top: 20px
     color: rgba(255, 255, 255, 0.85);
