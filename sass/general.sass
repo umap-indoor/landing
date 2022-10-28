@@ -338,14 +338,19 @@ main
 .container-flip_cards
     // background-color: #fff
     max-width: 1000px
-    height: 1000px
+    // height: 1000px
     margin: 0 auto
     display: flex
+    flex-direction: column
+    gap: 74px
 .flip-card
     width: 964px
     height: 412px
     position: relative
     perspective: 3200px
+    transition: 0.8s ease-in-out
+    transform-style: preserve-3d
+
     
 .font-card, .back-card
     border-radius: 40px
@@ -357,19 +362,19 @@ main
     justify-content: space-between
     align-items: start
     transition: 0.8s ease-in-out
+    -webkit-backface-visibility: hidden
     backface-visibility: hidden
     padding: 52px 56px
 .back-card
+    transform: rotateX(180deg)
     justify-content: start
     gap: 30px
 .font-card
     background: rgba(24, 25, 27, 0.8)
     background-color: rgba(24, 25, 27, 0.8)
-.back-card
-    background: rgba(24, 25, 27, 0.8)
-    transform: rotateX(180deg)
-    background: rgba(24, 25, 27, 0.8)
+
 .flip-card__btn
+    cursor: pointer
     position: relative
     display: flex
     align-items: center
@@ -377,6 +382,22 @@ main
     font-size: 20px
     color: rgba(255, 255, 255, 1)
     font-weight: 500
+    transition: 0.5s
+
+
+
+    
+.flip-card__btn:hover
+    color: rgba(176, 180, 194, 1)
+.flip-card__btn:hover .btn-plus
+    color: rgba(176, 180, 194, 1)
+.flip-card__btn:hover svg path 
+    fill: rgba(176, 180, 194, 1)
+.flip-card__btn:hover svg circle
+    stroke: rgba(176, 180, 194, 1)
+.btn-plus
+    transition: 0.5s
+    
 .flip-front-img
     position: absolute
     bottom: 0
@@ -394,13 +415,15 @@ main
 // .btn-plus
 //     position: relative
 //     top: 20px
+.flip 
+    transform: rotateX(180deg);
 .flip-card:hover .font-card
-    transform: rotateX(180deg)
+    background: rgba(24, 25, 27, 0.85)
 .flip-card:hover .back-card
-    transform: rotateX(360deg)
+    background: rgba(24, 25, 27, 0.85)
 
-// .font-card:hover
-//     transform: scale(1.1)
+.font-card:hover
+    transform: scale(1.05)
 
 
 .stick

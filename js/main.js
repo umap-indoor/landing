@@ -72,22 +72,22 @@ const phone = document.querySelector('.right_part_img');
 
 
 
-window.addEventListener('scroll', scrollPhone);
-function scrollPhone() {
-    let vertical_position = pageYOffset;
-    console.log(vertical_position)
-    // console.log(document.documentElement.clientWidth)
+// window.addEventListener('scroll', scrollPhone);
+// function scrollPhone() {
+//     let vertical_position = pageYOffset;
+//     console.log(vertical_position)
+//     // console.log(document.documentElement.clientWidth)
 
-    if(vertical_position > 2267){
-        phone.classList.remove('stick');
-        phone.classList.add('position');
+//     if(vertical_position > 2267){
+//         phone.classList.remove('stick');
+//         phone.classList.add('position');
 
-    } else {
-        phone.classList.add('stick');
-        phone.classList.remove('position');
+//     } else {
+//         phone.classList.add('stick');
+//         phone.classList.remove('position');
 
-    }
-};
+//     }
+// };
 
 
 //video-el
@@ -579,9 +579,34 @@ function ChangePlaceholder(){
     };
     });
 
+    const flipCards = document.querySelectorAll('.flip-card');
+    [...flipCards].forEach((card) => {
+        card.addEventListener('click', function() {
+            card.classList.toggle('flip');
+        });
+    });
 
 
 
+    // function flipCard() {
+
+    //     this.classList.toogle('flip'); //2.целевому элементу добавили класс flip
+      
+    //     if (!hasFlippedCard) { //если карта не перевернута, нажатой карте добавляется класс flip 
+    //       hasFlippedCard = true;
+    //       firstCard = this;
+        
+    //       return;
+    //     }
+      
+    //     secondCard = this;
+        
+    //     checkForMatch();
+
+        
+    //   }
+
+    // flipCards.forEach(card => card.addEventListener('click', flipCard));
 
 
 // const promises = [
