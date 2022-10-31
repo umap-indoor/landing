@@ -351,7 +351,7 @@ main
     height: 412px
     position: relative
     perspective: 3200px
-    transition: 0.8s ease-in-out
+    transition: 3.8s ease-in-out
     transform-style: preserve-3d
     background-color: rgba(24, 25, 27, 0.8)
     border-radius: 40px
@@ -389,7 +389,8 @@ main
     color: rgba(255, 255, 255, 1)
     font-weight: 500
     transition: 0.3
-
+.flip 
+    transform: rotateX(180deg);
 
 
     
@@ -426,8 +427,7 @@ main
 // .btn-plus
 //     position: relative
 //     top: 20px
-.flip 
-    transform: rotateX(180deg);
+
 .flip-card:hover .font-card
     background: rgba(24, 25, 27, 0.85)
 .flip-card:active .font-card
