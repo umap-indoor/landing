@@ -578,35 +578,15 @@ function ChangePlaceholder(){
         }
     };
     });
-
+    
     const flipCards = document.querySelectorAll('.flip-card');
-    [...flipCards].forEach((card) => {
-        card.addEventListener('click', function() {
-            card.classList.toggle('flip');
+    const BtnFlipCards = document.querySelectorAll('.flip-card__btn');
+    for (let i = 0; i < BtnFlipCards.length; i++) {
+        BtnFlipCards[i].addEventListener("click", function () {
+            this.closest('.flip-card').classList.toggle('flip');
+
         });
-    });
-
-
-
-    // function flipCard() {
-
-    //     this.classList.toogle('flip'); //2.целевому элементу добавили класс flip
-      
-    //     if (!hasFlippedCard) { //если карта не перевернута, нажатой карте добавляется класс flip 
-    //       hasFlippedCard = true;
-    //       firstCard = this;
-        
-    //       return;
-    //     }
-      
-    //     secondCard = this;
-        
-    //     checkForMatch();
-
-        
-    //   }
-
-    // flipCards.forEach(card => card.addEventListener('click', flipCard));
+    }
 
 
 // const promises = [
