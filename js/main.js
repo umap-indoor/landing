@@ -219,7 +219,7 @@ setTimeout(playVideoGif, 1000);
 
 //animation line
 const sl1 = new Swiper('.swiper-animation_one', {
-        slidesPerView: '4',
+        slidesPerView: '3',
         loop: true,
         momentumBounceRatio: 25,
         momentumRatio: 15,
@@ -268,6 +268,22 @@ const sl1 = new Swiper('.swiper-animation_one', {
 //         },
 // });
 
+
+const sl2 = new Swiper('.swiper-animation_two', {
+    slidesPerView: '4',
+    loop: true,
+    momentumBounceRatio: 25,
+    momentumRatio: 15,
+    momentumVelocityRatio: 15,
+    speed: 50000,
+    autoplay: {
+        enabled: true,
+        // delay: 3000,
+        // speed: 30000,
+            
+        //     // // reverseDirection: true,
+        },
+});
 
 // const sl2 = new Swiper('.swiper-animation_two', {
 //     slidesPerView: 'auto',
