@@ -218,138 +218,156 @@ setTimeout(playVideoGif, 1000);
 
 
 //animation line
-
 const sl1 = new Swiper('.swiper-animation_one', {
-    slidesPerView: 'auto',
-    loop: true,
-    speed: 20000,
-    slidesPerView: '2.8',
-    autoplay: {
-    enabled: true,
-    delay: 1,
-    // reverseDirection: true,
-    },
-    breakpoints: {
-        // when window width is >= 768px
-        250: {
-            slidesPerView: 0.7,
-        },
-        450: {
-            slidesPerView: 0.8,
-        },
-        738: {
-            slidesPerView: 1.2,
-        },
-        1068: {
-            slidesPerView: 1.8,
-        },
-        // when window width is >= 1350px
-        1350: {
-            slidesPerView: 2.6,
-        }
-        },
-});
+        slidesPerView: '4',
+        loop: true,
+        momentumBounceRatio: 25,
+        momentumRatio: 15,
+        momentumVelocityRatio: 15,
+        // speed: 50000,
+        autoplay: {
+            enabled: true,
+            // delay: 3000,
+            // speed: 30000,
+                
+            //     // // reverseDirection: true,
+            },
+    });
+// const sl1 = new Swiper('.swiper-animation_one', {
+//     slidesPerView: 'auto',
+//     loop: true,
+//     speed: 20000,
+//     slidesPerView: '2.8',
+//     momentumBounceRatio: 5,
+//     momentumRatio: 3,
+//     // momentumVelocityRatio: ,
+//     // autoplay: {
+//     // enabled: true,
+//     // delay: 1,
+    
+//     // // reverseDirection: true,
+//     // },
+//     breakpoints: {
+//         // when window width is >= 768px
+//         250: {
+//             slidesPerView: 0.7,
+//         },
+//         450: {
+//             slidesPerView: 0.8,
+//         },
+//         738: {
+//             slidesPerView: 1.2,
+//         },
+//         1068: {
+//             slidesPerView: 1.8,
+//         },
+//         // when window width is >= 1350px
+//         1350: {
+//             slidesPerView: 2.6,
+//         }
+//         },
+// });
 
 
-const sl2 = new Swiper('.swiper-animation_two', {
-    slidesPerView: 'auto',
-    loop: true,
-    speed: 30000,
-    slidesPerView: '3.0',
-    autoplay: {
-    enabled: true,
-    delay: 1700,
-    // reverseDirection: true,
-    },
-    breakpoints: {
-        // when window width is >= 768px
-        250: {
-            slidesPerView: 0.7,
-        }, 
-        450: {
-            slidesPerView: 0.8,
-        },
-        738: {
-            slidesPerView: 1.1,
-        },
-        1068: {
-            slidesPerView: 1.8,
-        },
-        // when window width is >= 1350px
-        1350: {
-            slidesPerView: 3,
-        }
-        },
-});
+// const sl2 = new Swiper('.swiper-animation_two', {
+//     slidesPerView: 'auto',
+//     loop: true,
+//     speed: 30000,
+//     slidesPerView: '3.0',
+//     autoplay: {
+//     enabled: true,
+//     delay: 1700,
+//     // reverseDirection: true,
+//     },
+//     breakpoints: {
+//         // when window width is >= 768px
+//         250: {
+//             slidesPerView: 0.7,
+//         }, 
+//         450: {
+//             slidesPerView: 0.8,
+//         },
+//         738: {
+//             slidesPerView: 1.1,
+//         },
+//         1068: {
+//             slidesPerView: 1.8,
+//         },
+//         // when window width is >= 1350px
+//         1350: {
+//             slidesPerView: 3,
+//         }
+//         },
+// });
 
-const sl3 = new Swiper('.swiper-animation_three', {
-    slidesPerView: 'auto',
-    loop: true,
-    speed: 8000,
-    slidesPerView: '3',
-    autoplay: {
-    enabled: true,
-    delay: 1,
-    // reverseDirection: true,
-    },
-    breakpoints: {
-        // when window width is >= 768px
-        250: {
-            slidesPerView: 0.7,
-        }, 
-        450: {
-            slidesPerView: 0.8,
-        }, 
-        738: {
-            slidesPerView: 1.3,
-        },
-        1068: {
-            slidesPerView: 1.6,
-        },
-        1200: {
-            slidesPerView: 1.4,
-        },
-        // when window width is >= 1350px
-        1350: {
-            slidesPerView: 2.4,
-        }
-        },
-});
+// const sl3 = new Swiper('.swiper-animation_three', {
+//     slidesPerView: 'auto',
+//     loop: true,
+//     speed: 8000,
+//     slidesPerView: '3',
+//     autoplay: {
+//     enabled: true,
+//     delay: 1,
+//     // reverseDirection: true,
+//     },
+//     breakpoints: {
+//         // when window width is >= 768px
+//         250: {
+//             slidesPerView: 0.7,
+//         }, 
+//         450: {
+//             slidesPerView: 0.8,
+//         }, 
+//         738: {
+//             slidesPerView: 1.3,
+//         },
+//         1068: {
+//             slidesPerView: 1.6,
+//         },
+//         1200: {
+//             slidesPerView: 1.4,
+//         },
+//         // when window width is >= 1350px
+//         1350: {
+//             slidesPerView: 2.4,
+//         }
+//         },
+// });
 
-const sl4 = new Swiper('.swiper-animation_four', {
-    // slidesPerView: 'auto',
-    loop: true,
-    speed: 15000,
-    slidesPerView: '3',
-    autoplay: {
-    enabled: true,
-    delay: 1000,
-    // reverseDirection: true,
-    },
-     // Responsive breakpoints
-    breakpoints: {
-        250: {
-            slidesPerView: 0.7,
-        }, 
-        450: {
-            slidesPerView: 0.8,
-        },
-        // when window width is >= 768px
-        738: {
-            slidesPerView: 1.2,
-        },
-        1068: {
-            slidesPerView: 1.8,
-        },
-        1200: {
-            slidesPerView: 1.4,
-        },
-        // when window width is >= 1350px
-        1350: {
-            slidesPerView: 3,
-        }
-        },
-});
+// const sl4 = new Swiper('.swiper-animation_four', {
+//     // slidesPerView: 'auto',
+//     loop: true,
+//     speed: 15000,
+//     slidesPerView: '3',
+//     autoplay: {
+//     enabled: true,
+//     delay: 1000,
+//     // reverseDirection: true,
+//     },
+//      // Responsive breakpoints
+//     breakpoints: {
+//         250: {
+//             slidesPerView: 0.7,
+//         }, 
+//         450: {
+//             slidesPerView: 0.8,
+//         },
+//         // when window width is >= 768px
+//         738: {
+//             slidesPerView: 1.2,
+//         },
+//         1068: {
+//             slidesPerView: 1.8,
+//         },
+//         1200: {
+//             slidesPerView: 1.4,
+//         },
+//         // when window width is >= 1350px
+//         1350: {
+//             slidesPerView: 3,
+//         }
+//         },
+// });
 
 //carousel project
 const carousel = document.querySelector(".carousel1");
