@@ -604,8 +604,8 @@ function activeBtn () {
     };
     activeBtn();
 
-const el=document.getElementById("TextWindow");
-el.placeholder="Какой вопрос хотите задать?";
+const el = document.getElementById("TextWindow");
+el.placeholder = "Какой вопрос хотите задать?";
 
 function ChangePlaceholder(){
     for (let btn of BtnsTheme) {
@@ -626,6 +626,16 @@ function ChangePlaceholder(){
     }
 };
     ChangePlaceholder();
+
+const developBtn = document.querySelector(".link_request")
+developBtn.addEventListener('click', () => {
+    BtnsTheme[0].classList.remove('active-buttons')
+    BtnsTheme[3].classList.add('active-buttons')
+    BtnsTheme[2].classList.remove('active-buttons')
+    BtnsTheme[1].classList.remove('active-buttons')
+    BtnsTheme[4].classList.remove('active-buttons')
+    el.placeholder = "Заказать разработку";
+})
 
     const accordionBtns = document.querySelectorAll(".button-accordion");
 
@@ -655,6 +665,28 @@ function ChangePlaceholder(){
 
         });
     }
+
+//popup
+
+
+const openContact = document.querySelector('#contact-link')
+const popupContact = document.querySelector('.popup-contact')
+const closePopupContact = document.querySelector('.popup-cross')
+openContact.addEventListener('click', () => {
+    popupContact.classList.toggle('hidden-popup')
+})
+
+closePopupContact.addEventListener('click', () => {
+    popupContact.classList.toggle('hidden-popup')
+})
+
+popupContact.addEventListener('click', (event) => {
+    if(event.target.classList.contains('popup-contact')) {
+        popupContact.classList.toggle('hidden-popup');
+    }
+})
+
+
 
 
 // const promises = [

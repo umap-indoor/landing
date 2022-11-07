@@ -18,9 +18,11 @@ main
     border-radius: 20px
 
 .logo-icon
-    padding-right: 32px
+    padding-right: 22px
     position: relative
     top: 4px
+.logo-icon-mobile
+    display: none
 // .link_request-mobile
 //     align-items: center
 //     color: $white
@@ -110,7 +112,9 @@ main
     max-width: 1390px
     margin: 0 20px
     width: 100%
-    justify-content: center
+    // justify-content: center
+    justify-content: space-between
+    gap: 20px
     box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.08);
     padding: 20px 20px
     border-radius: 28px
@@ -136,7 +140,8 @@ main
     flex-shrink: 0
 .phone-img-mobile
     display: none
-
+.about_company
+    display: none
 .nav-request
     display: flex
     justify-content: space-between
@@ -1644,5 +1649,5 @@ textarea:focus, input:focus
 
 @import _cookies
 @import _our-project
-
+@import _popup
 @import _media

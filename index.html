@@ -19,19 +19,20 @@
     <div class="wrapper">
         <header class="header">
             <nav class="navigation">
-                <div class="logo-icon"><img src="./assets/images/icons/logo.svg" alt="logo" class="logo"></div>
+                <div class="logo-icon logo-icon-mobile"><img src="./assets/images/icons/logo.svg" alt="logo" class="logo"></div>
             <ul class="nav-menu">
+                <div class="logo-icon"><img src="./assets/images/icons/logo.svg" alt="logo" class="logo"></div>
                 <li class="nav-menu__item menu__item-link"><a href="#capabilities">Возможности</a></li>
                 <li class="nav-menu__item menu__item-link"><a href="#advantage">Преимущества</a></li>
                 <li class="nav-menu__item menu__item-link"><a href="#price">Тарифы</a></li>
                 <li class="nav-menu__item menu__item-link"><a href="#faq">FAQ</a></li>
                 <li class="nav-menu__item_deviders menu__item-link"></li>
-                <li class="nav-menu__item menu__item-link"><a href="././pages/about/about.html">О компании</a></li>
-                <li class="nav-menu__item menu__item-link"><a href="././pages/about/about.html">Контакты</a></li>
+                <li class="nav-menu__item menu__item-link about_company"><a href="././pages/about/about.html">О компании</a></li>
+                <li class="nav-menu__item menu__item-link" id="contact-link">Контакты</li>
             </ul>
             <div class="arrow-nav"><img src="./assets/images/icons/Arrow-header.svg" alt="arrow"></div>
             <ul class="nav-request">
-                <li><a href="././pages/request/request.html" class="link_request">Заявка на создание карты</a></li>
+                <li><a href="#form-develop" class="link_request">Заявка на создание карты</a></li>
                 <li><button class="btn  btn__open-map"><a href="././pages/map/map.html">Открыть карту</a></button></li>
             </ul>
             
@@ -743,7 +744,7 @@
 
             <section class="request">
                 <div class="section__wrapper">
-                    <div class="section__title section__title_request">
+                    <div class="section__title section__title_request" id="form-develop">
                         Оставляйте заявку
                     </div>
                     <div class="title-descr secondary-block_title-descr secondary-block_title-descr-request">
@@ -752,7 +753,7 @@
 
                     <div class="questions-and-app__container">
 
-                        <div class="questions_container">
+                        <div class="questions_container" >
                             <div class="form-questions">
                                     <div class="title-descr secondary-block_title-descr secondary-block_title-descr-form">
                                         Тема заявки</div>
@@ -1007,6 +1008,23 @@
                 </div>
             </div>
     </footer>
+    <div class="popup-contact hidden-popup">
+        <div class="popup_content">
+            <div class="popup-cross">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="14.5" stroke="white" stroke-width="3"/>
+                    <rect x="20.2422" y="9.63599" width="3" height="15" rx="1" transform="rotate(45 20.2422 9.63599)" fill="white"/>
+                    <rect x="22.3643" y="20.2427" width="3" height="15" rx="1" transform="rotate(135 22.3643 20.2427)" fill="white"/>
+                    </svg>
+            </div>
+            <ul class="popup-contacts">
+                <li class="contact-mail"><a href="mailto:skimirilov@gmail.com">skimirilov@gmail.com</a></li>
+                <li class="contact-phone"><a href="tel:+79122971570">8 (912) 297-15-70</a>
+                <li class="contact-telega"><a href="https://telegram.me/skimirilov">t.me/skimirilov</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
