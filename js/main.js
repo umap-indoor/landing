@@ -221,16 +221,15 @@ setTimeout(playVideoGif, 1000);
 const sl1 = new Swiper('.swiper-animation_one', {
         slidesPerView: '3',
         loop: true,
-        momentumBounceRatio: 25,
-        momentumRatio: 15,
-        momentumVelocityRatio: 15,
-       
+        momentumBounceRatio: 5,
+        momentumRatio: 5,
+        momentumVelocityRatio: 5,
         // pauseOnMouseEnter: true,
         // speed: 20000,
         autoplay: {
             enabled: true,
-            delay: 3000,
-            speed: 20000,
+            delay: 1000000,
+            // speed: 20000,
             disableOnInteraction: false,
             // speed: 30000,
                 
@@ -274,22 +273,53 @@ const sl1 = new Swiper('.swiper-animation_one', {
 
 
 const sl2 = new Swiper('.swiper-animation_two', {
-    slidesPerView: '4',
+    slidesPerView: 'auto',
     loop: true,
     momentumBounceRatio: 25,
     momentumRatio: 15,
     momentumVelocityRatio: 15,
-    speed: 50000,
+    speed: 8000,
     autoplay: {
         enabled: true,
-        // delay: 3000,
+        delay: 1,
         // speed: 30000,
             
         //     // // reverseDirection: true,
         },
 });
 
-// const sl2 = new Swiper('.swiper-animation_two', {
+const sl3 = new Swiper('.swiper-animation_three', {
+    slidesPerView: 'auto',
+    loop: true,
+    momentumBounceRatio: 25,
+    momentumRatio: 15,
+    momentumVelocityRatio: 15,
+    speed: 8000,
+    autoplay: {
+        enabled: true,
+        delay: 1,
+        // speed: 30000,
+            
+        reverseDirection: true,
+        },
+});
+
+const sl4 = new Swiper('.swiper-animation_four', {
+    slidesPerView: 'auto',
+    loop: true,
+    momentumBounceRatio: 25,
+    momentumRatio: 15,
+    momentumVelocityRatio: 15,
+    speed: 18000,
+    autoplay: {
+        enabled: true,
+        delay: 1,
+        // speed: 30000,
+            
+        // reverseDirection: true,
+        },
+});
+// const sl2 = new Swiper('.swiper-animation_three', {
 //     slidesPerView: 'auto',
 //     loop: true,
 //     speed: 30000,
