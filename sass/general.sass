@@ -176,6 +176,7 @@ main
 .title_block
     display: flex
     justify-content: center
+    padding-top: 70px
 .first-block
     position: relative
     padding-bottom: 13.9rem
@@ -306,56 +307,67 @@ main
 .img_qr_link
     transform: translateY(37%)
 
-.right_part_img
-    width: 353.86px
-    height: 716px
-    display: flex
-    justify-content: center
-    align-items: center
+// .right_part_img
+//    idth: 353.86px
+//     height: 716px 
+//     display: flex
+//     justify-content: center
+//     align-items: center
 .phone-video
     padding-top: 132px
     position: relative
-    width: 353.86px
-    height: 716px
+    height: 844px;
+    width: 410.4065856933594px;
+    border-radius: 78.83515930175781px;
+
     display: flex
     justify-content: center
     align-items: center
 .frame
-    padding-top: 64px
+    padding-top: 80px
     position: absolute
-    height: auto
+    height: 105%
     top: 0
     left: 0
     z-index: 3
-    width: 353.86
+    width: 99%
 .img-video-phone
+    position: relative
     z-index: 1
-    width: 90%
+    // width: 360px
+    width: 88%
     height: auto
+    // width: 100%
+    // height: 100%
     border-radius: 37px
 
 // flip cards
 
 .container-flip_cards
     position: relative
-    // background-color: #fff
-    max-width: 1000px
-    // height: 1000px
     margin: 0 auto
     display: flex
     flex-direction: column
+    align-items: center
     gap: 74px
     perspective: 2000px;
+    width: 67vw
+    max-width: 965px
+    min-height: 1384px
+    height: 1384px
 .flip-card
-    max-width: 964px
-    width: 90%
-    width: 964px
-    height: 412px
+    // max-width: 964px
+    // width: 90%
+    width: 100%
+    // width: 964px
+    // height: 412px
+    height: 100%
     position: relative
     transition: transform 0.8s cubic-bezier(0.39,0.575,0.565,1);
     transform-style: preserve-3d
     background-color: rgba(24, 25, 27, 0.8)
     border-radius: 40px
+    // overflow: hidden
 .flip-text
     height: 100%
     display: flex
@@ -375,6 +387,7 @@ main
     -webkit-backface-visibility: hidden
     backface-visibility: hidden
     padding: 52px 56px
+    overflow: hidden
 .font-card
 
 .back-card
@@ -426,7 +439,10 @@ main
     position: relative
     right: -5px
     bottom: 18px
-.flip-text__back
+.flip-back-img
+    position: relative
+    right: -5px
+    top: -340px
 
 .flip-back-img
     // position: absolute
@@ -602,6 +618,7 @@ main
 
 
 .text_wrapper_one
+    transition-timing-function : linear;
     // transition: 0.3s linear infinite !important
 
 .text_wrapper_two

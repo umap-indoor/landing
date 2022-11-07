@@ -224,10 +224,14 @@ const sl1 = new Swiper('.swiper-animation_one', {
         momentumBounceRatio: 25,
         momentumRatio: 15,
         momentumVelocityRatio: 15,
-        // speed: 50000,
+       
+        // pauseOnMouseEnter: true,
+        // speed: 20000,
         autoplay: {
             enabled: true,
-            // delay: 3000,
+            delay: 3000,
+            speed: 20000,
+            disableOnInteraction: false,
             // speed: 30000,
                 
             //     // // reverseDirection: true,
