@@ -627,15 +627,19 @@ function ChangePlaceholder(){
 };
     ChangePlaceholder();
 
-const developBtn = document.querySelector(".link_request")
-developBtn.addEventListener('click', () => {
+const developBtns = document.querySelectorAll(".linkRequestJS")
+for (let i = 0; i < developBtns.length; i++) {
+    developBtns[i].addEventListener("click", openRequesrDevelop)
+    };
+
+function openRequesrDevelop() {
     BtnsTheme[0].classList.remove('active-buttons')
     BtnsTheme[3].classList.add('active-buttons')
     BtnsTheme[2].classList.remove('active-buttons')
     BtnsTheme[1].classList.remove('active-buttons')
     BtnsTheme[4].classList.remove('active-buttons')
     el.placeholder = "Заказать разработку";
-})
+}
 
     const accordionBtns = document.querySelectorAll(".button-accordion");
 
@@ -672,6 +676,7 @@ developBtn.addEventListener('click', () => {
 const openContact = document.querySelector('#contact-link')
 const popupContact = document.querySelector('.popup-contact')
 const closePopupContact = document.querySelector('.popup-cross')
+
 openContact.addEventListener('click', () => {
     popupContact.classList.toggle('hidden-popup')
 })

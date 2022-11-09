@@ -32,14 +32,15 @@
             </ul>
             <div class="arrow-nav"><img src="./assets/images/icons/Arrow-header.svg" alt="arrow"></div>
             <ul class="nav-request">
-                <li><a href="#form-develop" class="link_request">Заявка на создание карты</a></li>
+                <li><a href="#form-develop" class="link_request linkRequestJS">Заявка на создание карты</a></li>
                 <li><button class="btn  btn__open-map"><a href="././pages/map/map.html">Открыть карту</a></button></li>
             </ul>
             
         </nav>
         <ul class="nav-request-mobile">
             <div class="btn-menu"><p>Меню</p> <div class="burger"><span class="line-burger"></span><span class="line-burger"></span></div> </div>
-            <li><button class="btn  btn__open-mobile"><a href="././pages/request/request.html">Заявка</a></button></li>
+            <li class="btn  btn__open-mobile"><a href="#form-develop" class="linkRequestJS">Заявка</a></li>
+            <!-- <li class="btn  btn__open-mobile"><button class="btn  btn__open-mobile linkRequestJS">Заявка</button></li> -->
         </ul>
     </header>
 
@@ -318,7 +319,7 @@
                         <div class="animation-card__item">
                             <div class="animation-card_img">
                                 <video class="img-video img-video-image" id="video1" muted>
-                                    <source src="assets/images/video/имидж.m4v" type="video/mp4">
+                                    <source src="assets/images/video/AnimationCorporateImage.mov" type="video/mp4">
                                 </video>
                             </div>
                             
@@ -380,12 +381,12 @@
                             <div class="swiper-slide text_item text_item_three text_item-build">Показать клиентам, как попасть в здание</div>
                             <div class="swiper-slide text_item text_item_three text_item-plan">Объяснить план помещения для мероприятия</div>
                             <div class="swiper-slide text_item text_item_one text_item-quest">Избавить от вопросов “Как к вам добраться?”</div>
-                            <!-- <div class="swiper-slide text_item text_item_one">Как найти кабинет, когда опаздывваешь?</div>
-                            <div class="swiper-slide text_item text_item_one">Проводить онбординг сотрудников </div> -->
+                            <div class="swiper-slide text_item text_item_one text_item-late">Как найти кабинет, когда опаздывваешь?</div>
+                            <div class="swiper-slide text_item text_item_one text_item-onbording">Проводить онбординг сотрудников </div>
                             <div class="swiper-slide text_item text_item_three text_item-shop">Добраться до магазина</div>
                             <div class="swiper-slide  text_item text_item_two text_item-hermitage">Найти выставку в Эрмитаже</div>
-                            <!-- <div class="swiper-slide text_item text_item_two">Добраться до машины на парковке</div>
-                            <div class="swiper-slide text_item text_item_two">Сэкономить деньги на печати бумаги</div> -->
+                            <div class="swiper-slide text_item text_item_two text_item-parking">Добраться до машины на парковке</div>
+                            <div class="swiper-slide text_item text_item_two text_item-paper">Сэкономить деньги на печати бумаги</div>
                             <div class="swiper-slide text_item text_item_one text_item-cabinet">Найти кабинет, когда опаздываешь</div>
                             <div class="swiper-slide  text_item text_item_one text_item-rack">Поиск нужного стеллажа на складе</div>
                             <div class="swiper-slide text_item text_item_three text_item-shop">Добраться до магазина</div>
@@ -396,13 +397,13 @@
                     <div class="swiper-animation_three animation_wrapper animation_wrapper_three">
                         <div class="swiper-wrapper text_wrapper text_wrapper_three">
                            
-                            <!-- <div class="swiper-slide text_item text_item_one">Проводить онбординг сотрудников </div>
-                            <div class="swiper-slide text_item text_item_three">Добраться до магазина</div>
-                            <div class="swiper-slide text_item text_item_three">Показать клиентам, как попасть в здание</div>
-                            <div class="swiper-slide text_item text_item_three">Объяснить план помещения для мероприятия</div>
-                            <div class="swiper-slide text_item text_item_one">Избавить от вопросов “Как к вам добраться?”</div> -->
+                            <div class="swiper-slide text_item text_item_one text_item-onbording">Проводить онбординг сотрудников </div>
+                            <div class="swiper-slide text_item text_item_three text_item-shop">Добраться до магазина</div>
+                            <div class="swiper-slide text_item text_item_three text_item-build">Показать клиентам, как попасть в здание</div>
+                            <div class="swiper-slide text_item text_item_three text_item-plan">Объяснить план помещения для мероприятия</div>
+                            <div class="swiper-slide text_item text_item_one text_item-quest">Избавить от вопросов “Как к вам добраться?”</div>
                             <div class="swiper-slide text_item text_item_one text_item-cabinet">Найти кабинет, когда опаздываешь</div>
-                            <!-- <div class="swiper-slide text_item text_item_one">Проводить онбординг сотрудников </div> -->
+                            <div class="swiper-slide text_item text_item_one text_item-cabinet">Найти кабинет, когда опаздываешь</div>
                             <div class="swiper-slide text_item text_item_three text_item-shop">Добраться до магазина</div>
                             <div class="swiper-slide text_item text_item_three text_item-build">Показать клиентам, как попасть в здание</div>
                             <div class="swiper-slide text_item text_item_three text_item-plan">Объяснить план помещения для мероприятия</div>
@@ -420,8 +421,8 @@
                             <div class="swiper-slide text_item text_item_three text_item-build">Показать клиентам, как попасть в здание</div>
                             <div class="swiper-slide text_item text_item_three text_item-plan">Объяснить план помещения для мероприятия</div>
 
-                            <!-- <div class="swiper-slide text_item text_item_one">Сделать навигацию по цеху удобной для всех</div> -->
-                            <!-- <div class="swiper-slide text_item text_item_three">Показать клиентам, как попасть в здание</div> -->
+                            <div class="swiper-slide text_item text_item_one text_item-navigation">Сделать навигацию по цеху удобной для всех</div>
+                            <div class="swiper-slide text_item text_item_three text_item-build">Показать клиентам, как попасть в здание</div>
                             <div class="swiper-slide text_item text_item_three text_item-plan">Объяснить план помещения для мероприятия</div>
                             <div class="swiper-slide text_item text_item_one text_item-quest">Избавить от вопросов “Как к вам добраться?”</div>
                             <div class="swiper-slide text_item text_item_one text_item-cabinet">Найти кабинет, когда опаздываешь</div>
