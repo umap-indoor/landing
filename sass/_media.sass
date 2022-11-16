@@ -566,7 +566,7 @@
         width: 78%;
 
     .footer
-        padding: 40px 48px 80px 48px
+        padding: 40px 48px 100px 48px
     .footer-under
         flex-direction: column
         align-items: start
@@ -590,6 +590,34 @@
     .question
         padding-right: 30px
 @media  screen and (max-width: 770px)
+    .burger-menu
+        display: flex
+        position: absolute
+        // bottom: 0
+        bottom: -450px
+        height: 336px
+        width: 100vw
+        background-color: #fff
+        z-index: 100
+        border-radius: 24px 24px 0px 0px;
+        padding-inline: 45px
+        padding-top: 25px
+        transition: 0.5s
+    .burger-menu-active
+        bottom: 0
+    .ul-burger-menu
+        display: flex
+        flex-direction: column
+        justify-content: start
+        align-items: start
+        gap: 20px
+        width: 100%
+    .menu__item-link-burger-line
+        width: 100%
+        height: 1px
+        background: rgba(30, 30, 30, 0.08);
+
+    
     .logo-icon-mobile
         display: block
     .nav-menu, .nav-request, .arrow-nav
@@ -613,34 +641,55 @@
         padding-top: 25px
 
     .nav-request-mobile
-        z-index: 150
+        z-index: 200
         position: fixed
         display: flex
+        justify-content: center
+        align-items: center
         gap: 10px
-        transform: translatex(4%)
+        // transform: translatex(4%)
         // top: 58vh
-        bottom: 2vh
+        bottom: 0vh
+        height: 88px
+        width: 100vw
+        background: rgba(30, 30, 30, 0.7);
+        backdrop-filter: blur(6px);
+        border-radius: 24px 24px 0px 0px;
     .btn-menu
         display: flex
         padding: 16px 24px 16px 24px
         color: rgba(30, 30, 30, 1);
+        width: 157px
+        height: 52px
         font-size: 18px
         gap: 36px
         align-items: center
         background: rgba(255, 255, 255, 1);
         border-radius: 20px
         cursor: pointer
+        z-index: 150
+        transition: 0.5s
+    .btn-menu-active
+        background: rgba(233, 233, 233, 1);
+
     .line-burger
         height: 2px
         width: 18px
         background: rgba(30, 30, 30, 1);
         border-radius: 10px
+        transition: 0.8s
     .burger
         height: 10px
         width: 18px
         display: flex
         flex-direction: column
         justify-content: space-between
+    .burger-active
+        .line-burger:nth-child(1)
+            transform: translateY(3px) rotate(-45deg)
+        .line-burger:nth-child(2)
+            transform: translateY(-4px) rotate(45deg)
+            
     .btn__open-mobile
         display: flex
         justify-content: center
@@ -649,8 +698,24 @@
         width: 157px
         background: rgba(12, 117, 241, 1);
         font-size: 18px
+        z-index: 150
         &:active
             background: #1D51B5;
+    .burger-shadow
+        position: absolute;
+        display: none
+        left: 0;
+        // bottom: -450px
+        // top: 328.5px;
+        // bottom: 188px
+        width: 100%;
+        height: 1000vh
+        background: #0d090980;
+        z-index: 0;
+        backdrop-filter: blur(4px);
+        z-index: 101
+    .burger-shadow-active
+        display: block
     .tarif-cards__container::before
         width: 80px
     .tarif-cards__container::after
