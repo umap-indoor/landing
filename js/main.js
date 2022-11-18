@@ -385,18 +385,18 @@ const plus = document.getElementsByClassName("img-plus");
 
 //animation-phone
 
-const phoneApp = document.querySelector('.app__container-img');
+// const phoneApp = document.querySelector('.app__container-img');
 
 
-window.addEventListener('scroll', animationPhoneApp);
-function animationPhoneApp() {
-    let vertical_position = pageYOffset;
-    // console.log(vertical_position)
-    if(vertical_position > 6567){
-        phoneApp .classList.add('transform-Y');
+// window.addEventListener('scroll', animationPhoneApp);
+// function animationPhoneApp() {
+//     let vertical_position = pageYOffset;
+//     // console.log(vertical_position)
+//     if(vertical_position > 6567){
+//         phoneApp .classList.add('transform-Y');
 
-    } 
-};
+//     } 
+// };
 
 
 // slider-price
