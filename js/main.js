@@ -573,7 +573,10 @@ function openRequesrDevelop() {
 const openContact = document.querySelector('#contact-link')
 const popupContact = document.querySelector('.popup-contact')
 const closePopupContact = document.querySelector('.popup-cross')
-
+const BtnMenuContact = document.querySelector('.contact-link')
+BtnMenuContact.addEventListener('click' ,() => {
+    popupContact.classList.toggle('hidden-popup')
+})
 openContact.addEventListener('click', () => {
     popupContact.classList.toggle('hidden-popup')
 })

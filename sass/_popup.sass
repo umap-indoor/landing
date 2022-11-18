@@ -16,7 +16,7 @@
     justify-content: center
     align-items: center
     max-width: 740px
-    width: 52%
+    width: 100%
     border: 3px solid transparent
     height: 25%
     max-height: 470px
@@ -30,6 +30,9 @@
     top: 30px
     right: 60px
     cursor: pointer
+.svg-cross
+    width: 32px
+    height: 32px
 .popup-contacts
     color: $white
     font-size: 36px
@@ -40,38 +43,43 @@
     padding-bottom: 40px
 .contact-mail, .contact-phone, .contact-telega
     position: relative
-    
-.contact-mail:after
-    position: absolute
-    content: "Почта для связи"
-    top: -20px
-    right: 110px
+.contact-descr
     color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
+// .contact-mail:after
+//     position: absolute
+//     content: "Почта для связи"
+//     top: -20px
+//     right: 110px
+//     color: rgba(255, 255, 255, 0.7);
+//     font-size: 18px;
+//     font-weight: 400;
+//     line-height: 23px;
+//     letter-spacing: 0em;
 
-.contact-phone:after
-    position: absolute
-    content: "Телефон для связи"
-    top: -20px
-    right: 110px
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0em;
-.contact-telega:after
-    position: absolute
-    content: "Телеграмм для связи"
-    top: -20px
-    right: 110px
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0em;
+// .contact-phone:after
+//     position: absolute
+//     content: "Телефон для связи"
+//     top: -20px
+//     right: 110px
+//     color: rgba(255, 255, 255, 0.7);
+//     font-size: 18px;
+//     font-weight: 400;
+//     line-height: 23px;
+//     letter-spacing: 0em;
+// .contact-telega:after
+//     position: absolute
+//     content: "Телеграмм для связи"
+//     top: -20px
+//     right: 110px
+//     color: rgba(255, 255, 255, 0.7);
+//     font-size: 18px;
+//     font-weight: 400;
+//     line-height: 23px;
+//     letter-spacing: 0em;
 .hidden-popup
     display: none
 
@@ -80,14 +88,51 @@
         top: 50px
 
 @media  screen and (max-width: 1085px)
-    .popup_content
-        width: calc(100vw  - 100px )
+    // .popup_content
+    //     width: calc(100vw  - 100px )
 
 @media  screen and (max-width: 687px)
     .popup_content
-        width: calc(97vw  - 40px)
+        height: 20%
+    //     width: calc(97vw  - 40px)
 @media  screen and (max-width: 640px)
-    .popup_content
-        width: 90%
+    // .popup_content
+    //     width: 90%
     .popup-contacts
         font-size: 30px
+        gap: 25px
+@media  screen and (max-width: 540px)
+    .popup-cross
+        top: 25px
+        right: 37px
+    .popup_content
+        height: 15%
+        width: calc(97vw  - 40px)
+    .popup-contacts
+        font-size: 20px
+        gap: 15px
+@media  screen and (max-width: 440px)
+    .popup-cross
+        top: 8px
+    .popup_content
+        height: 11%
+    .popup-contacts
+        font-size: 16px
+        gap: 10px
+
+@media  screen and (max-width: 440px)
+    .popup-cross
+        top: 8%
+        right: 10%
+    .popup_content
+        height: 11%
+    .popup-contacts
+        font-size: 16px
+        gap: 10px
+    .svg-cross
+        width: 20px
+        height: 20px
+@media  screen and (max-width: 370px)
+    .popup-cross
+        top: 12%
+        right: 7%
