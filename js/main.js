@@ -3,26 +3,26 @@ slider();
 
 
 async function slider() {
-    let i = 0
-    const posts = document.querySelectorAll('.slider-text__item')
-    posts.forEach(t => t.style = 'top:-90px; pacity:0; transition: 0s')
+    let i = 0;
+    const posts = document.querySelectorAll('.slider-text__item');
+    posts.forEach(t => t.style = 'top:-90px; pacity:0; transition: 0s');
     posts[0].style = "top:0px; opacity:1; transition: 0s";
     
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     while(true) {
-        const next = (i + 1) % posts.length
+        const next = (i + 1) % posts.length;
         
         posts[i].style = "top:90px; opacity:0";
         posts[next].style = "top:0px; opacity:1";
         
-        await new Promise(resolve => setTimeout(resolve, 2000))
+        await new Promise(resolve => setTimeout(resolve, 2000));
         posts[i].style = "top:-90px; opacity:0; transition: 0s";
         
-        i = next
+        i = next;
         
-    }
-}
+    };
+};
 
 //cookie
 
@@ -425,24 +425,63 @@ const itemSlider = document.querySelectorAll(".tarif-card__item");
 
 // InitSliderTarif();
 
-swiperTarif = new Swiper('.swiper-container', {
-    initialSlide: 1,
-    slidesPerView: 3,
-    centeredSlides: true,
-    loop: true,
-    spaceBetween: 21,
-    slideToClickedSlide: true,
-    // allowTouchMove:false,
-     // Responsive breakpoints
-    breakpoints: {
-        // when window width is >= 1380px
-        1380: {
-            allowTouchMove: false,
+// const swiperTarif = new Swiper('.swiper-container', {
+//     initialSlide: 1,
+//     slidesPerView: 3,
+//     centeredSlides: true,
+//     loop: true,
+//     spaceBetween: 21,
+//     slideToClickedSlide: true,
+//     // allowTouchMove:false,
+//      // Responsive breakpoints
+//     breakpoints: {
+//         // when window width is >= 1380px
+//         1380: {
+//             allowTouchMove: false,
+//         }
+//         },
+//     });
+
+
+    let swiperTarif;
+
+    const initAdvantagesSlider = () => {
+        const resizeObserver = new ResizeObserver((entries) => {
+            for (let entry of entries) {
+            const {
+            contentRect: { width: bodyWidth },
+            } = entry;
+    
+                const breakpoint = 1370;
+    
+            if (bodyWidth < breakpoint && !swiperTarif) {
+                swiperTarif = new Swiper('.swiper-container', {
+                spaceBetween: 21,
+                centeredSlides: true,
+                loop: true,
+                initialSlide: 1,
+                slidesPerView: 3,
+                centeredSlides: true,
+            });
+        } else if (bodyWidth > breakpoint && swiperTarif) {
+            swiperTarif.destroy();
+            swiperTarif = undefined;
+            }
         }
-        },
-    });
+        });
+    
+        resizeObserver.observe(document.body);
+    };
+initAdvantagesSlider();
 
-
+// let swiperTarif = new Swiper('.swiper-container', {
+//                   spaceBetween: 21,
+//                   centeredSlides: true,
+//                     loop: true,
+//                     initialSlide: 1,
+//                     slidesPerView: 3,
+//                     centeredSlides: true,
+//                 });
 
 
     // form
@@ -556,6 +595,7 @@ const BurgerMenu = document.querySelector('.burger-menu');
 const BurgerItem = document.querySelectorAll('.menu__item-link-burger')
 const BurgerShadow = document.querySelector('.burger-shadow')
 const BodyHtml = document.querySelector('html')
+const LogoIcon = document.querySelector('.logo-icon-mobile')
 console.log(BodyHtml)
 BtnMenu.addEventListener('click', () => {
     BurgerMenu.classList.toggle('burger-menu-active');
@@ -575,6 +615,22 @@ BurgerItem.forEach(item => {
         BurgerShadow.classList.toggle('burger-shadow-active');
         BodyHtml.classList.toggle('no-scroll');
     })
+})
+
+LogoIcon.addEventListener('click', () => {
+    BurgerMenu.classList.toggle('burger-menu-active');
+    BtnMenu.classList.toggle('btn-menu-active');
+    Burger.classList.toggle('burger-active');
+    BurgerShadow.classList.toggle('burger-shadow-active');
+    BodyHtml.classList.toggle('no-scroll');
+})
+
+BurgerShadow.addEventListener('click', () => {
+    BurgerMenu.classList.toggle('burger-menu-active');
+    BtnMenu.classList.toggle('btn-menu-active');
+    Burger.classList.toggle('burger-active');
+    BurgerShadow.classList.toggle('burger-shadow-active');
+    BodyHtml.classList.toggle('no-scroll');
 })
 // const promises = [
 //     new Promise((resolve) => {
