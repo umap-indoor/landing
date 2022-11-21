@@ -99,7 +99,7 @@
     .swiper-pagination
         transform: translate(158%, 123%) !important
     .dot-translate
-        transform: translate(158%, 0%) !important
+        transform: translate(161%, 0%) !important
 
 @media  screen and (max-width: 1310px)
     .logo-icon
@@ -107,6 +107,8 @@
     .nav-request
         padding-left: 2vw
 @media  screen and (max-width: 1217px)
+    .footer
+        padding-bottom: 100px
     .nav-request-mobile 
         z-index: 200;
         position: fixed;
@@ -535,6 +537,34 @@
         justify-content: center
         align-items: center
 @media  screen and (max-width: 985px)
+    .dot-translate
+        display: none !important
+    .open__link-map
+        display: flex
+        position: absolute
+        width: 40%
+        height: 50px
+        background-color: #fff
+        border-radius: 12px
+        background: rgba(26, 27, 31, 1);
+        padding-left: 20px
+        color: $white
+        align-items: center
+        justify-content: center
+        transform: translate(-50%, -140%)
+        right: 50%
+        left: 50%
+        z-index: 200
+    .open__link-map::before
+        content: ""
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url('./../assets/images/icons/link-open_map.svg');
+        left: 53px
+        top: 14px
+
+
     .container-flip_cards
         width: calc( 100vw - 90px )
     .slider-text__item
@@ -816,7 +846,7 @@
         justify-content: space-between
     .burger-active
         .line-burger:nth-child(1)
-            transform: translateY(3px) rotate(-45deg)
+            transform: translateY(4px) rotate(-45deg)
         .line-burger:nth-child(2)
             transform: translateY(-4px) rotate(45deg)
             
@@ -866,7 +896,11 @@
     .animation-cards__container
         width: 100%
 @media  screen and (max-width: 700px)
-    
+    .open__link-map
+        width: 45%
+    .open__link-map::before
+        left: 20%
+
     .right_part_img-tablet
         display: none
     .main-information
@@ -901,6 +935,10 @@
     
 
 @media  screen and (max-width: 640px)
+    .open__link-map
+        width: 40%
+    .open__link-map::before
+        left: 7%
     .animation-card_img
         width: 326.6px
     .animation-card__item
@@ -1007,6 +1045,10 @@
 
 
 @media  screen and (max-width: 510px)
+    .open__link-map
+        width: 50%
+    .open__link-map::before
+        left: 9%
     .title-descr__first-block
         width: 86%
 
@@ -1145,6 +1187,10 @@
     .footer
         padding: 48px 18px 80px
 @media  screen and (max-width: 400px)
+    .open__link-map
+        width: 60%
+    .open__link-map::before
+        left: 5%
     .tarif-card__name
         padding: 12px
     .tarif_coast-item
