@@ -22,13 +22,13 @@
                 <div class="logo-icon logo-icon-mobile"><a href="#main"><img src="./assets/images/icons/logo.svg" alt="logo" class="logo"></a></div>
             <ul class="nav-menu">
                 <div class="logo-icon"><a href="#main"><img src="./assets/images/icons/logo.svg" alt="logo" class="logo"></a> </div>
-                <li class="nav-menu__item menu__item-link"><a href="#capabilities">Возможности</a></li>
-                <li class="nav-menu__item menu__item-link"><a href="#advantage">Преимущества</a></li>
-                <li class="nav-menu__item menu__item-link"><a href="#price">Тарифы</a></li>
-                <li class="nav-menu__item menu__item-link"><a href="#faq">FAQ</a></li>
+                <li class="nav-menu__item menu__item-link openBurgerJS"><a href="#capabilities">Возможности</a></li>
+                <li class="nav-menu__item menu__item-link openBurgerJS"><a href="#advantage">Преимущества</a></li>
+                <li class="nav-menu__item menu__item-link openBurgerJS"><a href="#price">Тарифы</a></li>
+                <li class="nav-menu__item menu__item-link openBurgerJS"><a href="#faq">FAQ</a></li>
                 <!-- <li class="nav-menu__item_deviders menu__item-link"></li> -->
-                <li class="nav-menu__item menu__item-link about_company"><a href="././pages/about/about.html">О компании</a></li>
-                <li class="nav-menu__item menu__item-link" id="contact-link">Контакты</li>
+                <li class="nav-menu__item menu__item-link about_company openBurgerJS"><a href="././pages/about/about.html">О компании</a></li>
+                <li class="nav-menu__item menu__item-link contact-link openBurgerJS">Контакты</li>
             </ul>
             <div class="arrow-nav"><img src="./assets/images/icons/Arrow-header.svg" alt="arrow"></div>
             <ul class="nav-request">
@@ -602,7 +602,7 @@
                                         <li class="tarif_list-item">Редактируйте, обновляйте и расширяйте свою карту</li>
                                     </ul>
                                     <div class="btn-cont">
-                                        <button class="btn tarif_btn btn-color"><a href="#no_scroll" class="open-link">Попробовать бесплатно</a></button>
+                                        <button class="btn tarif_btn btn-color"><a href="#form-develop" class="open-link linkRequestJS">Записаться на дэмо</a></button>
                                     </div>
                                 </div>
                                 
@@ -640,7 +640,7 @@
                                     </li>
                                 </ul>
                                 <div class="btn-cont">
-                                    <button class="btn tarif_btn btn-color"><a href="#no_scroll" class="open-link">Рассчитать стоимость</a></button>
+                                    <button class="btn tarif_btn btn-color"><a href="#form-develop" class="open-link linkRequestJS">Рассчитать стоимость</a></button>
                                 </div>
     
                             </div>
@@ -702,7 +702,7 @@
                                 </ul>
 
                                 <div class="button-accordion">Показать подробности</div>
-                                <div class="but"><a href="#!noscroll">Попробовать бесплатно</a></div>
+                                <div class="but"><a href="#form-develop" class="linkRequestJS">Записаться на дэмо</a></div>
 
 
     
@@ -737,7 +737,7 @@
                                 </ul>
                                
                                 <div class="button-accordion">Показать подробности</div>
-                                <div class="but"><a href="#!noscroll">Рассчитать стоимость</a></div>
+                                <div class="but"><a href="#form-develop" class="linkRequestJS">Рассчитать стоимость</a></div>
                                
                                 <!-- <div class="tarif_btn btn-cont">Открыть конструктор</div> -->
                                
@@ -777,7 +777,8 @@
                                     <div class="btns-theme active-buttons btn-quest">Задать вопрос</div>
                                     <div class="btns-theme btn-idea">Предложить идею</div>
                                     <div class="btns-theme btn-error">Сообщить об ошибке</div>
-                                    <div class="btns-theme btn-develop">Заказать разработку</div>
+                                    <div class="btns-theme btn-develop">Записаться на дэмо</div>
+                                    <div class="btns-theme btn-other">Рассчитать стоимость</div>
                                     <div class="btns-theme btn-other">Другое</div>
                                 </div>
 
@@ -1024,7 +1025,7 @@
     </footer>
     <div class="popup-contact hidden-popup">
         <div class="popup_content">
-            <div class="popup-cross">
+            <div class="popup-cross contact-link">
                 <svg class="svg-cross" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16" cy="16" r="14.5" stroke="white" stroke-width="3"/>
                     <rect x="20.2422" y="9.63599" width="3" height="15" rx="1" transform="rotate(45 20.2422 9.63599)" fill="white"/>

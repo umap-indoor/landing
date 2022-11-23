@@ -45,32 +45,8 @@ async function slider() {
 //     }
 
 
-// async function slider(screen) {
-//     let i = 0;
-//     const posts = document.querySelectorAll('.slider-text__item');
-//     posts.forEach(t => t.style = `top:-${screen}; opacity:0; transition: 0s`);
-//     posts[0].style = "top:0px; opacity:1; transition: 0s";
-    
-//     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-//     while(true) {
-//         const next = (i + 1) % posts.length;
-        
-//         posts[i].style = `top:${screen}; opacity:0`;
-//         posts[next].style = `top:${screen}; opacity:1`;
-        
-//         await new Promise(resolve => setTimeout(resolve, 2000));
-//         posts[i].style = `top:-${screen}; opacity:0; transition: 0s`;
-        
-//         i = next;
-        
-//     }
-// };
 
 //scroll phone-desctop
-const phone = document.querySelector('.right_part_img');
-
-
 
 // window.addEventListener('scroll', scrollPhone);
 // function scrollPhone() {
@@ -165,7 +141,7 @@ videoGif2.addEventListener('ended', function (){
 
 window.addEventListener('scroll', playVideoGif);
 
-setTimeout(playVideoGif, 1000);
+// setTimeout(playVideoGif, 1000);
 
 
 // setTimeout(function() {
@@ -408,39 +384,7 @@ const itemSlider = document.querySelectorAll(".tarif-card__item");
 
 
 //tarif
-// const InitSliderTarif = () => {
-//     if (document.documentElement.clientWidth < 1307) {
-//         swiperTarif = new Swiper('.swiper-container', {
-//             initialSlide: 1,
-//             slidesPerView: 3,
-//             centeredSlides: true,
-//             loop: true,
-//             spaceBetween: 21,
-//             slideToClickedSlide: true,
-//             });
-//     } else if (document.documentElement.clientWidth < 1307) {
-//         swiperTarif = undefined;
-//     }
-// }
 
-// InitSliderTarif();
-
-// const swiperTarif = new Swiper('.swiper-container', {
-//     initialSlide: 1,
-//     slidesPerView: 3,
-//     centeredSlides: true,
-//     loop: true,
-//     spaceBetween: 21,
-//     slideToClickedSlide: true,
-//     // allowTouchMove:false,
-//      // Responsive breakpoints
-//     breakpoints: {
-//         // when window width is >= 1380px
-//         1380: {
-//             allowTouchMove: false,
-//         }
-//         },
-//     });
 
 
     let swiperTarif;
@@ -474,15 +418,6 @@ const itemSlider = document.querySelectorAll(".tarif-card__item");
     };
 initAdvantagesSlider();
 
-// let swiperTarif = new Swiper('.swiper-container', {
-//                   spaceBetween: 21,
-//                   centeredSlides: true,
-//                     loop: true,
-//                     initialSlide: 1,
-//                     slidesPerView: 3,
-//                     centeredSlides: true,
-//                 });
-
 
     // form
 
@@ -515,7 +450,7 @@ function ChangePlaceholder(){
         }else if (et.classList.contains('btn-error')){
             el.placeholder = "Сообщите нам об ошибке";
         } else if (et.classList.contains('btn-develop')){
-            el.placeholder = "Заказать разработку";
+            el.placeholder = "Записаться на дэмо";
         } else if (et.classList.contains('btn-other')){
             el.placeholder = "Пишите по любой теме";
         }
@@ -535,7 +470,7 @@ function openRequesrDevelop() {
     BtnsTheme[2].classList.remove('active-buttons')
     BtnsTheme[1].classList.remove('active-buttons')
     BtnsTheme[4].classList.remove('active-buttons')
-    el.placeholder = "Заказать разработку";
+    el.placeholder = "Записаться на дэмо";
 }
 
     const accordionBtns = document.querySelectorAll(".button-accordion");
@@ -569,27 +504,15 @@ function openRequesrDevelop() {
 
 //popup
 
-
-const openContact = document.querySelector('#contact-link')
 const popupContact = document.querySelector('.popup-contact')
-const closePopupContact = document.querySelector('.popup-cross')
-const BtnMenuContact = document.querySelector('.contact-link')
-BtnMenuContact.addEventListener('click' ,() => {
+const openContact = document.querySelectorAll('.contact-link')
+openContact.forEach((el) => { el.addEventListener('click', () => {
     popupContact.classList.toggle('hidden-popup')
-})
-openContact.addEventListener('click', () => {
-    popupContact.classList.toggle('hidden-popup')
-})
+})});
 
-closePopupContact.addEventListener('click', () => {
-    popupContact.classList.toggle('hidden-popup')
-})
 
-popupContact.addEventListener('click', (event) => {
-    if(event.target.classList.contains('popup-contact')) {
-        popupContact.classList.toggle('hidden-popup');
-    }
-})
+
+
 
 
 const BtnMenu = document.querySelector('.btn-menu');
@@ -600,6 +523,8 @@ const BurgerShadow = document.querySelector('.burger-shadow')
 const BodyHtml = document.querySelector('html')
 const LogoIcon = document.querySelector('.logo-icon-mobile')
 console.log(BodyHtml)
+
+
 BtnMenu.addEventListener('click', () => {
     BurgerMenu.classList.toggle('burger-menu-active');
     BtnMenu.classList.toggle('btn-menu-active');
