@@ -1080,6 +1080,24 @@ main
     font-weight: 400
     color: rgba(255, 255, 255, 0.9);
     padding-bottom: 10px
+    position: relative
+    &:after
+        position: absolute
+        content: ""
+        width: 20px
+        height: 20px
+        background-image: url('../assets/images/icons/tooltip-circle.svg')
+        right: -30px
+
+.finall-price-title2
+    &:after
+        right: 75px
+
+.finall-price-title3
+    &:after
+        right: 90px
+
+
 .finall-price-bottom
     font-size: 36px
     font-weight: 600
@@ -1097,7 +1115,7 @@ main
 
 
 
-.btns-theme
+.btns-theme, .btns-date
     display: inline-block
     color: $white
     background: rgba(255, 255, 255, 0.04);
@@ -1180,7 +1198,7 @@ textarea:focus, input:focus
     height: 80px 
     font-weight: 400; 
     color: rgba(255, 255, 255, 0.6);
-    padding: .6em 0em .5em 0em; 
+    padding: .6em 1.4em .5em 1.8em; 
     width: 100%; 
     // max-width: 101%; 
     box-sizing: border-box; 
@@ -1258,6 +1276,10 @@ textarea:focus, input:focus
 .btns-date
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.06)
+.span-cirkle-tultip
+    width: 20px
+    height: 20px
+    background: #B7BFCB;
 // select
 //     font-size: 18px; 
 //     font-weight: 400; 
