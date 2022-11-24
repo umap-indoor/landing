@@ -260,8 +260,8 @@
         width: 235px
     .flip-back-img
         top: -232px
-    .flip-front-img  .img-flip3
-        width: 300px
+    // .flip-front-img  .img-flip3
+    //     width: 300px
     .flip-descr
         line-height: 20px
     .title_block, .slider-text__item
@@ -893,12 +893,31 @@
         padding-top: 30px
     .header_we-know
         width: 100%
-@media  screen and (max-width: 710px)
+@media  screen and (max-width: 714px)
     .secondary-block__title-one
         width: 56%
     .animation-card_description
         padding-bottom: 0
     .animation-cards__container
+        width: 100%
+    .container-flip_cards
+        min-height: 1050px
+        height: 1150px
+
+    .font-card, .back-card
+        padding: 20px 30px 
+    .flip-descr
+        font-size: 16px
+    .flip-front-img > img
+        width: 209px
+    .flip-front-img > img
+        width: 209px
+    .flip-front-img
+        bottom: 0
+    .flip-back-img
+        top: -280px
+
+    .secondary-block__title-one
         width: 100%
 @media  screen and (max-width: 700px)
     .open__link-map
@@ -937,9 +956,38 @@
         width: calc( 100vw - 96px  )
     .form-questions_title
         width: 90%
-    
+    // .flip-front-img .img-flip3
+    //     width: 265px
+
 
 @media  screen and (max-width: 640px)
+    .flip-card
+        display: flex
+        justify-content: center
+    .flip-front-img
+        bottom: 0px
+        right: 0
+    .flip3
+        padding-top: 30px
+    .font-card, .back-card
+        flex-direction: column
+        align-items: center
+    .flip-text
+        gap: 40px
+    .card-middle
+        flex-direction: column-reverse
+        gap: 0
+        justify-content: start
+    .card-middle > .flip-front-img
+
+    .card-middle > .flip-text
+        height: 61%
+    .container-flip_cards
+        width: calc( 100vw - 100px )
+        min-width: 320px
+        gap: 40px
+        height: 1550px
+        
     .open__link-map
         width: 40%
     .open__link-map::before
@@ -1233,7 +1281,10 @@
         padding-bottom: 100px
     .accordion
         font-size: 12px
-@media  screen and (max-width: 350px)
+@media  screen and (max-width: 355px)
+    .container-flip_cards
+        width: 100%
+        min-width: 280px
     .animation-card_description
         padding-left: 18px
     .tarif-card__name-free

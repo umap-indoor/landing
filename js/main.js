@@ -460,9 +460,8 @@ function ChangePlaceholder(){
     ChangePlaceholder();
 
 const developBtns = document.querySelectorAll(".linkRequestJS")
-for (let i = 0; i < developBtns.length; i++) {
-    developBtns[i].addEventListener("click", openRequesrDevelop)
-    };
+developBtns.forEach((item) => item.addEventListener('click',  openRequesrDevelop))
+
 
 function openRequesrDevelop() {
     BtnsTheme[0].classList.remove('active-buttons')
