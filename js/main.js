@@ -420,7 +420,7 @@ initAdvantagesSlider();
 
 
     // form
-
+const CalculatioContainer = document.querySelector('.calculation-container')
 const BtnsTheme = document.querySelectorAll('.btns-theme');
 function activeBtn () {
     for (let btn of BtnsTheme) {
@@ -445,13 +445,18 @@ function ChangePlaceholder(){
         const et = event.target;
         if (et.classList.contains('btn-idea')) {
             el.placeholder = "Предложите свою идею";
+            CalculatioContainer.style.display ='none';
         } else if (et.classList.contains('btn-quest')){
             el.placeholder = "Какой вопрос хотите задать?";
+            CalculatioContainer.style.display ='none';
         }else if (et.classList.contains('btn-error')){
             el.placeholder = "Сообщите нам об ошибке";
+            CalculatioContainer.style.display ='none';
         } else if (et.classList.contains('btn-develop')){
             el.placeholder = "Записаться на дэмо";
+            CalculatioContainer.style.display ='none';
         } else if (et.classList.contains('btn-other')){
+            CalculatioContainer.style.display ='block';
             el.placeholder = "Пишите по любой теме";
         }
     })
@@ -462,6 +467,19 @@ function ChangePlaceholder(){
 const developBtns = document.querySelectorAll(".linkRequestJS")
 developBtns.forEach((item) => item.addEventListener('click',  openRequesrDevelop))
 
+const CalculateJS = document.querySelectorAll('.CalculateJS')
+    CalculateJS.forEach((item) => item.addEventListener('click', () => {
+        BtnsTheme[0].classList.remove('active-buttons')
+        BtnsTheme[3].classList.remove('active-buttons')
+        BtnsTheme[2].classList.remove('active-buttons')
+        BtnsTheme[1].classList.remove('active-buttons')
+        BtnsTheme[4].classList.add('active-buttons')
+        BtnsTheme[5].classList.remove('active-buttons')
+        el.placeholder = "Рассчитать стоимость";
+        CalculatioContainer.style.display ='block';
+    
+    })
+    )
 
 function openRequesrDevelop() {
     BtnsTheme[0].classList.remove('active-buttons')
