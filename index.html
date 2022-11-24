@@ -768,11 +768,11 @@
                     <div class="questions-and-app__container">
 
                         <div class="questions_container" >
-                            <div class="form-questions">
+                            <!-- <div class="form-questions">
                                     <div class="title-descr secondary-block_title-descr secondary-block_title-descr-form">
                                         Тема заявки</div>
-                            </div>
-                            <form action="#" class="questions">
+                            </div> -->
+                            <form action="#" class="questions" method="post">
                                 <div class="buttons-container">
                                     <div class="btns-theme active-buttons btn-quest">Задать вопрос</div>
                                     <div class="btns-theme btn-idea">Предложить идею</div>
@@ -780,6 +780,62 @@
                                     <div class="btns-theme btn-develop">Записаться на дэмо</div>
                                     <div class="btns-theme btn-other">Рассчитать стоимость</div>
                                     <div class="btns-theme btn-other">Другое</div>
+                                </div>
+
+                                <div class="calculation-container">
+                                    <div class="input-building-container">
+                                        <div class="input-building">
+                                            <input type="number" name="input-text" id="input-text" required spellcheck="false">
+                                            <span class="placeholder placeholder-build">
+                                                Площадь помещения внутри, м <small>2</small>
+                                            </span>
+                                          </div>
+
+                                          <div class="input-building">
+                                            <input type="number" name="input-text" id="input-text" required spellcheck="false">
+                                            <span class="placeholder placeholder-build">
+                                                Площадь помещения cнаружи, м <small>2</small>
+                                            </span>
+                                          </div>
+                                        
+                                    </div>
+
+                                    <div class="btn-date-container">
+                                        <div class="btns-theme btns-date active-buttons">1 месяц</div>
+                                        <div class="btns-theme btns-date">2 месяца</div>
+                                        <div class="btns-theme btns-date">3 месяца</div>
+                                        <div class="btns-theme btns-date">6 месяцев</div>
+                                        <div class="btns-theme btns-date">1 год</div>
+                                        <div class="btns-theme btns-date">2 года</div>
+                                        <div class="btns-theme btns-date">3 года</div>
+                                        <div class="btns-theme btns-date">5 лет</div>
+                                        <div class="btns-theme btns-date">10 лет</div>
+                                    </div>
+
+                                    <div class="finall-price-container">
+                                        <div class="finall-price-item">
+                                            <div class="finall-price-title">Цена оцифровки</div>
+                                            <div class="finall-price-bottom">
+                                                <span class="total-price">7000</span> &#8381
+                                            </div>
+                                        </div>
+                                        <div class="finall-price-item">
+                                            <div class="finall-price-title">Цена за месяц</div>
+                                            <div class="finall-price-bottom">
+                                                <span class="total-price">Бесплатно</span> &#8381
+                                            </div>
+                                        </div>
+                                        <div class="finall-price-item">
+                                            <div class="finall-price-title">Итого</div>
+                                            <div class="finall-price-bottom">
+                                                <span class="total-price">490000</span> &#8381
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+
+                                    <span class="price-line"></span>
+                                    <p class="price-descr">Цена может быть дополнительно снижена при общении</p>
                                 </div>
 
                                 <div class="input-block">
