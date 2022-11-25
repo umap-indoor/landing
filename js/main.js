@@ -488,6 +488,7 @@ function openRequesrDevelop() {
     BtnsTheme[1].classList.remove('active-buttons')
     BtnsTheme[4].classList.remove('active-buttons')
     el.placeholder = "Записаться на дэмо";
+    CalculatioContainer.style.display ='none';
 }
 
     const accordionBtns = document.querySelectorAll(".button-accordion");
