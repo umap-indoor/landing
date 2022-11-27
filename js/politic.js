@@ -1,24 +1,21 @@
-//popup
-
-const popupContact = document.querySelector('.popup-contact')
-const openContact = document.querySelectorAll('.contact-link')
+//popup-contact
+const popupContact = document.querySelector('.popup-contact'),
+    openContact = document.querySelectorAll('.contact-link');
 openContact.forEach((el) => { el.addEventListener('click', () => {
-    popupContact.classList.toggle('hidden-popup')
+    popupContact.classList.toggle('hidden-popup');
 })});
 
+//burger-menu
 
 
+const BtnMenu = document.querySelector('.btn-menu'),
+    Burger = document.querySelector('.burger'),
+    BurgerMenu = document.querySelector('.burger-menu'),
+    BurgerItem = document.querySelectorAll('.menu__item-link-burger'),
+    BurgerShadow = document.querySelector('.burger-shadow'),
+    BodyHtml = document.querySelector('html'),
+    LogoIcon = document.querySelector('.logo-icon-mobile');
 
-
-
-const BtnMenu = document.querySelector('.btn-menu');
-const Burger = document.querySelector('.burger')
-const BurgerMenu = document.querySelector('.burger-menu');
-const BurgerItem = document.querySelectorAll('.menu__item-link-burger')
-const BurgerShadow = document.querySelector('.burger-shadow')
-const BodyHtml = document.querySelector('html')
-const LogoIcon = document.querySelector('.logo-icon-mobile')
-console.log(BodyHtml)
 
 
 BtnMenu.addEventListener('click', () => {
@@ -27,9 +24,8 @@ BtnMenu.addEventListener('click', () => {
     Burger.classList.toggle('burger-active');
     BurgerShadow.classList.toggle('burger-shadow-active');
     BodyHtml.classList.toggle('no-scroll');
-
     
-})
+    });
 
 BurgerItem.forEach(item => {
     item.addEventListener('click', () => {
@@ -38,24 +34,17 @@ BurgerItem.forEach(item => {
         Burger.classList.toggle('burger-active');
         BurgerShadow.classList.toggle('burger-shadow-active');
         BodyHtml.classList.toggle('no-scroll');
-    })
-})
+    });
+});
 
 LogoIcon.addEventListener('click', () => {
-    BurgerMenu.classList.toggle('burger-menu-active');
-    BtnMenu.classList.toggle('btn-menu-active');
-    Burger.classList.toggle('burger-active');
-    BurgerShadow.classList.toggle('burger-shadow-active');
-    BodyHtml.classList.toggle('no-scroll');
-})
-
-BurgerShadow.addEventListener('click', () => {
-    BurgerMenu.classList.toggle('burger-menu-active');
-    BtnMenu.classList.toggle('btn-menu-active');
-    Burger.classList.toggle('burger-active');
-    BurgerShadow.classList.toggle('burger-shadow-active');
-    BodyHtml.classList.toggle('no-scroll');
+    BurgerMenu.classList.remove('burger-menu-active');
+    BtnMenu.classList.remove('btn-menu-active');
+    Burger.classList.remove('burger-active');
+    BurgerShadow.classList.remove('burger-shadow-active');
+    BodyHtml.classList.remove('no-scroll');
 });
+
 
 
 
