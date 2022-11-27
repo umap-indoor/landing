@@ -184,14 +184,17 @@ main
 .slider-text__container
     // width: 600px;
     width: 465px
+    width: 768px
     // height: 100px;
     height: 90px
     position: relative;
     overflow: hidden;
     text-align: center
+    // border: 2px solid red
 .slider-text__item
     position: absolute;
     width: 478px;
+    width: 768px
     height: 100px;
     transition: 2s;
     margin-top: -20px
@@ -829,7 +832,12 @@ main
     visibility: visible;
     opacity: 1;
 
-
+.tarif_btn-disable:active .tooltiptext 
+    visibility: visible;
+    opacity: 1;
+.tarif_btn-disable:focus .tooltiptext 
+    visibility: visible;
+    opacity: 1;
 
 //ellipse
 .ellips__price-container

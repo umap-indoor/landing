@@ -964,10 +964,15 @@
     .tarif_btn-disable .tooltiptext
         bottom: 30%
         left: 20%
-    .tarif_btn-disable:hover .tooltiptext
+    #btn-t:hover .tooltiptext
         visibility: visible
         opacity: 1
-    
+    .tarif_btn-disable:active .tooltiptext 
+        visibility: visible;
+        opacity: 1;
+    .tarif_btn-disable:focus .tooltiptext 
+        visibility: visible;
+        opacity: 1;
     .flip-card
         display: flex
         justify-content: center
@@ -1127,7 +1132,7 @@
     .open__link-map::before
         left: 9%
     .title-descr__first-block
-        width: 86%
+        width: 42%
 
     .secondary-block__title-one
         width: 100%
@@ -1286,8 +1291,8 @@
     .footer
         padding-bottom: 100px
 @media  screen and (max-width: 400px)
-    .title-descr__first-block
-        width: 77%
+    // .title-descr__first-block
+    //     width: 77%
     .animation-card_img
         width: 288.6px
     .img-video
