@@ -328,19 +328,6 @@ function ChangePlaceholder(){
 const developBtns = document.querySelectorAll(".linkRequestJS")
 developBtns.forEach((item) => item.addEventListener('click',  openRequesrDevelop))
 
-const CalculateJS = document.querySelectorAll('.CalculateJS')
-    CalculateJS.forEach((item) => item.addEventListener('click', () => {
-        BtnsTheme[0].classList.remove('active-buttons')
-        BtnsTheme[3].classList.remove('active-buttons')
-        BtnsTheme[2].classList.remove('active-buttons')
-        BtnsTheme[1].classList.remove('active-buttons')
-        BtnsTheme[4].classList.add('active-buttons')
-        BtnsTheme[5].classList.remove('active-buttons')
-        el.placeholder = "Рассчитать стоимость";
-        CalculatioContainer.style.display ='block';
-    
-    })
-    )
 
 function openRequesrDevelop() {
     BtnsTheme[0].classList.remove('active-buttons')
@@ -349,7 +336,6 @@ function openRequesrDevelop() {
     BtnsTheme[1].classList.remove('active-buttons')
     BtnsTheme[4].classList.remove('active-buttons')
     el.placeholder = "Записаться на дэмо";
-    CalculatioContainer.style.display ='none';
 };
 
 const accordionBtns = document.querySelectorAll(".button-accordion");
