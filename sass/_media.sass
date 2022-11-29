@@ -1057,9 +1057,7 @@
         width: calc(100%  - 40px )
         margin-bottom: 0
         margin-inline: auto
-        
-    .tarif_coast-item
-        width: calc( 100vw * 0.44  )
+
         //section our-price
 
     .button-accordion
@@ -1095,8 +1093,9 @@
     // .tarif_coast-item
     //     width: 51%
     .tarif_coast-item-third
-        width: 66%
-
+        min-width: 330px
+        width: calc( 82vw -  100px)
+       
     .but
         margin: 0 auto
         border-radius: 20px
@@ -1162,10 +1161,10 @@
     .secondary-block_title-our-price
         width: 100%
         font-size: 18px
-    .tarif_coast-item
-        width: calc( 100vw * 0.47  )
-    .tarif_coast-item-third
-        width: 87%
+    // .tarif_coast-item
+    //     width: calc( 100vw * 0.47  )
+    // .tarif_coast-item-third
+    //     width: 87%
     .app__container
         backdrop-filter: none
     .app__container-img
@@ -1210,6 +1209,14 @@
 
 
 @media  screen and (max-width: 450px)
+    .tarif_coast-item-third
+        // min-width: 330px
+        // justify-content: center
+        min-width: 260px
+        font-size: 30px
+    .tarif-plus
+        font-size: 30px
+    
     .navigation
         padding-inline: 0
         padding-top: 32px
@@ -1277,7 +1284,12 @@
     .section__title_we-know 
         width: 100%
         font-size: 30px
-
+    .tarif_coast
+        font-size: 30px
+    .price-item
+        font-size: 14px
+    .tarif-coast-third
+        font-size: 30px
     .secondary-block_title-descr-we-know
         font-size: 20px
     .btn-plan
@@ -1293,12 +1305,12 @@
         padding-inline: 10px
     .footer
         padding: 48px 18px 80px
-@media  screen and (max-width: 450px)
     .footer
         padding-bottom: 100px
+    .tarif_coast, .tarif_coast-third
+        font-size: 30px
 @media  screen and (max-width: 400px)
-    // .title-descr__first-block
-    //     width: 77%
+    
     .animation-card_img
         width: 288.6px
     .img-video
@@ -1310,12 +1322,8 @@
         left: 5%
     .tarif-card__name
         padding: 12px
-    .tarif_coast-item
-        width: calc(100vw * 0.6   )
-    .tarif-plus
-        top: 0px
-    .tarif_coast-item-third
-        width: 98%
+
+
     .price-item
         top: 19%
         font-size: 15px
@@ -1336,6 +1344,8 @@
     .accordion
         font-size: 12px
 @media  screen and (max-width: 355px)
+    .tarif-card__title
+        width: calc( 100% - 20px )
     .container-flip_cards
         width: 100%
         min-width: 280px
@@ -1344,8 +1354,8 @@
         padding-left: 18px
     .tarif-card__name-free
         width: 106%
-    .tarif_coast-item-third
-        width: 100%
+    // .tarif_coast-item-third
+    //     min-width: 243px
     .tarif_name-dates
         font-size: 12px
     .secondary-block_title-descr-we-know

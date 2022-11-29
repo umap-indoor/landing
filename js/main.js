@@ -9,7 +9,7 @@ async function slider() {
     
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    while(true) {
+    while(i < 10) {
         const next = (i + 1) % posts.length;
         
         posts[i].style = "top:90px; opacity:0";
@@ -17,7 +17,6 @@ async function slider() {
         
         await new Promise(resolve => setTimeout(resolve, 2000));
         posts[i].style = "top:-90px; opacity:0; transition: 0s";
-        
         i = next;
         
     };
@@ -281,46 +280,16 @@ initTarifsSlider();
 
 // form
 
-const CalculatioContainer = document.querySelector('.calculation-container'),
-        BtnsTheme = document.querySelectorAll('.btns-theme');
-function activeBtn () {
-    for (let btn of BtnsTheme) {
-        btn.addEventListener('click', (event) => {
-        const et = event.target;
-        const BtnActive = document.querySelector('.active-buttons');
-        if (BtnActive) {
-            BtnActive.classList.remove('active-buttons');
-        }
-        et.classList.add('active-buttons');
-        })
-    }
-    };
-    activeBtn();
-
-const el = document.getElementById("TextWindow");
+const selectBtn = document.querySelectorAll('.select-btn-radio');
+    el = document.getElementById("TextWindow");
 el.placeholder = "Какой вопрос хотите задать?";
 
 function ChangePlaceholder(){
-    for (let btn of BtnsTheme) {
+    for (let btn of selectBtn) {
         btn.addEventListener('click', (event) => {
-        const et = event.target;
-        if (et.classList.contains('btn-idea')) {
-            el.placeholder = "Предложите свою идею";
-            CalculatioContainer.style.display ='none';
-        } else if (et.classList.contains('btn-quest')){
-            el.placeholder = "Какой вопрос хотите задать?";
-            CalculatioContainer.style.display ='none';
-        }else if (et.classList.contains('btn-error')){
-            el.placeholder = "Сообщите нам об ошибке";
-            CalculatioContainer.style.display ='none';
-        } else if (et.classList.contains('btn-develop')){
-            el.placeholder = "Записаться на дэмо";
-            CalculatioContainer.style.display ='none';
-        } else if (et.classList.contains('btn-other')){
-            CalculatioContainer.style.display ='block';
-            el.placeholder = "Пишите по любой теме";
-        }
-    })
+        const et = event.target.dataset.name;
+            el.placeholder = `${et}`;
+    });
     }
 };
     ChangePlaceholder();
@@ -330,12 +299,9 @@ developBtns.forEach((item) => item.addEventListener('click',  openRequesrDevelop
 
 
 function openRequesrDevelop() {
-    BtnsTheme[0].classList.remove('active-buttons')
-    BtnsTheme[3].classList.add('active-buttons')
-    BtnsTheme[2].classList.remove('active-buttons')
-    BtnsTheme[1].classList.remove('active-buttons')
-    BtnsTheme[4].classList.remove('active-buttons')
-    el.placeholder = "Записаться на дэмо";
+    document.getElementById("demo").checked = true;
+    el.placeholder = "Что нам устоит учесть при встрече?";
+    console.log('dfg')
 };
 
 const accordionBtns = document.querySelectorAll(".button-accordion");
@@ -381,7 +347,7 @@ openContact.forEach((el) => { el.addEventListener('click', () => {
 //burger-menu
 
 
-const BtnMenu = document.querySelector('.btn-menu');
+const BtnMenu = document.querySelector('.btn-menu'),
     Burger = document.querySelector('.burger')
     BurgerMenu = document.querySelector('.burger-menu');
     BurgerItem = document.querySelectorAll('.menu__item-link-burger')
@@ -418,3 +384,81 @@ LogoIcon.addEventListener('click', () => {
     BodyHtml.classList.remove('no-scroll');
 });
     });
+
+
+//input email
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+const input = document.querySelector('#input-text1');
+    inputBlock = document.querySelector('.input-email')
+    btnSubmit = document.querySelector('.questions_btn')
+
+function isEmailValid(value) {
+    return EMAIL_REGEXP.test(value);
+}
+
+function onInput() {
+    console.log('sdff')
+	if (isEmailValid(input.value)) {
+        document.querySelector('.questions_btn').removeAttribute('disabled');
+	} else {
+		inputBlock.style.borderColor = 'red';
+	}
+};
+
+input.addEventListener('input', onInput);
+
+
+
+
+//form
+
+
+    // const form = document.querySelector("form");
+    // // console.log(form)
+
+    // form.addEventListener("submit", function (e) {
+    //     e.preventDefault();
+    //     const data = new FormData(form);
+    //     const values = Object.fromEntries(data.entries())
+    //     console.log(values)
+
+    //     fetch(`https://${window.location.host}/api/site/feedback`, {
+    //         method: "POST",
+    //         body: values,
+    //     })
+    //         // .then((response) => response.text());
+    //         .then(function () {
+    //             btnSubmit.textContent =
+    //                 "Thank you for your message!
+    //         })
+            
+    //         .catch((error) => {
+    //             console.error("Error:", error);
+    //         });
+    // });
+
+
+    submitForm();
+
+    function submitForm() {
+        const form = document.querySelector("form");
+        btnSubmit=form.querySelector('.questions_btn')
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const data = new FormData(this);
+            const values = Object.fromEntries(data.entries())
+    
+            fetch(`https://${window.location.host}/api/site/feedback`, {
+                method: "POST",
+                body: values,
+            })
+                .then((response) => response.text())
+                .then(function () {
+                    Btn.textContent =
+                        "Thank you for your message!";
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        });
+    }

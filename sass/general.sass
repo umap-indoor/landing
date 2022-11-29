@@ -220,6 +220,10 @@ main
     height: 100px;
     transition: 2s;
     margin-top: -20px
+.build
+    margin-top: 0
+.conference, .hotel
+    margin-top: -9px
 .slider-text__item:nth-of-type(1) 
     top: 0;
     z-index: 10;
@@ -942,11 +946,11 @@ main
     font-size: 56px;
     letter-spacing: -2px
 .tarif_coast, .tarif_coast-second,  .tarif_coast-third
-    font-size: 56px
+    font-size: 38px
     color: $white
     font-weight: 600
     letter-spacing: -2px
-    
+
 .tarif-coast-descriotin
     color: rgba(255, 255, 255, 0.85)
     padding-bottom: 35px
@@ -1020,14 +1024,14 @@ main
 
 .price-item
     position: relative
-    top: 34%
+    top: 0%
     font-size: 17px
     font-weight: 400
     color: rgba(255, 255, 255, 0.4);
 
 .tarif_coast-item
     display: flex
-    width: 66%
+    // width: 66%
     // position: relative
     justify-content: space-between
 .tarif_coast-item-third
@@ -1037,14 +1041,12 @@ main
     justify-content: space-between
 .tarif-line
     width: 1px
-    height: 55px
+    height: 49px
     transform: rotate(18deg)
     background-color: rgba(255, 255, 255, 0.1)
 
 .tarif-plus
-    position: relative
-    top: 7px
-    font-size: 44px
+    font-size: 38px
     color: $white
     font-weight: 500
 .tarif_card-color-boder
@@ -1237,7 +1239,8 @@ textarea:focus, input:focus
     // max-width: 101%; 
     box-sizing: border-box; 
     margin: 0; 
-    border: none
+    border-color: rgba(255, 255, 255, 0.06);
+
     border-radius: 20px
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1253,7 +1256,8 @@ textarea:focus, input:focus
     // max-width: 101%; 
     box-sizing: border-box; 
     margin: 0; 
-    border: none
+    border-color: rgba(255, 255, 255, 0.06);
+
     border-radius: 20px
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1787,6 +1791,45 @@ textarea:focus, input:focus
 .footer-description_app
     display: none
 
+// .buttons-container
+//     border: none;
+//     overflow: hidden;
+
+// .buttons-container::-moz-focus-inner 
+//     border: 0;
+
+// .buttons-container:focus 
+//     outline: none;
+
+// .buttons-container option
+//     width: 20px;
+//     padding: 5px 0;
+//     text-align: center;
+//     margin: 0px 1px;
+//     display: inline-block;
+//     cursor: pointer;
+//     border: rgba(128, 128, 128, 0.7) solid 1px;
+//     border-radius: 2px;
+//     color: rgb(128, 128, 128);
+.select-btns 
+    display: flex;
+
+.select-btn-view 
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+
+.select-btn-view:hover
+    background-color: lightblue;
+
+.select-btn-radio:checked + .btns-theme
+    background-color: rgba(12, 117, 241, 1)
+    inset: 3px
+    border-color: rgba(255, 255, 255, 0.12)
 
 
 @import _cookies
