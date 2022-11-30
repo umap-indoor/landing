@@ -201,26 +201,26 @@ const swiper = new Swiper('.swiper1', {
 
 
 //carousel2
-const swiper2 = new Swiper('.swiper2', {
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination2',
-        type: 'bullets',
-        clickable: true,
-    //   dynamicBullets: true
-    },
+// const swiper2 = new Swiper('.swiper2', {
+//     loop: true,
+//     pagination: {
+//         el: '.swiper-pagination2',
+//         type: 'bullets',
+//         clickable: true,
+//     //   dynamicBullets: true
+//     },
 
-    navigation: {
-        nextEl: '.swiper-button-prev2',
-        prevEl: '.swiper-button-next2',
-    },
-    pagination: {
-        el: '.swiper-pagination2',
-        type: 'bullets',
-        clickable: true,
-    //   dynamicBullets: true
-    },
-    });
+//     navigation: {
+//         nextEl: '.swiper-button-prev2',
+//         prevEl: '.swiper-button-next2',
+//     },
+//     pagination: {
+//         el: '.swiper-pagination2',
+//         type: 'bullets',
+//         clickable: true,
+//     //   dynamicBullets: true
+//     },
+//     });
 
 
 
@@ -413,30 +413,6 @@ input.addEventListener('input', onInput);
 //form
 
 
-    // const form = document.querySelector("form");
-    // // console.log(form)
-
-    // form.addEventListener("submit", function (e) {
-    //     e.preventDefault();
-    //     const data = new FormData(form);
-    //     const values = Object.fromEntries(data.entries())
-    //     console.log(values)
-
-    //     fetch(`https://${window.location.host}/api/site/feedback`, {
-    //         method: "POST",
-    //         body: values,
-    //     })
-    //         // .then((response) => response.text());
-    //         .then(function () {
-    //             btnSubmit.textContent =
-    //                 "Thank you for your message!
-    //         })
-            
-    //         .catch((error) => {
-    //             console.error("Error:", error);
-    //         });
-    // });
-
 
     submitForm();
 
@@ -447,6 +423,7 @@ input.addEventListener('input', onInput);
             e.preventDefault();
             const data = new FormData(this);
             const values = Object.fromEntries(data.entries())
+            console.log(values);
     
             fetch(`https://${window.location.host}/api/site/feedback`, {
                 method: "POST",
@@ -454,11 +431,11 @@ input.addEventListener('input', onInput);
             })
                 .then((response) => response.text())
                 .then(function () {
-                    Btn.textContent =
-                        "Thank you for your message!";
+                    btnSubmit.textContent =
+                        "Заявка отправлена";
                 })
                 .catch((error) => {
-                    console.error("Error:", error);
+                    console.error(error);
                 });
         });
     }

@@ -543,6 +543,11 @@
         justify-content: center
         align-items: center
 @media  screen and (max-width: 985px)
+    .accordion__content.active .answer 
+        height: 130px;
+
+    .answer
+        font-size: 18px
     .frame
         height: 104%
     .dot-translate
@@ -1010,7 +1015,9 @@
         width: 100%
 
 
-@media  screen and (max-width: 640px)
+@media  screen and (max-width: 644px)
+    .accordion__content.active .answer 
+        height: 160px;
     .tarif_btn-disable .tooltiptext
         bottom: 30%
         left: 20%
@@ -1129,9 +1136,15 @@
         font-size: 16px
         font-weight: normal
         color: rgba(255, 255, 255, 1);
-
+@media  screen and (max-width: 555px)
+    .container-flip_cards
+        height: 2248px
 
 @media  screen and (max-width: 510px)
+    .accordion__content.active .answer 
+        height: auto
+    .answer
+        font-size: 16px
     .open__link-map
         width: 50%
     .open__link-map::before
@@ -1191,7 +1204,7 @@
 
 @media  screen and (max-width: 490px)
     .container-flip_cards
-        height: 2248px
+        height: 2448px
     .secondary-block__title
         font-size: 36px
     .flip-card__btn
@@ -1205,17 +1218,28 @@
         width: 276px
     .secondary-block__title-last
         text-align: left
+    .email-info__item1
+        font-size: 34px
+        top: -46px
+    .email-info:hover .email-info__item1 
+        top: 8px;
 
 
 
-@media  screen and (max-width: 450px)
+@media  screen and (max-width: 457px)
+    .logo-politeh
+        display: block
+        width: 30px
     .tarif_coast-item-third
         // min-width: 330px
-        // justify-content: center
-        min-width: 260px
+        justify-content: center
+        // min-width: 260px
         font-size: 30px
     .tarif-plus
         font-size: 30px
+        display: none
+    .tarif-line, .tarif_coast-third, .price-item
+        display: none
     
     .navigation
         padding-inline: 0
@@ -1250,7 +1274,7 @@
         height: 302px
     .carousel_title
         font-size: 20px
-        padding-bottom: 20px
+        // padding-bottom: 20px
     
     ///section price
     .tarif_name-title, .tarif_name-dates
@@ -1304,11 +1328,12 @@
     .but
         padding-inline: 10px
     .footer
-        padding: 48px 18px 80px
+        padding: 48px 15px 80px
     .footer
         padding-bottom: 100px
     .tarif_coast, .tarif_coast-third
         font-size: 30px
+    
 @media  screen and (max-width: 400px)
     
     .animation-card_img
@@ -1336,20 +1361,25 @@
     .email-info
         font-size: 36px
     .email-info__item1
-        top: -46px
+        top: -41px
     .email-info:hover .email-info__item1
         top: 4px
     .footer
         padding-bottom: 100px
     .accordion
         font-size: 12px
+@media  screen and (max-width: 365px)
+    .email-info__item1
+        font-size: 30px
+        // top: -46px
+    .email-info:hover .email-info__item1 
+        top: 11px;
 @media  screen and (max-width: 355px)
-    .tarif-card__title
-        width: calc( 100% - 20px )
+
     .container-flip_cards
         width: 100%
         min-width: 280px
-        height: 2348px
+        // height: 2348px
     .animation-card_description
         padding-left: 18px
     .tarif-card__name-free
@@ -1370,9 +1400,12 @@
         width: 145px
     .email-info
         font-size: 32px
-    .email-info__item1
-        top: -41px
-    .email-info:hover .email-info__item1 
-        top: 8px;
+    // .email-info__item1
+    //     top: -41px
+    // .email-info:hover .email-info__item1 
+    //     top: 8px;
     .footer
         padding-bottom: 100px
+@media  screen and (max-width: 345px)
+    .flip-descr
+        font-size: 15px

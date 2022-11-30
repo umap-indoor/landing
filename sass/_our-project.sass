@@ -19,7 +19,9 @@
 
 .open__link-map
     display: none
-
+.carousel_title-your
+    width: 100%
+    display: flex
 
 
 .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after 
@@ -31,14 +33,28 @@
 
 
 .carousel_title
-    display: block
+    display: flex
+    align-items: center
     padding-top: 0px
     padding-bottom: 24px
+    padding-bottom: 10px
     font-size: 28px;
     font-weight: 500
     color: #fff;
     text-align: left
-    padding-left: 50px
+    gap: 12px
+    // padding-left: 50px
+.carousel_title-your
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+.carousel_title-polit
+    position: relative
+// .carousel_title-polit:
+.descr-your
+    font-size: 18px
+    color: rgba(177, 177, 177, 1)
 
 .carousel_slide 
     text-align: center;
@@ -46,7 +62,10 @@
     transition: transform .3s ease-out;
 
 
-
+.container-title-your
+    display: flex
+    align-items: center
+    gap: 12px
 
 
 .carousel_image
